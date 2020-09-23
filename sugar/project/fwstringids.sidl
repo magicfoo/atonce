@@ -1,0 +1,27 @@
+
+@package su.fw.stringids
+
+
+@stringid none
+	interns 'unknown'
+
+
+/*
+@stringenum NullEnum
+	interns "null"
+	concerns none
+*/
+
+@stringenum IOSKeys
+	concerns none Touch Home Mute Audio USB
+
+@stringenum Controller
+	concerns none Keyboard Mouse Pad1 Pad2 Pad3 Pad4 Nunchuk1 Nunchuk2 Nunchuk3 Nunchuk4
+
+@stringenum KeyModifier
+	concerns None Shift Ctrl Alt CtrlShift AltShift AltCtrl CtrlAltShift
+
+@stringenum Inputevent
+	concerns Down Up UpOrDown Analog Character ClickDouble ErrorDetect Removed Plugged
+
+

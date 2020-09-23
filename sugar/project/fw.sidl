@@ -1,0 +1,157 @@
+
+
+@if defined(__VERBOSE__)
+@print @subst 'Running on platform $__PLATFORM__'
+@endif
+
+
+@package su.fw
+
+@include 'env.sidl'
+
+@set fwbuild	@dir '$sufw/project/build'
+@set fwdoc		@dir '$sufw/project/doc'
+
+// @set __GLES_IMGTECH__	1
+
+
+
+@module gencode
+	defines
+		namespace	= 'su'
+		nullalias	= 'NotSupported'
+		settings	= '$sufw/su_settings.h'
+		forceref	= '$sufw/core/base/su_forceref.h'
+		uids		= '$sufw/su_uids.h'
+		maps		= '$sufw/su_mapping.h'
+		stringids	= '$sufw/su_stringid.h'
+		c_class		= 'Fl_Widget;Fl_Image;Fl_Group;Fl_Window'
+{
+	su.fw.*
+}
+
+
+
+@module genproj
+	defines
+		tmpdir		= '$fwbuild/tmp'
+		filefilter	= '-*.sua.h -*.lua.h'
+{
+	su.fw.*
+}
+
+
+
+@module gendoc
+	defines
+		xmlfile		= '$fwdoc/su_doc.xml'
+		packed		= 0
+{
+	su.fw.*
+}
+
+
+
+@include 'fwcore.sidl'
+@include 'fwcodec.sidl'
+@include 'fwasset.sidl'
+@include 'fwui.sidl'
+@include 'fwstringids.sidl'
+@include 'fwmaps.sidl'
+@include 'fwmedia.sidl'
+@include 'fwlanglua.sidl'
+@include 'fwlangflash.sidl'
+@include 'fwlogic.sidl'
+@include 'fwddriver.sidl'
+@include 'fwengine.sidl'
+@include '$buildroot/sufw-${__platform__}/project/fwport_${__platform__}.sidl'
+@include '$buildroot/sufw-build/project/3rdparty.sidl'
+
+
+@group group.su.fw.misc
+{
+	@folder 'cpp'
+		adds '$sufw/*.h'
+		adds '$sufw/*.cpp'
+
+	@folder 'cpp.precompiled'
+		adds '$sufw/precompiled/*.h'
+		adds '$sufw/precompiled/*.cpp'
+
+	@folder 'sidl.fw'
+		adds '*.sidl'
+}
+
+
+
+@outpath '$fwbuild'
+
+
+
+@archive lib.su.fw
+	targets 'bin/sufw'
+
+	defines
+		cppdefines = 'SU_FRAMEWORK'
+{
+	group.su.fw.*
+	group.su.options.*
+	group.su.auth.*
+	group.thirdparty.sidl
+	group.thirdparty.codec.*
+	group.thirdparty.lua.*
+	group.thirdparty.zip.*
+	group.thirdparty.zlib.*
+	group.thirdparty.yaml.*
+	group.thirdparty.lzma.*
+	group.thirdparty.libpng.*
+@if defined(__WINDOWS__)
+	group.thirdparty.gfl.*
+	group.thirdparty.pvrtc.*
+	group.thirdparty.dds.*
+	group.thirdparty.fltk.*
+	group.thirdparty.dwm
+	group.thirdparty.gl.*
+	group.thirdparty.dx9.x32.*
+	group.thirdparty.platformsdk.*
+@endif
+@if defined(__WINDOWS__) or defined(__DARWIN__)
+	group.thirdparty.autodesk.*
+	group.thirdparty.sqlite.*
+@endif
+@if defined(__IOS__)
+	group.thirdparty.qcar.*
+@endif
+}
+
+
+
+@solution solution.su.fw
+{
+	lib.su.fw
+}
+
+@include 'fwbuild.sidl'
+
+@if defined(__WINDOWS__)
+
+	@build
+		targets lib.su.fw
+		using win32.dx.cg.msvc.release
+		
+@elif defined(__ANDROID__)
+
+	@build
+		targets lib.su.fw
+		using android.ndk.release
+		
+@elif defined(__IOS__)
+
+	@build
+		targets lib.su.fw
+		using ios.simulator.release
+	
+@endif
+
+
+

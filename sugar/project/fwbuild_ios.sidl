@@ -1,0 +1,134 @@
+@buildenv config.ios
+	from '$devcenter/config/buildconfig_ios.py'
+		with
+			target='iPhoneSimulator'
+			version='4.2'
+			
+@buildenv ios.defines
+[
+	CO_CCFLAGS		-x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fno-exceptions -fno-rtti -fno-objc-exceptions -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot $IOS_SDK -fexceptions -fno-objc-call-cxx-cdtors -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote $BUILD_TMP/lib_su_fw_SIM_DBG-generated-files.hmap -iquote $BUILD_TMP/lib_su_fw_SIM_DBG-project-headers.hmap -F/Users/ryan/work/prog/sufw/project/bin -F$IOS_SDK/System/Library/PrivateFrameworks
+	
+	CO_LKFLAGS 		-static -arch_only i386 -syslibroot $IOS_SDK
+	CO_LKCPPFLAS	-arch i386 -isysroot $IOS_SDK -F$IOS_SDK/System/Library/PrivateFrameworks -mmacosx-version-min=10.6 -dead_strip -Xlinker -objc_abi_version -Xlinker 2 -framework OpenGLES -framework CoreMedia -framework AudioToolbox -framework Foundation -framework CoreVideo -framework AVFoundation -framework CoreGraphics -framework QuartzCore -framework UIKit
+	CO_PLISTFLAGS	-expandbuildsettings -format binary -platform iphonesimulator
+	CO_CPPDEFINES	__IPHONE_OS_VERSION_MIN_REQUIRED=40200 SU_IOS_SIM SU_IOS_C_DIALECTS_OBJCPP
+	
+	BIN2HCOM 	atmake tool bin2h
+	CCCOM		$IOS_BIN/gcc-4.2
+	CPPCOM		$IOS_BIN/g++-4.2
+	LKCOM		$IOS_BIN/libtool
+	PLISTCOM	$IOS_BIN/builtin-infoPlistUtility
+	DSYMCOM		$IOS_BIN/dsymutil
+	
+	APPDATA		$buildroot/demo1/data/EmbeddedData
+]
+
+@buildenv ios.release
+[
+	CCFLAGS			$CO_CCFLAGS
+	LKFLAGS			$CO_FLAGS
+	LKCPPFLAGS		$CO_LKCPPFLAS
+	CPPDEFINES 		$CO_CPPDEFINES NODEBUG _NODEBUG NDEBUG _NDEBUG RELEASE _RELEASE
+]
+
+@buildenv ios.depends
+[
+	INCLUDES 		${listixes({-I,},$INCLUDE)}
+	DEFINES 		${stripixes({-D,},$CPPDEFINES)}
+	LIBDEPDIRS 		${listixes({-L,},$LIB)}
+	LIBDEPS 		${listixes({-l,},$LIBS)} ${listixes({,},$SYS_LIBS)} ${ADDITIONALLIB}
+]
+
+@buildstep luatoh
+	inputs 	sua lua
+	outputs	h
+	unary
+	defines
+		message = "bin2h'ing file"
+[
+	$BIN2HCOM ifile=${SOURCE} ofile=${SOURCE}.h arrayname=1
+]
+
+@buildstep ios.ctoobj
+	inputs c cpp "c++" cxx
+	outputs o
+	unary
+	defines
+		message = "Compiling files"
+
+[
+	$CCCOM $CCFLAGS $DEFINES $INCLUDES -c ${SOURCE} -o ${TARGET}.o
+]
+
+@buildstep ios.objtolib
+	inputs o a
+	outputs a
+	multiple
+	defines
+		message = "Linking target"
+[
+	$LKCOM $LKFLAGS -o ${TARGET}.a ${SOURCES}
+]
+
+@buildstep ios.objtoexe
+	inputs o a
+	outputs so
+	multiple
+	defines
+		message = "Linking target"
+[
+	${mkdir($projoutpath/$projname.app)}
+	$CPPCOM $LIBDEPDIRS $LIBDEPS $LKCPPFLAGS -o ${projoutpath}/$projname.app/$projname ${SOURCES}
+]
+
+@buildstep ios.genplist
+	unary
+[
+	$PLISTCOM -genpkginfo ${projoutpath}.app/PkgInfo $CO_PLISTFLAGS -o $projoutpath/$projname.app/Info.plist
+]
+
+@buildstep ios.sotodsym
+	unary
+[
+	$DSYMCOM ${projoutpath}/$projname.app/$projname -o ${projoutpath}/$projname.app/$projname.app.dSym
+]
+
+@buildstep ios.appgen
+	unary
+[
+	atpython -u {$projoutpath.py} call={postbuild} project={$projoutpath} target={$projoutpath/$projname.app} appdata={$APPDATA}
+]
+
+
+@buildsetup ios.simulator.release
+{
+	config.default
+	config.ios
+	
+	ios.defines
+	ios.release
+	ios.depends
+	
+	luatoh
+	ios.ctoobj
+	ios.objtolib
+}
+
+@buildsetup ios.simulator.release.exe
+{
+	config.default
+	config.ios
+	
+	ios.defines
+	ios.release
+	ios.depends
+	
+	luatoh
+	ios.ctoobj
+	ios.objtolib
+	ios.objtoexe
+	ios.sotodsym
+	ios.appgen
+}
+
+

@@ -1,0 +1,183 @@
+@buildenv config.msvc
+	from '$devcenter/config/buildconfig_visual.py'
+		with
+			platform='x86'
+
+@buildenv config.dx
+	from '$devcenter/config/buildconfig_dx.py'
+
+@buildenv config.cg
+	from '$devcenter/config/buildconfig_cg.py'
+	
+	
+@buildenv dx.tools
+[
+	BIN2HCOM 		atmake tool bin2h
+	CGCCOM 			cgc
+	VSACOM			vsa
+	PSACOM 			psa
+	FXCCOM 			'$dxdir/utilities/bin/x86/fxc'
+]
+
+@buildenv msvc.tools
+[
+	CCCOM 			'$MSVC_INSTALL_DIR\VC\\bin\\cl'
+	LBCOM 			'$MSVC_INSTALL_DIR\VC\\bin\\lib'
+	LKCOM 			'$MSVC_INSTALL_DIR\VC\\bin\\link'
+]
+
+@buildenv msvc.all
+[
+	FXFLAGS	 		/T fx_2_0 /O2 /Vn fxcode /nologo
+	CO_CCFLAGS		/nologo /W3 /WX- /wd4018 /wd4244 /wd4503 /wd4530
+	CO_FLAGS		/NOLOGO /MACHINE:X86 /SUBSYSTEM:WINDOWS /DYNAMICBASE /ALLOWISOLATION /NXCOMPAT /FORCE:MULTIPLE /IGNORE:4006 /IGNORE:4221 /IGNORE:4099
+	CO_DLLFLAGS		/dll
+	CO_CPPDEFINES	WIN32 _WIN32 _WINDOWS _PC DX _DX _CRT_SECURE_NO_WARNINGS
+]
+
+@buildenv msvc.release
+[
+	CCFLAGS  		$CO_CCFLAGS /MD /O2 /Ot /Oy- /GF /Gd /MP
+	CPPFLAGS 		$CCFLAGS /Zc:wchar_t /Zc:forScope /GR-
+	LKFLAGS  		$CO_FLAGS
+	DLLFLAGS 		$CO_DLLFLAGS
+	CPPDEFINES 		$CO_CPPDEFINES NODEBUG _NODEBUG NDEBUG _NDEBUG RELEASE _RELEASE
+]
+	
+@buildenv msvc.debug
+[
+	CCFLAGS  		$CO_CCFLAGS /Od /Ob0 /wd4710 /RTC1 /MDd /GS /Z7 /MP
+	CPPFLAGS 		$CCFLAGS /Zc:wchar_t /Zc:forScope /GR-
+	LKFLAGS  		$CO_FLAGS /DEBUG
+	DLLFLAGS 		$CO_DLLFLAGS /DEBUG
+	CPPDEFINES 		$CO_CPPDEFINES DEBUG _DEBUG
+]
+
+@buildenv msvc.depends
+[
+	ADDITIONALLIB	{ws2_32.lib} {wininet.lib} {comctl32.lib}
+	INCLUDES 		${listixes({/I,},$INCLUDE)}
+	DEFINES 		${stripixes({/D,},$CPPDEFINES)}
+	LIBDEPDIRS 		${listixes({/LIBPATH:,},$LIB)}
+	LIBDEPS 		${listixes({,},$LIBS)} ${listixes({,},$SYS_LIBS)} ${ADDITIONALLIB}
+]
+
+@buildstep luatoh
+	inputs 	sua lua
+	outputs	h
+	unary
+	defines
+		message = "bin2h'ing file"
+[
+	$BIN2HCOM ifile=${SOURCE} ofile=${SOURCE}.h arrayname=1
+]
+
+@buildstep cgtocgo
+	inputs 	cg
+	outputs	cgo
+	unary
+	defines
+		message = "compiling cg files"
+[
+	$CGCCOM /nologo {-O ${SOURCE}.cgo} ${SOURCE}
+]
+
+@buildstep vsatovso
+	inputs 		vsa
+	outputs		vso
+	unary
+	defines
+		message = "compiling vsa files"
+[
+	$VSACOM /nologo {/Fh${SOURCE}.vso} ${SOURCE}
+]
+
+@buildstep psatopso
+	inputs 	psa
+	outputs	pso
+	unary
+	defines
+		message = "compiling psa files"
+[
+	$PSACOM /nologo {/Fh${SOURCE}.pso} ${SOURCE}
+]
+
+@buildstep fxtoh
+	inputs 	fx
+	outputs	h
+	unary
+	defines
+		message = "fx2h'ing file"
+[
+	$FXCCOM $FXFLAGS /Fh ${SOURCE}.h ${SOURCE}
+]
+
+@buildstep win32.ctoobj
+	inputs 	c
+	outputs	obj
+	unary
+	defines
+		message = "compiling c files"
+[
+	$CCCOM $DEFINES $INCLUDES $CCFLAGS /c ${SOURCE} {/Fo${TARGET}.obj}
+]
+	
+@buildstep win32.cpptoobj
+	inputs 	cpp cxx "c++"
+	outputs	obj
+	unary
+	defines
+		message = "compiling cpp files"
+[
+	$CCCOM $DEFINES $INCLUDES $CPPFLAGS /c ${SOURCE} {/Fo${TARGET}.obj}
+]
+
+@buildstep win32.objtolib
+	inputs 	obj lib
+	outputs	lib
+	multiple
+	defines
+		message = "compiling lib files"
+[
+	$LBCOM $LIBDEPDIRS $LIBDEPS /nologo ${SOURCES} {/OUT:${TARGET}.lib}
+]
+	
+@buildstep win32.objtodll
+	inputs 	obj lib
+	outputs	dll
+	multiple
+	defines
+		message = "linking dll files"
+[
+	$LKCOM $LIBDEPDIRS $LIBDEPS $DLLFLAGS /nologo ${SOURCES} {/OUT:${TARGET}.dll}
+]
+
+@buildstep win32.objtoexe
+	inputs 	obj lib
+	outputs	exe
+	multiple
+	defines
+		message = "linking exe files"
+[
+	$LKCOM $LIBDEPDIRS $LIBDEPS $LKFLAGS ${SOURCES} {/OUT:${TARGET}.exe}
+]
+
+@buildsetup win32.dx.cg.msvc.release
+{
+	config.default
+	config.msvc
+	config.dx
+	config.cg
+	dx.tools
+	msvc.tools
+	msvc.all
+	msvc.release
+	msvc.depends
+
+	luatoh
+	fxtoh
+	win32.ctoobj
+	win32.cpptoobj
+	win32.objtolib
+	win32.objtoexe
+}

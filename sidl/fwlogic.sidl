@@ -1,0 +1,37 @@
+
+
+@package su.fw.logic
+
+@iopath '$sufw/logic'
+
+
+
+@interface IStateMachine
+{
+	@func (bool)	IsRunning
+	@func (int)		State
+
+	@func (bool)	Start
+	@func (bool)	Start		: (int) inStateId
+	@func			Stop
+
+	@func			Step
+	@func			Gotostate	: (int) inStateId
+
+	@func			Raise		: (uint) inSignalId		-- an integer in [0,31]
+	@func (bool)	Raised		: (uint) inSignalId		-- an integer in [0,31]
+	@func			Clear		: (uint) inSignalId		-- an integer in [0,31]
+}
+
+
+
+
+@group group.su.fw.logic
+{
+	@folder 'cpp.logic'
+		adds '<*.h'
+		adds '<*.cpp'
+}
+
+
+

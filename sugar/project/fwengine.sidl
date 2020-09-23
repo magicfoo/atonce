@@ -1,0 +1,17 @@
+
+
+@package su.fw.engine
+
+@iopath '$sufw/engine'
+
+
+
+@group group.su.fw.engine
+{
+	@folder 'cpp.engine'
+		adds '<*.h'
+		adds '<*.cpp' ifexisting
+}
+
+
+

@@ -1,0 +1,130 @@
+@buildenv config.android
+	from '$devcenter/config/buildconfig_ndk.py'
+
+	
+@buildenv android.tools
+[
+	CCCOM		$NDK_BINDIR/arm-linux-androideabi-gcc
+	CPPCOM		$NDK_BINDIR/arm-linux-androideabi-g++
+	LKCOM		$NDK_BINDIR/arm-linux-androideabi-ar
+]
+
+@buildenv android.apk
+[
+	JAVA_PROJ	$buildroot\sufw-android\java_project
+	SRC_FILES	$JAVA_PROJ/src/*.java
+	ASSET_PATH	$JAVA_PROJ
+	MANIFEST_FILE $JAVA_PROJ/AndroidManifest.xml
+	RES_DIR 	$JAVA_PROJ/res
+	APK_NAME	SuActivity-release	
+	
+	AAPT		$AND_PLATFORMTOOLS/aapt
+]
+
+@buildenv android.all
+[
+	CFLAGS		-fno-exceptions -fpic -ffunction-sections -funwind-tables -fstack-protector -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -I$NDK_INCLUDEDIR -Wno-psabi -Wno-multichar -Wa,--noexecstack -Os -O0 -g -march=armv5te -mtune=xscale -msoft-float -mthumb
+	LFLAGS		-lc -lm -lstdc++ -lsupc++ -llog -lGLESv2 -Wl,-rpath-link=$NDK_LIBDIR -Wl,--no-undefined -Wl,-z,noexecstack -shared --sysroot=$NDK_SYSROOT 
+	CPPFLAGS	-fno-rtti -fpermissive
+	CO_CPPDEFINES	SU_HW_ANDROID ANDROID __ARM_ARCH_5__ __ARM_ARCH_5T__ __ARM_ARCH_5E__ __ARM_ARCH_5TE__
+]
+
+@buildenv android.release
+[
+	CPPDEFINES 	$CO_CPPDEFINES SU_RELEASE SU_NDEBUG NDEBUG
+]
+
+@buildenv android.debug
+[
+	CPPDEFINES 	$CO_CPPDEFINES SU_DEBUG DEBUG
+]
+
+@buildenv android.depends
+[
+	INCLUDES 		${listixes({-I,},$INCLUDE)}
+	DEFINES 		${stripixes({-D,},$CPPDEFINES)}
+]
+
+@buildstep android.ctoobj
+	inputs c
+	outputs o
+	unary
+	defines
+		message = "compiling c files"
+[
+	$CCCOM -o ${TARGET}.o -c ${SOURCE} $CFLAGS $DEFINES $INCLUDES
+]
+
+@buildstep android.cpptoobj
+	inputs cpp cxx "c++"
+	outputs o
+	unary
+	defines
+		message = "compiling cpp files"
+[
+	$CPPCOM -o ${TARGET}.o -c ${SOURCE} $CFLAGS $CPPFLAGS $DEFINES $INCLUDES
+]
+
+@buildstep android.objtolib
+	inputs o
+	outputs a
+	multiple
+	defines
+		message = "linking library"
+[
+	$LKCOM crs ${TARGET}.a ${SOURCES}
+]
+
+@buildstep android.objtoso
+	inputs o a
+	outputs so
+	multiple
+	defines
+		message = "linking program"
+[
+	$CPPCOM -o ${TARGET}.so ${SOURCES} $LFLAGS
+	${mkdir(${BUILD_TMP}/libs/armeabi)}
+	${copy(${TARGET}.so,${BUILD_TMP}/libs/armeabi/libsugarProg.so)}
+]
+
+@buildstep android.aapkgen
+	unary
+	defines
+		message = "Generate R.java (aapt)"
+[
+	${mkdir(${BUILD_TMP}\gen)}
+	$AAPT package -f -m -M $MANIFEST_FILE -S $RES_DIR -I $AND_INSTALL\platforms\android-8\android.jar -J $BUILD_TMP\gen
+	${mkdir(${BUILD_TMP}\classes)}
+	"$JAVA_INSTALL\\bin\\javac" -d $BUILD_TMP\classes -classpath "$BUILD_TMP\classes;$JAVA_PROJ;$JAVA_INSTALL\lib\tools.jar" -sourcepath $JAVA_PROJ\src;$BUILD_TMP\gen -target 1.5 -bootclasspath $AND_INSTALL\platforms\android-8\android.jar;$AND_INSTALL\add-ons\addon_google_apis_google_inc_8\libs\maps.jar -encoding ascii -g -source 1.5 ${SRC_FILES}
+	"$AND_PLATFORMTOOLS\\dx.bat" --dex --output=$BUILD_TMP\classes.dex $BUILD_TMP\classes
+	$AAPT package -f --debug-mode -M $MANIFEST_FILE -S $RES_DIR -A $ASSET_PATH -I $AND_INSTALL\platforms\android-8\android.jar -F $BUILD_TMP\$APK_NAME.ap_ -0 ""
+	"$AND_TOOLS\\apkbuilder.bat" $BUILD_TMP\$APK_NAME-unaligned.apk -z $BUILD_TMP\$APK_NAME.ap_ -nf $BUILD_TMP\libs -f $BUILD_TMP\classes.dex 2>&0
+	"$AND_TOOLS\\zipalign.exe" -f 4 $BUILD_TMP\$APK_NAME-unaligned.apk $BUILD_TMP\$APK_NAME.apk 
+]
+
+@buildsetup android.ndk.release
+{
+	config.default
+	config.android
+	
+	android.tools
+	android.all
+	android.release
+	android.depends
+	
+	android.ctoobj
+	android.cpptoobj
+	android.objtolib
+	android.objtoso
+}
+
+@buildsetup android.apk.release
+{
+	config.default
+	config.android
+	
+	android.tools
+	android.apk
+	
+	android.aapkgen
+}

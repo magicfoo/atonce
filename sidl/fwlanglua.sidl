@@ -1,0 +1,674 @@
+
+@package su.fw.lang
+
+@outpath '$sufw/lang/lua'
+
+
+
+
+
+@interface ILuaState
+{
+	@forward lua_State
+
+	@enum Status
+		S_UNDEFINED				-- undefined
+		S_RUNNING				-- running
+		S_YIELDED				-- yielded coroutine is waiting to resume
+		S_FINISHED				-- task or coroutine has finished normally
+		S_ERRCHUNK				-- invalid chunk
+		S_ERRSYNTAX				-- syntax error
+		S_ERRRUN				-- runtime error
+		S_ERRMEM				-- memory failure
+		S_ERRERR				-- error in the error handler function
+		S_ERRFATAL				-- other fatal error
+	
+	@struct Chunk
+		(byte*)			baddr
+		(uint)			bsize
+		(LString)		name
+		(BString<2048>)	path
+
+	@struct Error
+		(Status)		status
+		(BString<2048>)	reason		-- error reason available for CS_ERRxxx status
+
+
+	-- set up the vm
+
+	@func	(bool)			Realize				: (bool)	inOptimizeCode = (SU_BUILD_FASTCODE)
+												: (Pool*)	inStatePool    = (NULL)
+	@func	(bool)			IsRealized
+	@func 					Unrealize
+	@func	(lua_State*)	GetState
+	@func	(Pool*)			GetStatePool
+	@func					GarbageCollect
+
+
+	-- run tasks & co-routines
+
+	@func	(bool)			RunTask					: (Chunk&)		inChunk
+													: (Error*)		outError = (NULL)
+
+	@func	(int)			StartCoroutine			: (Chunk&)		inChunk
+													: (Error*)		outError = (NULL)
+	@func	(Status)		GetCoroutineStatus		: (int)			inCoid
+	@func	(bool)			ResumeCoroutine			: (int)			inCoid
+													: (Error*)		outError = (NULL)
+	@func					RecycleCoroutine		: (int)			inCoid
+}
+
+
+
+
+@implementation MLuaState
+     concerns ILuaState ISwitch
+
+
+
+
+
+
+@interface ILuaLang
+{
+	@forward lua_State
+
+	@switch :lua			error
+	@switch :lua			traceback
+	@switch :lua			breakpoint
+	@switch :lua			where
+	@switch :lua			getInfo
+	@switch :lua			getRegistry
+	@switch :lua			getLocal
+	@switch :lua			findLocal		-- findLocal( level, name )
+	@switch :lua			setLocal
+	@switch :lua			getChunkLevel
+	@switch :lua			isBytecode
+	@switch :lua			parseFile		-- parseFile( path [, name] )
+	@switch :lua			parseText		-- parseText( text [, name] )
+	@switch :lua			dumpCode
+	@switch :lua			loadCode
+	@switch :lua			sizeOf			-- amount of keys for table, or objLen
+	@switch :lua			isNone			-- nil or 0 or "" or {}
+	@switch :lua			isNumber
+	@switch :lua			isInteger
+	@switch :lua			toInteger
+	@switch :lua			isNil
+	@switch :lua			isString
+	@switch :lua			isBinary
+	@switch :lua			isFunction
+	@switch :lua			isTable
+	@switch :lua			toTable
+	@switch :lua			clearTable
+	@switch :lua			dupTable
+	@switch :lua			copyTable
+	@switch :lua			resizeTable
+	@switch :lua			countTable
+	@switch :lua			isArray			-- table with keys of type integer only, in the complete range [1,n]
+	@switch :lua			countArray
+	@switch :lua			isEmpty			-- true if table has no key
+	@switch	:lua			getKeys			-- { [k1]=v1, [k2]=v2, ... } => { [1]=k1, [2]=k2, ... }
+	@switch	:lua			getValues		-- { [k1]=v1, [k2]=v2, ... } => { [1]=v1, [2]=v2, ... }
+	@switch	:lua			mapValues		-- { [k1]=v1, [k2]=v2, ... } => { [v1]=1, [v2]=1, ... }
+}
+
+@implementation MLuaLang
+	static
+	concerns ILuaLang ISwitch
+
+
+
+
+
+
+@interface ILuaString
+{
+	@forward lua_State
+
+	@switch :lua			len
+	@switch :lua			cvt
+	@switch :lua			format
+	@switch :lua			match
+	@switch :lua			decodeHex
+	@switch :lua			decodeFloat
+
+	@switch :lua			isEmpty
+	@switch :lua			isSpace
+	@switch :lua			isAlpha
+	@switch :lua			isDigit2
+	@switch :lua			isDigit10
+	@switch :lua			isDigit16
+	@switch :lua			isAlnum
+	@switch :lua			isUpper
+	@switch :lua			isLower
+	@switch :lua			isIdent
+
+	@switch :lua			compare
+	@switch :lua			equals
+	@switch :lua			find
+	@switch :lua			findAny
+	@switch :lua			startsWith
+	@switch :lua			startsWithAny
+	@switch :lua			endsWith
+	@switch :lua			endsWithAny
+	@switch :lua			copy
+	@switch :lua			indexOf
+	@switch :lua			indexOfAny
+	@switch :lua			upper
+	@switch :lua			lower
+
+	@switch :lua			strip
+	@switch :lua			split
+	@switch :lua			splitlines
+	@switch :lua			splitargs
+	@switch :lua			join
+	@switch :lua			mid
+	@switch :lua			xmid
+	@switch :lua			left
+	@switch :lua			right
+	@switch :lua			front
+	@switch :lua			back
+	@switch :lua			replace
+	@switch :lua			reverse
+}
+
+@implementation MLuaString
+	static
+	concerns ILuaString ISwitch
+
+
+
+
+
+@interface ILuaCore
+{
+	@forward lua_State
+
+	@switch :lua			stdout
+	@switch :lua			stderr
+	@switch :lua			loadProfile
+	@switch :lua			update
+	@switch :lua			processEvent
+	@switch :lua			waitEvent
+	@switch :lua			setWaitInterval
+	@switch :lua			sleep
+	@switch :lua			buildLevel
+	@switch :lua			buildRevision
+	@switch :lua			buildPlatform
+}
+
+
+@implementation MLuaCore
+	static
+	concerns ILuaCore ISwitch
+
+
+
+
+
+@interface ILuaMath
+{
+	@forward lua_State
+
+	@switch :lua			rand
+	@switch :lua			srand
+	@switch :lua			cos
+	@switch :lua			sin
+	@switch :lua			tan
+	@switch :lua			sqrt
+
+
+
+	@switch luavec2 alias lua as LuaVec2_
+	@switch :lua			newVec2			-- (), (x,y), ({[1]=x,[2]=y})
+	@switch :luavec2		x
+	@switch :luavec2		y
+	@switch :luavec2		yx				-- return newVec2(y,x)
+	@switch :luavec2		asTable			-- return { [1]=x, [2]=y }
+
+	@switch luavec3 alias lua as LuaVec3_
+	@switch :lua			newVec3
+	@switch :luavec3		x
+	@switch :luavec3		y
+	@switch :luavec3		z
+	@switch :luavec3		xzy
+	@switch :luavec3		yxz
+	@switch :luavec3		yzx
+	@switch :luavec3		zxy
+	@switch :luavec3		zyx
+	@switch :luavec3		asTable			-- return { [1]=x, [2]=y, [3]=z }
+
+	@switch luavec4 alias lua as LuaVec4_
+	@switch :lua			newVec4
+	@switch :luavec4		x
+	@switch :luavec4		y
+	@switch :luavec4		z
+	@switch :luavec4		w
+	@switch :luavec4		asTable			-- return { [1]=x, [2]=y, [3]=z, [4]=w }
+
+	@switch luaquat alias lua as LuaQuat_
+	@switch :lua			newQuat
+	@switch :luaquat		x
+	@switch :luaquat		y
+	@switch :luaquat		z
+	@switch :luaquat		w
+	@switch :luaquat		xzyw
+	@switch :luaquat		asTable			-- return { [1]=x, [2]=y, [3]=z, [4]=w }
+
+	@switch luamat alias lua as LuaMat_
+	@switch :lua			newMatrix
+	@switch :luamat			get				-- (r,c)
+	@switch :luamat			set				-- (r,c,v), ( {[1]=m11, [5]=m21, ..} )
+	@switch :luamat			asTable			-- return { [1]=m11, [2]=m12, ..., [16]=m44 }
+
+
+	-- operations
+	@switch :lua			copy			--	vec[2,3,4],		quat,	matrix
+	@switch :lua			zero			--	vec[2,3,4],		quat,	matrix
+	@switch :lua			identity		--					quat,	matrix
+	@switch :lua			isIdentity		--					quat,	matrix
+	@switch :lua			norm			--	vec[2,3,4],		quat
+	@switch :lua			norm2			--	vec[2,3,4],		quat
+	@switch :lua			normalize		--	vec[2,3,4],		quat,	matrix
+	@switch :lua			orthoNormalize	--							matrix
+	@switch :lua			cross			--	vec[2,3,4]
+	@switch :lua			dot				--	vec[2,3,4],		quat
+	@switch :lua			near			--	vec[2,3,4],		quat
+	@switch :lua			add				--	vec[2,3,4],		quat,	matrix
+	@switch :lua			sub				--	vec[2,3,4],		quat,	matrix
+	@switch :lua			mul				--	vec[2,3,4],		quat,	matrix
+	@switch :lua			min				--	vec[2,3,4]
+	@switch :lua			max				--	vec[2,3,4]
+	@switch :lua			scale			--	vec[2,3,4],				matrix
+	@switch :lua			apply			--	vec[2,3,4]
+	@switch :lua			applyVector		--	vec[2,3,4]
+	@switch :lua			lerp			--	vec[2,3,4]
+	@switch :lua			slerp			--					quat
+	@switch :lua			inverse			--					quat,	matrix			for matrix : o, det = inverse( i ) || det = inverse( o, i )
+	@switch :lua			fastInverse		--					quat,	matrix
+	@switch :lua			translate		--							matrix
+	@switch :lua			preTranslate	--							matrix
+	@switch :lua			rotate			--							matrix
+	@switch :lua			preRotate		--							matrix
+	@switch :lua			rotateX			--							matrix
+	@switch :lua			rotateY			--							matrix
+	@switch :lua			rotateZ			--							matrix
+	@switch :lua			preRotateX		--							matrix
+	@switch :lua			preRotateY		--							matrix
+	@switch :lua			preRotateZ		--							matrix
+	@switch :lua			preScale		--							matrix
+	@switch :lua			translation		--							matrix
+	@switch :lua			rotationX		--							matrix
+	@switch :lua			rotationY		--							matrix
+	@switch :lua			rotationZ		--							matrix
+	@switch :lua			rotation		--							matrix
+	@switch :lua			scaling			--							matrix
+	@switch :lua			buildTR			--							matrix
+}
+
+
+@implementation MLuaMath
+	static
+	concerns ILuaMath ISwitch
+
+
+
+
+@interface ILuaIO
+{
+	@forward lua_State
+
+	@switch :lua			isExists
+	@switch :lua			isEmpty
+	@switch :lua			isDirectory
+	@switch :lua			isFile
+	@switch :lua			isReadOnly
+	@switch :lua			isHidden
+	@switch :lua			isSystem
+	@switch :lua			isFullname
+	@switch :lua			findFile
+	@switch :lua			listDirectory
+	@switch	:lua			splitExtension
+	@switch	:lua			hasExtension
+	@switch	:lua			getExtension
+	@switch	:lua			getSize
+	@switch	:lua			glob
+	@switch :lua			getDirname
+	@switch :lua			getBasename
+	@switch :lua			getFullname
+	@switch :lua			getNormalized
+	@switch :lua			getHostPath
+	@switch :lua			getVirtualPath
+	@switch :lua			hashContent
+	@switch :lua			removeFile
+	@switch	:lua			removeDir
+	@switch :lua			parseStream			-- lua-table <= yaml-string
+	@switch :lua			loadStream			-- lua-table <= yaml-file
+	@switch :lua			presentStream		-- lua-table => yaml-string	( [inref,] e1, e2, ... )
+	@switch :lua			dumpStream			-- lua-table => yaml-file	( yfile, [inref,] e1, e2, ... )
+	@switch :lua			loadBinary			-- load blob from a file
+	@switch :lua			dumpBinary			-- dump blob to a file
+	@switch :lua			mount
+	@switch :lua			unmount
+	@switch :lua			unmountAll
+	@switch :lua			listMount
+}
+
+
+@implementation MLuaIO
+	static
+	concerns ILuaIO ISwitch
+
+
+
+
+@interface ILuaUtil
+{
+	@forward lua_State
+
+	@switch :lua			hash32
+	@switch :lua			hash128
+	@switch :lua			sid
+	@switch :lua			newBlob			-- newBlob( inbsize )
+	@switch :lua			newArray		-- newArray( insize ) corresponds to a reserved lua table, faster to populate than a empty table
+
+	-- console
+	@switch :lua			setConsoleFile
+
+	-- clock
+	@switch :lua			getTime
+	@switch :lua			getDate
+	@switch :lua			getNow
+
+	-- mapping
+	@switch :lua			selectMap
+	@switch :lua			binarizeMap
+
+	-- pak file
+	@switch luapak alias lua as LuaPak_
+	@switch :lua			listMaps
+	@switch :lua			listTags
+	@switch :lua			openPak
+	@switch :luapak			getHeader
+	@switch :luapak			getDesc
+	@switch :luapak			enumDesc
+	@switch :luapak			extractBytes
+	@switch :luapak			extractRaw
+	@switch :luapak			extractContent
+	@switch :luapak			startUpdating
+	@switch :luapak			updateLabel
+	@switch :luapak			updateRevision
+	@switch :luapak			updateContent
+	@switch :luapak			endUpdating
+	@switch :luapak			optimize
+	@switch :luapak			gc
+
+	-- zip file
+	@switch luazip alias lua as LuaZip_
+	@switch :lua			openZip
+	@switch :luazip			len
+	@switch :luazip			comment
+	@switch :luazip			tell			-- give the current position in uncompressed data
+	@switch :luazip			eof				-- return 1 if the end of file was reached, 0 elsewhere
+	@switch :luazip			firstFile
+	@switch :luazip			nextFile
+	@switch :luazip			seekFile
+	@switch :luazip			aboutCurrent
+	@switch :luazip			openCurrent
+	@switch :luazip			closeCurrent
+	@switch :luazip			readCurrent		-- read a file, previously opened
+	@switch :luazip			gc
+
+	-- vector bit stream
+	@switch :lua			newVector
+	@switch :lua			vcpy
+	@switch :lua			veq
+	@switch :lua			vlen
+	@switch :lua			vstr
+	@switch :lua			vlb
+	@switch :lua			vlh
+	@switch :lua			vlw
+	@switch :lua			vld
+	@switch :lua			vlq
+	@switch :lua			vlf
+	@switch :lua			vsb
+	@switch :lua			vsh
+	@switch :lua			vsw
+	@switch :lua			vsd
+	@switch :lua			vsq
+	@switch :lua			vsf
+
+	-- cursor bit stream
+	@switch luacurs alias lua as LuaCurs_
+	@switch :lua			newCursor		-- newCursor( blob )
+	@switch :luacurs		size
+	@switch :luacurs		pos
+	@switch :luacurs		seek			-- seek( bits )
+	@switch :luacurs		backward		-- backward()
+	@switch :luacurs		hasbackward		-- hasbackward( bits )
+	@switch :luacurs		gobackward		-- gobackward( bits )
+	@switch :luacurs		forward			-- forward()	-- forward( bits )
+	@switch :luacurs		hasforward		-- hasforward( bits )
+	@switch :luacurs		goforward		-- goforward( bits )
+	@switch :luacurs		align			-- align( bits )
+	@switch :luacurs		uread			-- uread( bits )
+	@switch :luacurs		sread			-- sread( bits )
+	@switch :luacurs		sizeB
+	@switch :luacurs		seekB			-- seekB( bytes )
+	@switch :luacurs		usedB			-- usedB()	-- usedB( byteCount )
+	@switch :luacurs		leftB			-- leftB()	-- leftB( byteCount )
+	@switch :luacurs		findB			-- findB( v )
+	@switch :luacurs		writeu8			-- writeu8( v )
+	@switch :luacurs		writes8			-- writes8( v )
+	@switch :luacurs		writeu16		-- writeu16( v )
+	@switch :luacurs		writes16		-- writes16( v )
+	@switch :luacurs		writeu32		-- writeu32( v )
+	@switch :luacurs		writes32		-- writes32( v )
+	@switch :luacurs		writef32		-- writef32( v )
+	@switch :luacurs		gc
+}
+
+@implementation MLuaUtil
+	static
+	concerns ILuaUtil ISwitch
+
+
+
+
+
+
+@interface ILuaNet
+{
+	@forward lua_State
+
+	@switch :lua			decomposeUrl
+
+	@switch luaco alias lua as LuaCo_
+	@switch :lua			newConnection
+	@switch :luaco			setopt
+	@switch :luaco			getopt
+	@switch :luaco			delopt
+	@switch :luaco			getstate
+	@switch :luaco			connect
+	@switch :luaco			disconnect
+	@switch :luaco			receive
+	@switch :luaco			send
+	@switch :luaco			perform
+	@switch :luaco			gc
+}
+
+@implementation MLuaNet
+	static
+	concerns ILuaNet ISwitch
+
+
+
+
+
+
+@interface ILuaGraphic
+{
+	@forward lua_State
+
+	-- direct-draw object
+	@switch luadd alias lua as LuaDD_
+	@switch :lua			newDirectDraw
+	@switch :luadd			realize
+	@switch :luadd			createView
+	@switch :luadd			unrealize
+	@switch :luadd			countDisplay
+	@switch :luadd			countScreen
+	@switch	:luadd			getShaderModel
+	@switch :luadd			gc
+}
+
+@implementation MLuaGraphic
+	static
+	concerns ILuaGraphic ISwitch
+
+
+
+
+
+@interface ILuaFltk
+{
+	@forward lua_State
+
+	@switch :lua			check
+	@switch :lua			wait			-- in mstime
+	@switch :lua			flush
+	@switch :lua			redraw
+	@switch :lua			belowmouse
+	@switch :lua			focus
+	@switch :lua			screencount
+	@switch :lua			buildversion
+	@switch :lua			lock
+	@switch :lua			unlock
+	@switch :lua			xid				-- widget to xid (HWND, IView, ...)
+	@switch :lua			find			-- xid to widget
+	@switch :lua			iswindow		-- true if the widget is a Fl_Window
+	@switch :lua			isgroup			-- true if the widget is a Fl_Group
+	@switch :lua			firstWindow
+	@switch :lua			nextWindow
+	@switch :lua			mousexy	
+
+	@switch luaimg alias lua as LuaImg_
+	@switch :lua			newImage
+	@switch :lua			imageId
+	@switch :luaimg			width
+	@switch :luaimg			height
+	@switch :luaimg			bpp
+	@switch :luaimg			gc
+}
+
+@implementation MLuaFltk
+	alias NotSupported
+
+
+
+
+
+@interface ILuaWindows
+{
+	@forward lua_State
+
+	@switch :lua			programFile
+	@switch :lua			cmdLine
+	@switch :lua			currentDirectory
+	@switch :lua			computerName
+	@switch :lua			tempPath
+	@switch :lua			shellFolder
+	@switch :lua			getEnv
+	@switch :lua			getLogicalDrives
+	@switch :lua			getLogicalDriveStrings
+	@switch	:lua			getDiskFreeSpace
+	@switch :lua			getDriveType
+	@switch :lua			isLinkFile
+	@switch :lua			readLinkFile
+
+	-- HKEY object
+	--
+	-- Registry Value Types
+	--	'REG_SZ'
+	--	'REG_EXPAND_SZ'
+	--	'REG_DWORD'
+	--	'REG_QWORD'
+	--	'REG_BINARY'
+	--	'REG_NONE'
+	--	'REG_DWORD_LITTLE_ENDIAN'
+	--	'REG_DWORD_BIG_ENDIAN'
+	--	'REG_LINK'
+	--	'REG_MULTI_SZ'
+	--	'REG_QWORD_LITTLE_ENDIAN'
+	--
+	-- Registry access rights  for open() and create() methods
+	--	'KEY_ALL_ACCESS'
+	--	'KEY_CREATE_LINK'
+	--	'KEY_CREATE_SUB_KEY'
+	--	'KEY_ENUMERATE_SUB_KEYS'
+	--	'KEY_EXECUTE'
+	--	'KEY_NOTIFY'
+	--	'KEY_QUERY_VALUE'
+	--	'KEY_READ'
+	--	'KEY_SET_VALUE'
+	--	'KEY_WRITE'
+
+	@switch luahk alias lua as LuaHK_
+	@switch :lua			hkeyClassesRoot
+	@switch :lua			hkeyCurrentConfig
+	@switch :lua			hkeyCurrentUser
+	@switch :lua			hkeyLocalMachine
+	@switch :lua			hkeyUsers
+	@switch :luahk			open
+	@switch :luahk			create
+	@switch :luahk			close
+	@switch :luahk			delete
+	@switch :luahk			queryValue
+	@switch :luahk			setValue
+	@switch :luahk			deleteValue
+	@switch :luahk			enumKeys
+	@switch :luahk			enumValues
+	@switch :luahk			toString
+	@switch :luahk			gc
+	
+}
+
+@implementation MLuaWindows
+	alias NotSupported
+
+
+
+
+
+
+@interface ILuaDatatree
+{
+	@forward lua_State
+
+	@func	(bool)			Setup			: (lua_State*) inL
+	@func	(lua_State*)	GetState
+	@func					PushPropTable
+}
+
+@implementation MLuaDatatree
+    concerns IDatatree ILuaDatatree
+
+
+
+
+@inpath '$sufw/lang'
+
+@group group.su.fw.lang.lua
+{
+	@folder 'cpp.lang'
+		adds '<*lua*.h'
+	@folder 'cpp.lang.lua'
+		adds '<lua/lua*.h'
+		adds '<lua/lua*.cpp'
+		adds '<lua/su_*.h'
+		adds '<lua/su_*.cpp'
+}
+
+
+
+

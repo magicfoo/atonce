@@ -1,0 +1,314 @@
+
+@package su.fw.lang
+
+@outpath '$sufw/lang/flash'
+
+
+
+@interface ISwfReader
+{
+
+	@enum TagCode
+		End								= (0)
+		ShowFrame						= (1)
+		DefineShape						= (2)
+		-- 3
+		PlaceObject						= (4)
+		RemoveObject					= (5)
+		DefineBits						= (6)
+		DefineButton					= (7)
+		JPEGTables						= (8)
+		SetBackgroundColor				= (9)
+		DefineFont						= (10)
+		DefineText						= (11)
+		DoAction						= (12)
+		DefineFontInfo					= (13)
+		DefineSound						= (14)
+		StartSound						= (15)
+		-- 16
+		DefineButtonSound				= (17)
+		SoundStreamHead					= (18)
+		SoundStreamBlock				= (19)
+		DefineBitsLossless				= (20)
+		DefineBitsJPEG2					= (21)
+		DefineShape2					= (22)
+		DefineButtonCxform				= (23)
+		Protect							= (24)
+		-- 25
+		PlaceObject2					= (26)
+		-- 27
+		RemoveObject2					= (28)
+		-- 31
+		DefineShape3					= (32)
+		DefineText2						= (33)
+		DefineButton2					= (34)
+		DefineBitsJPEG3					= (35)
+		DefineBitsLossless2				= (36)
+		DefineEditText					= (37)
+		-- 38
+		DefineSprite					= (39)
+		-- 40-42
+		FrameLabel						= (43)
+		-- 44
+		SoundStreamHead2				= (45)
+		DefineMorphShape				= (46)
+		-- 47
+		DefineFont2						= (48)
+		-- 49-55
+		ExportAssets					= (56)
+		ImportAssets					= (57)
+		EnableDebugger					= (58)
+		DoInitAction					= (59)
+		DefineVideoStream				= (60)
+		VideoFrame						= (61)
+		DefineFontInfo2					= (62)
+		-- 63
+		EnableDebugger2					= (64)
+		ScriptLimits					= (65)
+		SetTabIndex						= (66)
+		-- 67-68
+		FileAttributes					= (69)
+		PlaceObject3					= (70)
+		ImportAssets2					= (71)
+		-- 72
+		DefineFontAlignZones			= (73)
+		CSMTextSettings					= (74)
+		DefineFont3						= (75)
+		SymbolClass						= (76)
+		Metadata						= (77)
+		DefineScalingGrid				= (78)
+		-- 79-81
+		DoABC							= (82)
+		DefineShape4					= (83)
+		DefineMorphShape2				= (84)
+		-- 85
+		DefineSceneAndFrameLabelData	= (86)
+		DefineBinaryData				= (87)
+		DefineFontName					= (88)
+		StartSound2						= (89)
+		DefineBitsJPEG4					= (90)
+		DefineFont4						= (91)
+		-- 92-1023
+
+
+	@enum Constants
+		ShapeRecord_Edge				= (1<<5)
+		ShapeEdge_Straigth				= (1<<4)
+		StyleChange_NewStyles			= (1<<4)
+		StyleChange_LineStyle			= (1<<3)
+		StyleChange_FillStyle1			= (1<<2)
+		StyleChange_FillStyle0			= (1<<1)
+		StyleChange_MoveTo				= (1<<0)
+		--
+		DefFtInf_SmallText				= (1<<5)
+		DefFtInf_ShiftJIS				= (1<<4)
+		DefFtInf_ANSI					= (1<<3)
+		DefFtInf_Italic					= (1<<2)
+		DefFtInf_Bold					= (1<<1)
+		DefFtInf_WideCodes				= (1<<0)
+		--
+		DefFt23_HasLayout				= (1<<7)
+		DefFt23_ShiftJIS				= (1<<6)
+		DefFt23_SmallText				= (1<<5)
+		DefFt23_ANSI					= (1<<4)
+		DefFt23_WideOffsets				= (1<<3)
+		DefFt23_WideCodes				= (1<<2)
+		DefFt23_Italic					= (1<<1)
+		DefFt23_Bold					= (1<<0)
+		--
+		DefEdTx_HasText					= (1<<15)
+		DefEdTx_WordWrap				= (1<<14)
+		DefEdTx_Multiline				= (1<<13)
+		DefEdTx_Passwd					= (1<<12)
+		DefEdTx_Readonly				= (1<<11)
+		DefEdTx_HasTextColor			= (1<<10)
+		DefEdTx_HasMaxLength			= (1<<9)
+		DefEdTx_HasFont					= (1<<8)
+		DefEdTx_HasFontClass			= (1<<7)
+		DefEdTx_AutoSize				= (1<<6)
+		DefEdTx_HasLayout				= (1<<5)
+		DefEdTx_NoSelect				= (1<<4)
+		DefEdTx_Border					= (1<<3)
+		DefEdTx_WasStatic				= (1<<2)
+		DefEdTx_Html					= (1<<1)
+		DefEdTx_UseOutlines				= (1<<0)
+		# --
+		TextRecord_HasFont				= (1<<3)
+		TextRecord_HasColor				= (1<<2)
+		TextRecord_HasYOffset			= (1<<1)
+		TextRecord_HasXOffset			= (1<<0)
+
+		GlyphEdge_Curved				= (1<<0)
+		GlyphEdge_MoveTo				= (1<<1)
+
+		TextAlign_Undefined				= (-1)
+		TextAlign_Left					= (0)
+		TextAlign_Right					= (1)
+		TextAlign_Center				= (2)
+		TextAlign_Justify				= (3)
+
+		Lang_Locale						= (0)
+		Lang_Latin						= (1)	// The western languages covered by latin-1: English, French, German, etc.
+		Lang_Japanese					= (2)
+		Lang_Korean						= (3)
+		Lang_SimplifiedChinese			= (4)
+		Lang_TraditionalChinese			= (5)
+
+
+	@struct Tag
+		(TagCode)		code
+		(uint64)		pos
+		(uint64)		begin
+		(uint64)		end
+		(uint64)		next
+
+	@struct Frame
+		(uint64)		fromTag
+		(uint64)		toTag
+		(pcstr)			label
+		(bool)			isAnchor
+
+	@struct Rect
+		(float)			xmin
+		(float)			xmax
+		(float)			ymin
+		(float)			ymax
+
+	@struct Color
+		(byte)			r -- g b a
+
+	@struct CXForm
+		(int)			aa
+		(int)			ab			// a is multiply factor, b is addition factor
+		(int)			ra
+		(int)			rb
+		(int)			ga
+		(int)			gb
+		(int)			ba
+		(int)			bb
+
+	@struct Matrix
+		(float)			a
+		(float)			b
+		(float)			c
+		(float)			d
+		(float)			tx
+		(float)			ty
+
+	@struct FontGlyph
+		(int)			code
+		(vector<Vec2>)	deltas
+		(vector<uint>)	edges		// GlyphEdge_... flags
+
+	@type Glyphs = (vector<FontGlyph>)
+
+	@struct FontLayout
+		(bool)			defined
+		(float)			ascent
+		(float)			descent
+		(float)			leading
+		(vector<float>)	advance		// for each glyph
+
+	@struct FontTag
+		(bool)			smallText
+		(bool)			italic
+		(bool)			bold
+		(uint)			langCode
+		(String)		fontName
+		(Glyphs)		glyphs
+		(FontLayout)	layout
+
+	@struct StaticText
+		(int)			fontid
+		(uint32)		color
+		(Vec2)			xyoffset
+		(float)			height
+		(vector<int>)	glyphs
+		(vector<int>)	advances
+
+	@type StaticTexts = (vector<StaticText>)
+
+	@struct StaticTextTag
+		(Rect)			bound
+		(Matrix)		trs
+		(StaticTexts)	texts
+
+	@struct DynamicTextTag
+		(int)			fontid
+		(Rect)			bound
+		(uint32)		color			// rgba
+		(float)			height
+		(int)			maxLength
+		(bool)			wordWrap
+		(bool)			multiline
+		(bool)			passwd
+		(bool)			readOnly
+		(bool)			autoSize
+		(bool)			selectable
+		(bool)			border
+		(bool)			wasStatic
+		(bool)			html
+		(bool)			useOutlines
+		(int)			align			// TextAlign_...
+		(float)			lmargin
+		(float)			rmargin
+		(float)			ident
+		(float)			leading
+		(String)		fontClass
+		(String)		varName
+		(String)		text
+
+
+	@func	(bool)				Realize				: (pcstr)		inPath
+													: (Pool*)		inPool = (NULL)
+
+	@func	(bool)				Realize				: (byte*)		inBytes
+													: (uint)		inBSize
+													: (Pool*)		inPool = (NULL)
+
+	@func	(bool)				IsRealized
+
+	@func						Unrealize
+
+	@func	(uint)				GetByteSize
+
+	@func	(bool)				IsPacked
+	@func	(uint)				GetVersionNumber
+	@func	(uint)				GetFrameWidth
+	@func	(uint)				GetFrameHeight
+	@func	(uint)				GetFrameRate
+
+	@func	(MCursor)			GetCursor
+
+	@func	(uint)				CountTag
+	@func	(Tag)				GetTag				: (uint)		inIndex
+	@func	(Tag)				GetFirstTag
+	@func	(Tag)				GetLastTag
+
+	@func	(uint)				CountFrame
+	@func	(Frame)				GetFrame			: (uint)		inIndex
+
+}
+
+
+
+@implementation MSwfReader
+     concerns ISwfReader
+
+
+
+
+@inpath '$sufw/lang'
+
+@group group.su.fw.lang.flash
+{
+	@folder 'cpp.lang'
+		adds '<*flash*.h'
+	@folder 'cpp.lang.flash'
+		adds '<flash/*.h'
+		adds '<flash/*.cpp'
+}
+
+
+
+

@@ -1,0 +1,4277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+	<ItemGroup>
+		<Filter Include="auth">
+			<UniqueIdentifier>{108607B8-E01F-3B0E-8088-38DBE4715F1C}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="auth\windows">
+			<UniqueIdentifier>{BC744189-C539-328F-BC5E-312F36228DFE}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="auth\windows\precompiled">
+			<UniqueIdentifier>{05A6D58A-E21A-3F5A-ABC1-382870578AFD}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="auth\windows\sufl">
+			<UniqueIdentifier>{AFE1818C-C48A-380B-84D2-8A5E1AEFAF2E}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="auth\windows\sufl\pixmaps">
+			<UniqueIdentifier>{6A8422EB-4FF6-317A-A89C-E95053C45CB8}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp">
+			<UniqueIdentifier>{AD466F4F-4262-3D32-B8F0-4DB7AFDBB3A5}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\asset">
+			<UniqueIdentifier>{9569B04E-FF98-33FF-B6C9-8C8A9DEDB2C7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\codec">
+			<UniqueIdentifier>{4042D5AB-DB04-3397-9E64-DF232ECED421}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\core">
+			<UniqueIdentifier>{87B115FA-BD37-340F-9F0A-FBAEB6C3E86F}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\core\base">
+			<UniqueIdentifier>{31B0B241-B9CE-3C4F-9F15-6DF9129D4D40}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\core\base\md5">
+			<UniqueIdentifier>{C801F1B2-460D-381D-932D-B9CCD757C5C8}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\core\container">
+			<UniqueIdentifier>{208DA0A8-69C7-318B-A578-051C9652A5D1}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\core\dg">
+			<UniqueIdentifier>{5B55C7DF-CAE1-3450-B994-7EE2673C61D7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\core\fs">
+			<UniqueIdentifier>{B86E4C22-AE9A-34C0-B7C7-611FE2494017}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\core\mem">
+			<UniqueIdentifier>{D52F3E4D-EAE4-3B00-880E-63E3D4316BE4}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\core\misc">
+			<UniqueIdentifier>{A4004339-B767-372B-A7D6-A6C0D1BD573C}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\core\net">
+			<UniqueIdentifier>{4A40EFF5-6AA0-3699-9614-13E7DF332B64}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\core\test">
+			<UniqueIdentifier>{CE8CD712-88CC-3362-AF7C-E68BC917FB5B}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\core\thread">
+			<UniqueIdentifier>{2029CDF6-FC09-3E0B-A9D6-A14209AF9944}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\direct driver">
+			<UniqueIdentifier>{8BE2461A-355D-3B92-BF6A-74B9EC5C125E}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\dx9">
+			<UniqueIdentifier>{088CDAFB-65F5-3B6C-866D-9D85A86FEA3D}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\engine">
+			<UniqueIdentifier>{AECAB1BF-767B-3A49-92CB-ACE3E1AB7946}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\gl">
+			<UniqueIdentifier>{F0246196-C4CC-383A-87F8-FF42DE589EF8}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\gl\host">
+			<UniqueIdentifier>{25EE529C-E29C-3CD9-808E-950CA6A32EE7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\lang">
+			<UniqueIdentifier>{641F5763-7749-353A-8454-CF108FB45695}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\lang\flash">
+			<UniqueIdentifier>{D920E2EC-FDF0-37B5-9A44-27960390F2D5}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\lang\lua">
+			<UniqueIdentifier>{B70AA94D-7C97-311B-A1DA-B7856E718DD0}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\logic">
+			<UniqueIdentifier>{E3088FA8-45D5-3A2C-B1E9-63C7C484A6D3}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\media">
+			<UniqueIdentifier>{E54DDF95-799C-38C3-8778-6C50D7D86DD0}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\precompiled">
+			<UniqueIdentifier>{23607E18-E5C7-3DD8-8507-CF09BBFD155F}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\ui">
+			<UniqueIdentifier>{05E08600-A52A-37B5-AF41-5BE667A7E055}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="cpp\windows">
+			<UniqueIdentifier>{DACDA0D7-CAC9-305E-B951-2905F049EB46}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="sidl">
+			<UniqueIdentifier>{C921E2BB-DF6F-3044-9746-58D6913CAED1}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="sidl\fw">
+			<UniqueIdentifier>{388C487E-077A-3E5E-8F59-A3FB6BC65959}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="sidl\gl">
+			<UniqueIdentifier>{475C02F0-5EAF-3207-B15D-67EE127BDD3E}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="sidl\thirdparty">
+			<UniqueIdentifier>{ACF27CD7-2D08-3F1A-82F6-3799C493A2D7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="sidl\windows">
+			<UniqueIdentifier>{5D688494-F64D-3F9B-8FBD-A5C7BAAE19A2}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty">
+			<UniqueIdentifier>{07C21CB5-B690-35C0-91FD-22B74734BDA0}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\codec">
+			<UniqueIdentifier>{F833BD60-262A-383B-B1CA-DC451834A324}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\codec\jpegd">
+			<UniqueIdentifier>{0215F993-D352-37CB-AA2D-22F6E6F516D7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\codec\lzh5">
+			<UniqueIdentifier>{E28511E1-BF2F-3873-95C5-BDBE7A133A5B}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\codec\lzo">
+			<UniqueIdentifier>{5A8A3D3B-5937-3483-92C3-25F238316B28}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\dds">
+			<UniqueIdentifier>{9956DBDD-C670-336E-A1AF-9F47FBCCEE5F}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\dds\dds">
+			<UniqueIdentifier>{065FC879-E140-370F-A4DE-FF2EDA0CBC2B}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\dds\dxtlib">
+			<UniqueIdentifier>{BF055BA6-62C3-3DCB-8169-B44AD581A8E8}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\dwm">
+			<UniqueIdentifier>{92A7F44C-B0B5-3C89-B6F8-7B96475923ED}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\dwm\lib">
+			<UniqueIdentifier>{AB1B54A5-89D3-365A-9DA1-0251FDAAC27E}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\fltk">
+			<UniqueIdentifier>{83D25C60-E241-352F-AD10-122918F7E4AB}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\fltk\documentation">
+			<UniqueIdentifier>{38CE476B-9C2E-315A-8811-FC533BF49B0B}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\fltk\fluid">
+			<UniqueIdentifier>{3BAAD6C3-F658-3D1C-9FE2-6741FBDD45CE}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\fltk\fluid\header">
+			<UniqueIdentifier>{4FC8E846-361B-3285-8C1D-18F8E1F35C02}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\fltk\fluid\icons">
+			<UniqueIdentifier>{1CBC1B9F-3842-37EB-BA86-172079ADAB9B}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\fltk\fluid\pixmaps">
+			<UniqueIdentifier>{739E73A8-16FF-36D2-AED4-213A467EE318}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\fltk\fluid\sources">
+			<UniqueIdentifier>{AE4D9BEA-BD5D-3369-8C2E-AD946C5FA1C9}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\fltk\header">
+			<UniqueIdentifier>{DE408DA2-8D58-3D36-9C8C-2C1A06B3FD3D}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\fltk\lib">
+			<UniqueIdentifier>{C7CB0273-A581-3B4D-8BBB-C91D637B0DDC}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\fltk\src">
+			<UniqueIdentifier>{7F3A74C0-3E81-3953-82C5-8730D5610517}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\fltk\tests">
+			<UniqueIdentifier>{00DCF446-D433-3882-B7AF-42F693A5D87E}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\gfl">
+			<UniqueIdentifier>{88C9DFFA-C49B-3D79-B890-7EDD433CCA71}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\gl32">
+			<UniqueIdentifier>{E993D5A9-B681-3FF2-AFFA-A324F60FA351}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\lua">
+			<UniqueIdentifier>{54D6079A-DBE9-3B51-939E-F17B37223BB3}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\lua\auxlib (excluded)">
+			<UniqueIdentifier>{96A0F4AF-0D18-31BA-A306-28ADC7653A08}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\lua\core">
+			<UniqueIdentifier>{7AEF1BCC-FEC8-3697-A675-A8ACF9D75B96}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\lua\doc">
+			<UniqueIdentifier>{E5D1C886-3BBB-382B-B8DE-5BE48979DC14}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\lua\libs (excluded)">
+			<UniqueIdentifier>{C474909A-C81B-364C-B596-8903924E71AD}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\lzma">
+			<UniqueIdentifier>{C6BC44DA-6703-341A-A417-4D1B7EAF2FFC}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\platformsdk">
+			<UniqueIdentifier>{C2F53CA2-797E-33D9-AD47-01E5AA0D7454}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\pvrtc">
+			<UniqueIdentifier>{16D21C38-795F-3B25-B114-A93D55A53AD1}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\sqlite">
+			<UniqueIdentifier>{78A3BF7E-69CF-3ECC-95A6-2AE49F7FA424}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\yaml">
+			<UniqueIdentifier>{EA139EB2-88BA-37DC-A974-34A08D0B0F75}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\yaml\doc">
+			<UniqueIdentifier>{668BB0A2-2300-33C6-BB0D-C356F4AB21D6}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\yaml\spec">
+			<UniqueIdentifier>{AF2ADBF8-47B6-3C16-BD77-3B3728ADF723}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\yaml\spec\1_1">
+			<UniqueIdentifier>{41C653A8-B6AE-3B4A-8B9B-CE2AB19474A4}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\yaml\spec\1_2">
+			<UniqueIdentifier>{4D921166-1EEE-3B07-9F4A-B08A8406AE47}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="thirdparty\zip">
+			<UniqueIdentifier>{9EE9EDEB-5143-3705-B864-817855B309EC}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\codec\su_codec.h">
+			<Filter>cpp\codec</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\codec\su_icodec.h">
+			<Filter>cpp\codec</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\codec\su_mcodecjpeg_stub.h">
+			<Filter>cpp\codec</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\codec\su_mcodeclzh5_stub.h">
+			<Filter>cpp\codec</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\codec\su_mcodeclzo_stub.h">
+			<Filter>cpp\codec</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\codec\su_mcodecpng_stub.h">
+			<Filter>cpp\codec</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\codec\su_mcodecrs_stub.h">
+			<Filter>cpp\codec</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\codec\su_mcodectga_stub.h">
+			<Filter>cpp\codec</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\codec\su_mcodecym_stub.h">
+			<Filter>cpp\codec</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\codec\su_codec.cpp">
+			<Filter>cpp\codec</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\codec\su_codec_lzma.cpp">
+			<Filter>cpp\codec</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\codec\su_codec_pvrtc.cpp">
+			<Filter>cpp\codec</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\codec\su_mcodecjpeg_skel.cpp">
+			<Filter>cpp\codec</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\codec\su_mcodeclzh5_skel.cpp">
+			<Filter>cpp\codec</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\codec\su_mcodeclzo_skel.cpp">
+			<Filter>cpp\codec</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\codec\su_mcodecpng_skel.cpp">
+			<Filter>cpp\codec</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\codec\su_mcodecrs_skel.cpp">
+			<Filter>cpp\codec</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\codec\su_mcodectga_skel.cpp">
+			<Filter>cpp\codec</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\codec\su_mcodecym_skel.cpp">
+			<Filter>cpp\codec</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\media\su_icameragrabber.h">
+			<Filter>cpp\media</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\media\su_iimageanalyzer.h">
+			<Filter>cpp\media</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\media\su_mimageanalyzer_stub.h">
+			<Filter>cpp\media</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\media\su_mimageanalyzer_skel.cpp">
+			<Filter>cpp\media</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\..\sufw-windows\dx9\default_program.fx.h">
+			<Filter>cpp\dx9</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_dx9sdk.h">
+			<Filter>cpp\dx9</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_idirectdrawdx9.h">
+			<Filter>cpp\dx9</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectdrawdx9_resource.h">
+			<Filter>cpp\dx9</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectdrawdx9_stub.h">
+			<Filter>cpp\dx9</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectshaderbasedx9_cmds.h">
+			<Filter>cpp\dx9</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectshaderbasedx9_resources.h">
+			<Filter>cpp\dx9</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectshaderbasedx9_stub.h">
+			<Filter>cpp\dx9</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectshaderprimdx9_stub.h">
+			<Filter>cpp\dx9</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectshaderprogramdx9_stub.h">
+			<Filter>cpp\dx9</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectshadertiledx9_stub.h">
+			<Filter>cpp\dx9</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectsounddx9_stub.h">
+			<Filter>cpp\dx9</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\dx9\tile_hlsl.fx.h">
+			<Filter>cpp\dx9</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\..\sufw-windows\dx9\su_mdirectdrawdx9_skel.cpp">
+			<Filter>cpp\dx9</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\dx9\su_mdirectshaderbasedx9_skel.cpp">
+			<Filter>cpp\dx9</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\dx9\su_mdirectshaderprimdx9_skel.cpp">
+			<Filter>cpp\dx9</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\dx9\su_mdirectshaderprogramdx9_skel.cpp">
+			<Filter>cpp\dx9</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\dx9\su_mdirectshadertiledx9_skel.cpp">
+			<Filter>cpp\dx9</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\dx9\su_mdirectsounddx9_skel.cpp">
+			<Filter>cpp\dx9</Filter>
+		</ClCompile>
+		<CustomBuild Include="..\..\..\sufw-windows\dx9\default_program.fx">
+			<Filter>cpp\dx9</Filter>
+		</CustomBuild>
+		<CustomBuild Include="..\..\..\sufw-windows\dx9\tile_hlsl.fx">
+			<Filter>cpp\dx9</Filter>
+		</CustomBuild>
+		<ClInclude Include="..\..\logic\su_fsm.h">
+			<Filter>cpp\logic</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\logic\su_istatemachine.h">
+			<Filter>cpp\logic</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\logic\su_logic.h">
+			<Filter>cpp\logic</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\logic\su_fsm.cpp">
+			<Filter>cpp\logic</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\su_config.h">
+			<Filter>cpp</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\su_core.h">
+			<Filter>cpp</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\su_fw.h">
+			<Filter>cpp</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\su_generic.h">
+			<Filter>cpp</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\su_mapping.h">
+			<Filter>cpp</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\su_settings.h">
+			<Filter>cpp</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\su_startup.h">
+			<Filter>cpp</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\su_stringid.h">
+			<Filter>cpp</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\su_system.h">
+			<Filter>cpp</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\su_uids.h">
+			<Filter>cpp</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\su_mapping.cpp">
+			<Filter>cpp</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\su_stringid.cpp">
+			<Filter>cpp</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\precompiled\supch_core.h">
+			<Filter>cpp\precompiled</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\precompiled\supch_fw.h">
+			<Filter>cpp\precompiled</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\precompiled\supch_core.cpp">
+			<Filter>cpp\precompiled</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\precompiled\supch_fw.cpp">
+			<Filter>cpp\precompiled</Filter>
+		</ClCompile>
+		<None Include="..\env.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fw.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwasset.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwbuild.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwbuild_android.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwbuild_ios.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwbuild_windows.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwcodec.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwcore.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwddriver.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwengine.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwlangflash.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwlanglua.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwlogic.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwmaps.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwmedia.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwstringids.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<None Include="..\fwui.sidl">
+			<Filter>sidl\fw</Filter>
+		</None>
+		<ClInclude Include="..\..\..\sufw-windows\su_mallocatorstd_stub.h">
+			<Filter>cpp\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\su_mcameragrabberdshow_stub.h">
+			<Filter>cpp\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\su_mconsolestd_stub.h">
+			<Filter>cpp\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\su_mdirectory_stub.h">
+			<Filter>cpp\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\su_mdriverfs_stub.h">
+			<Filter>cpp\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\su_mfileburst_stub.h">
+			<Filter>cpp\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\su_mfilereader_stub.h">
+			<Filter>cpp\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\su_mfileview_stub.h">
+			<Filter>cpp\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\su_mfilewriter_stub.h">
+			<Filter>cpp\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\su_mluawindows_stub.h">
+			<Filter>cpp\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\su_platform_windows.h">
+			<Filter>cpp\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\WebCamPicker.h">
+			<Filter>cpp\windows</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\..\sufw-windows\su_clock.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_core_functions.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_cs.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mallocatorstd_skel.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_math.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mcameragrabberdshow_skel.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mconsolestd_skel.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mdirectory_skel.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mdriverfs_skel.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mfileburst_skel.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mfilereader_skel.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mfileview_skel.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mfilewriter_skel.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mluawindows_skel.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_socket.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_stack.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\WebCamPicker.cpp">
+			<Filter>cpp\windows</Filter>
+		</ClCompile>
+		<None Include="..\..\..\sufw-windows\project\fwauth.sidl">
+			<Filter>sidl\windows</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\project\fwport_dx11.sidl">
+			<Filter>sidl\windows</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\project\fwport_dx9.sidl">
+			<Filter>sidl\windows</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\project\fwport_windows.sidl">
+			<Filter>sidl\windows</Filter>
+		</None>
+		<ClInclude Include="..\..\directdriver\su_adirectdraw_stub.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\directdriver\su_adirectshader_stub.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\directdriver\su_directdraw.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\directdriver\su_directdraw_cmds.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\directdriver\su_directdraw_defs.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\directdriver\su_directdraw_enums.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\directdriver\su_directdriver.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\directdriver\su_idirectapp.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\directdriver\su_idirectdraw.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\directdriver\su_idirectinput.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\directdriver\su_idirectshader.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\directdriver\su_idirectsound.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\directdriver\su_idirectviewer.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\directdriver\su_lib3d.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\directdriver\su_mdirectshadercamera_stub.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\directdriver\su_mdirectviewer_stub.h">
+			<Filter>cpp\direct driver</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\directdriver\su_lib3d.cpp">
+			<Filter>cpp\direct driver</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\directdriver\su_mdirectshadercamera_skel.cpp">
+			<Filter>cpp\direct driver</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\directdriver\su_mdirectviewer_skel.cpp">
+			<Filter>cpp\direct driver</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\..\sufw-gl\su_glshader.h">
+			<Filter>cpp\gl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-gl\su_glwindow.h">
+			<Filter>cpp\gl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-gl\su_idirectdrawgl.h">
+			<Filter>cpp\gl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectdrawgl_stub.h">
+			<Filter>cpp\gl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectshaderbasegl_cmds.h">
+			<Filter>cpp\gl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectshaderbasegl_resources.h">
+			<Filter>cpp\gl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectshaderbasegl_stub.h">
+			<Filter>cpp\gl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectshaderprimgl_stub.h">
+			<Filter>cpp\gl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectshaderprogramgl_glsl.h">
+			<Filter>cpp\gl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectshaderprogramgl_stub.h">
+			<Filter>cpp\gl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectshadertilegl_stub.h">
+			<Filter>cpp\gl</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\..\sufw-gl\su_glshader.cpp">
+			<Filter>cpp\gl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-gl\su_glwindow.cpp">
+			<Filter>cpp\gl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-gl\su_mdirectdrawgl_skel.cpp">
+			<Filter>cpp\gl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-gl\su_mdirectshaderbasegl_skel.cpp">
+			<Filter>cpp\gl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-gl\su_mdirectshaderprimgl_skel.cpp">
+			<Filter>cpp\gl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-gl\su_mdirectshaderprogramgl_skel.cpp">
+			<Filter>cpp\gl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-gl\su_mdirectshadertilegl_skel.cpp">
+			<Filter>cpp\gl</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\..\sufw-gl\glhost\glhost.h">
+			<Filter>cpp\gl\host</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-gl\glhost\glhost_and.h">
+			<Filter>cpp\gl\host</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-gl\glhost\glhost_ios.h">
+			<Filter>cpp\gl\host</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-gl\glhost\glhost_mac.h">
+			<Filter>cpp\gl\host</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-gl\glhost\glhost_win.h">
+			<Filter>cpp\gl\host</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\..\sufw-gl\glhost\glhost.cpp">
+			<Filter>cpp\gl\host</Filter>
+		</ClCompile>
+		<None Include="..\..\..\sufw-gl\project\fwport_gl.sidl">
+			<Filter>sidl\gl</Filter>
+		</None>
+		<ClInclude Include="..\..\core\su_base.h">
+			<Filter>cpp\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\su_core.h">
+			<Filter>cpp\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\dg\su_dg.h">
+			<Filter>cpp\core\dg</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\core\dg\su_dg.cpp">
+			<Filter>cpp\core\dg</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\core\fs\su_idirectory.h">
+			<Filter>cpp\core\fs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\fs\su_idriverfs.h">
+			<Filter>cpp\core\fs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\fs\su_ifile.h">
+			<Filter>cpp\core\fs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\fs\su_ifileburst.h">
+			<Filter>cpp\core\fs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\fs\su_ifilereader.h">
+			<Filter>cpp\core\fs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\fs\su_ifilesystem.h">
+			<Filter>cpp\core\fs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\fs\su_ifileview.h">
+			<Filter>cpp\core\fs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\fs\su_ifilewriter.h">
+			<Filter>cpp\core\fs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\fs\su_mfileconsole_stub.h">
+			<Filter>cpp\core\fs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\fs\su_mfilesystem_stub.h">
+			<Filter>cpp\core\fs</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\core\fs\su_mfileconsole_skel.cpp">
+			<Filter>cpp\core\fs</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\fs\su_mfilesystem_skel.cpp">
+			<Filter>cpp\core\fs</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\core\misc\su_clock.h">
+			<Filter>cpp\core\misc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\misc\su_colors.h">
+			<Filter>cpp\core\misc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\misc\su_cs.h">
+			<Filter>cpp\core\misc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\misc\su_idriver.h">
+			<Filter>cpp\core\misc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\misc\su_parameter.h">
+			<Filter>cpp\core\misc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\misc\su_psm.h">
+			<Filter>cpp\core\misc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\misc\su_rexp.h">
+			<Filter>cpp\core\misc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\misc\su_rexpi.h">
+			<Filter>cpp\core\misc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\misc\su_stack.h">
+			<Filter>cpp\core\misc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\misc\su_units.h">
+			<Filter>cpp\core\misc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\misc\su_unitsi.h">
+			<Filter>cpp\core\misc</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\core\misc\su_colors.cpp">
+			<Filter>cpp\core\misc</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\misc\su_parameter.cpp">
+			<Filter>cpp\core\misc</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\misc\su_psm.cpp">
+			<Filter>cpp\core\misc</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\misc\su_units.cpp">
+			<Filter>cpp\core\misc</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\core\container\su_bstring.h">
+			<Filter>cpp\core\container</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\container\su_bstringi.h">
+			<Filter>cpp\core\container</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\container\su_list.h">
+			<Filter>cpp\core\container</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\container\su_listi.h">
+			<Filter>cpp\core\container</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\container\su_multiset.h">
+			<Filter>cpp\core\container</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\container\su_multiseti.h">
+			<Filter>cpp\core\container</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\container\su_set.h">
+			<Filter>cpp\core\container</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\container\su_seti.h">
+			<Filter>cpp\core\container</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\container\su_string.h">
+			<Filter>cpp\core\container</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\container\su_stringi.h">
+			<Filter>cpp\core\container</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\container\su_tree.h">
+			<Filter>cpp\core\container</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\container\su_treei.h">
+			<Filter>cpp\core\container</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\container\su_treeii.h">
+			<Filter>cpp\core\container</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\container\su_vector.h">
+			<Filter>cpp\core\container</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\container\su_vectori.h">
+			<Filter>cpp\core\container</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\core\container\su_string.cpp">
+			<Filter>cpp\core\container</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\container\su_tree.cpp">
+			<Filter>cpp\core\container</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\core\mem\su_iallocatorchunk.h">
+			<Filter>cpp\core\mem</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\mem\su_iallocatorheap.h">
+			<Filter>cpp\core\mem</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\mem\su_iallocatorobstack.h">
+			<Filter>cpp\core\mem</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\mem\su_mallocatorchunk_stub.h">
+			<Filter>cpp\core\mem</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\mem\su_mallocatorheap_stub.h">
+			<Filter>cpp\core\mem</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\mem\su_mallocatorinner_stub.h">
+			<Filter>cpp\core\mem</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\mem\su_mallocatorobstack_stub.h">
+			<Filter>cpp\core\mem</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\mem\su_mallocatorouter_stub.h">
+			<Filter>cpp\core\mem</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\mem\su_mallocatorslab_stub.h">
+			<Filter>cpp\core\mem</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\mem\su_mcursor.h">
+			<Filter>cpp\core\mem</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\mem\su_mcursori.h">
+			<Filter>cpp\core\mem</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\mem\su_obstackobject.h">
+			<Filter>cpp\core\mem</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\mem\su_obstackobjecti.h">
+			<Filter>cpp\core\mem</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\core\mem\su_mallocatorchunk_skel.cpp">
+			<Filter>cpp\core\mem</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\mem\su_mallocatorheap_skel.cpp">
+			<Filter>cpp\core\mem</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\mem\su_mallocatorinner_skel.cpp">
+			<Filter>cpp\core\mem</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\mem\su_mallocatorobstack_skel.cpp">
+			<Filter>cpp\core\mem</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\mem\su_mallocatorouter_skel.cpp">
+			<Filter>cpp\core\mem</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\mem\su_mallocatorslab_skel.cpp">
+			<Filter>cpp\core\mem</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\mem\su_mcursor.cpp">
+			<Filter>cpp\core\mem</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\core\thread\su_imutex.h">
+			<Filter>cpp\core\thread</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\thread\su_isema.h">
+			<Filter>cpp\core\thread</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\thread\su_isignal.h">
+			<Filter>cpp\core\thread</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\thread\su_ithread.h">
+			<Filter>cpp\core\thread</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\thread\su_ithreadref.h">
+			<Filter>cpp\core\thread</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\thread\su_itimer.h">
+			<Filter>cpp\core\thread</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\net\su_hfs.h">
+			<Filter>cpp\core\net</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\net\su_inet.h">
+			<Filter>cpp\core\net</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\net\su_inet_conx.h">
+			<Filter>cpp\core\net</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\net\su_inet_cookie.h">
+			<Filter>cpp\core\net</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\net\su_inet_url.h">
+			<Filter>cpp\core\net</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\net\su_mconsolenet_stub.h">
+			<Filter>cpp\core\net</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\net\su_socket.h">
+			<Filter>cpp\core\net</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\core\net\su_hfs.cpp">
+			<Filter>cpp\core\net</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\net\su_inet.cpp">
+			<Filter>cpp\core\net</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\net\su_mconsolenet_skel.cpp">
+			<Filter>cpp\core\net</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\core\test\su_test.h">
+			<Filter>cpp\core\test</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\core\test\su_test.cpp">
+			<Filter>cpp\core\test</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\engine\cubeHelper_obj.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\cubeHelper_tga.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\noise_tga.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_collection.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_collectioni.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_engine.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_core.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_corebillboard.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_corecamera.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_corecollection.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_coreframe.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_coregeometry.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_coregroup.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_corepostfx.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_coreprimitive.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_corescale.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_coreuscale.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_coreviewport.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_handle.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_handleroot.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_scenegraph.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_scenegraph_enum.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_scenegraph_ppu.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_scenegraph_ra.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\engine\su_sg_scenegraph_rsc.h">
+			<Filter>cpp\engine</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\engine\su_collection.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_collection_mesh.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_sg_core.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_sg_corebillboard.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_sg_corecamera.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_sg_corecollection.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_sg_coreframe.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_sg_coregeometry.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_sg_coregroup.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_sg_corepostfx.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_sg_coreprimitive.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_sg_corescale.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_sg_coreuscale.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_sg_coreviewport.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_sg_handle.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_sg_handleroot.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\engine\su_sg_scenegraph.cpp">
+			<Filter>cpp\engine</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\core\base\su_addin.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_addini.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_any.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_anyi.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_core_functions.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_defines.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_export.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_factory.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_factoryi.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_forceref.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_globals.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_globalsi.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_iallocator.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_iconsole.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_iinterface.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_iinterfacei.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_import.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_inull.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_iswitch.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_iswitchuser.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_langc.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_locals.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_mapping_base.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_mapping_basei.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_math.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_mathi.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_math_common.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_mnull_stub.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_pool.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_pooli.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_stringid_base.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_ttrait.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_types.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_util.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_utili.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\core\base\su_util_uucode.h">
+			<Filter>cpp\core\base</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\core\base\su_addin.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_any.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_core_profile.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_factory.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_globals.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_locals.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_mapping_base.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_mnull_skel.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_notsupported.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_pool.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_stringid_base.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_util.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_util_bits.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_util_hmac_crc32.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_util_hmac_md5.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_util_hmac_sha1.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_util_match.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_util_str.cpp">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_langc.c">
+			<Filter>cpp\core\base</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\core\base\md5\md5.h">
+			<Filter>cpp\core\base\md5</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\core\base\md5\md5.cpp">
+			<Filter>cpp\core\base\md5</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\lang\su_lang_lua.h">
+			<Filter>cpp\lang</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\luatools.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\luatools_i.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\lang\lua\luatools.cpp">
+			<Filter>cpp\lang\lua</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\lang\lua\su_iluacore.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_iluadatatree.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_iluafltk.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_iluagraphic.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_iluaio.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_ilualang.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_iluamath.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_iluanet.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_iluastate.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_iluastring.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_iluautil.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_iluawindows.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_lua.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_mluacore_stub.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_mluadatatree_stub.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_mluagraphic_stub.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_mluaio_stub.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_mlualang_stub.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_mluamath_stub.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_mluanet_stub.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_mluastate_stub.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_mluastring_stub.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_mluautil_stub.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\lua\su_mluautil_typeid.h">
+			<Filter>cpp\lang\lua</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\lang\lua\su_mluacore_skel.cpp">
+			<Filter>cpp\lang\lua</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluadatatree_skel.cpp">
+			<Filter>cpp\lang\lua</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluagraphic_skel.cpp">
+			<Filter>cpp\lang\lua</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluaio_skel.cpp">
+			<Filter>cpp\lang\lua</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mlualang_skel.cpp">
+			<Filter>cpp\lang\lua</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluamath_skel.cpp">
+			<Filter>cpp\lang\lua</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluanet_skel.cpp">
+			<Filter>cpp\lang\lua</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluastate_skel.cpp">
+			<Filter>cpp\lang\lua</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluastring_skel.cpp">
+			<Filter>cpp\lang\lua</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluautil_skel.cpp">
+			<Filter>cpp\lang\lua</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\lang\su_lang_flash.h">
+			<Filter>cpp\lang</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\flash\su_iswfreader.h">
+			<Filter>cpp\lang\flash</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\flash\su_mswfreader_structs.h">
+			<Filter>cpp\lang\flash</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\lang\flash\su_mswfreader_stub.h">
+			<Filter>cpp\lang\flash</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\lang\flash\su_mswfreader_skel.cpp">
+			<Filter>cpp\lang\flash</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\flash\su_mswfreader_structs.cpp">
+			<Filter>cpp\lang\flash</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\ui\su_iuicanvas.h">
+			<Filter>cpp\ui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\ui\su_iuicollection.h">
+			<Filter>cpp\ui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\ui\su_iuiobject.h">
+			<Filter>cpp\ui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_asset.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_ibitmapdocument.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_idatatree.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_idatatreeheap.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_idatatreeio.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_ieffectdocument.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_ipakdesigner.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_irscmanager.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_mbitmapdocument_stub.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_mdatatreeheap_stub.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_mdatatreeio_stub.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_mpakdesigner_stub.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_mrscmanager_handle.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_mrscmanager_pak.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_mrscmanager_plist.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_mrscmanager_stash.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\asset\su_mrscmanager_stub.h">
+			<Filter>cpp\asset</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\asset\su_mbitmapdocument_skel.cpp">
+			<Filter>cpp\asset</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\asset\su_mdatatreeheap_skel.cpp">
+			<Filter>cpp\asset</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\asset\su_mdatatreeio_skel.cpp">
+			<Filter>cpp\asset</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\asset\su_mpakdesigner_skel.cpp">
+			<Filter>cpp\asset</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\asset\su_mrscmanager_skel.cpp">
+			<Filter>cpp\asset</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\cubeHelper_obj.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\cubeHelper_tga.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_flluadbg.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iassetdatabase.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iauthassetbrowser.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iauthbitmap.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iauthdbgmaster.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iauthdummy.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iauthfacade.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iauthgraphics.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iauthobserver.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_imodeldocument.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_isuastream.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_massetdatabase_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_massetviewer_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mauthbitmap_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mauthdummy_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mauthgraphics_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mcodecgfl_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mcodecpvrtc_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mcodeczlib_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mdirectapp_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfbxdocument_fbxfile.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfbxdocument_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflassetbrowser_filter.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflassetbrowser_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflassetbrowser_treecb.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflconsoleview_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflconsole_buf.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflconsole_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfldesigner_io.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfldesigner_pixmaps.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfldesigner_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfldesigner_widgets.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfllayoutmanager_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfllayoutmanager_utils.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflluadbgmaster_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflluadbgviewer_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflnetworkviewer_block.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflnetworkviewer_graph.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflnetworkviewer_link.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflnetworkviewer_plug.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflnetworkviewer_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflsessionchooser_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfluserdatainspector_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfluserdatainspector_view.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflworldinspector_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfxdocument_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mluaauthfacade_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mluafltk_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mnullconsole_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mobjdocument_stub.h">
+			<Filter>auth\windows</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_massetdatabase_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_massetviewer_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mauthbitmap_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mauthdummy_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mauthgraphics_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mcodecgfl_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mcodecpvrtc_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mcodeczlib_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mdirectapp_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mfbxdocument_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflassetbrowser_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflconsoleview_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflconsole_buf.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflconsole_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mfldesigner_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mfllayoutmanager_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflluadbgmaster_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflluadbgviewer_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflnetworkviewer_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflsessionchooser_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mfluserdatainspector_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflworldinspector_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mfxdocument_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mluaauthfacade_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mluafltk_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mnullconsole_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mobjdocument_skel.cpp">
+			<Filter>auth\windows</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\..\sufw-windows\precompiled\supch_fw_fltk.h">
+			<Filter>auth\windows\precompiled</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\..\sufw-windows\precompiled\supch_fw_fltk.cpp">
+			<Filter>auth\windows\precompiled</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_animated.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_appwindow.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_checkbutton.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_choice.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_framegroup.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_ghostwindow.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_group.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_grouplayer.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_popupwindow.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_popupwindow_choice.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_pushbutton.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_scroll.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_scrollbar.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_slider.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_spinner.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_text.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_textdisplay.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_texteditor.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_textinput.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_timespinner.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_togglebutton.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_treeitem.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_treeoverlay.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_treeview.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_treeview_handle.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_treeview_tools.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_window.h">
+			<Filter>auth\windows\sufl</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_animated.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_appwindow.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_checkbutton.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_choice.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_framegroup.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_ghostwindow.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_group.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_grouplayer.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_popupwindow.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_pushbutton.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_scroll.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_scrollbar.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_slider.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_spinner.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_text.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_textdisplay.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_texteditor.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_textinput.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_timespinner.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_togglebutton.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_treeitem.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_treeoverlay.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_treeview.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_window.cpp">
+			<Filter>auth\windows\sufl</Filter>
+		</ClCompile>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flAdjuster.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flBox.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flBrowser.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flButton.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flCheckBrowser.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flCheckButton.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flChoice.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flClass.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flClock.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flCode.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flCodeBlock.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flComment.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flCounter.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flData.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flDeclaration.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flDeclarationBlock.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flDial.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flFileBrowser.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flFileInput.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flFunction.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flGroup.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flHelp.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flInput.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flLightButton.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flMenubar.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flMenuButton.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flMenuitem.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flOutput.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flPack.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flProgress.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flRepeatButton.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flReturnButton.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flRoller.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flRoundButton.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flScroll.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flScrollBar.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flSlider.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flSpinner.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flSubmenu.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flTable.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flTabs.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flTextDisplay.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flTextEdit.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flTile.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flTree.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flValueInput.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flValueOutput.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flValueSlider.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flWidgetClass.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flWindow.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flWizard.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\lock.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\print_color.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\print_gray.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\protected.xpm">
+			<Filter>auth\windows\sufl\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\project\3rdparty.sidl">
+			<Filter>sidl\thirdparty</Filter>
+		</None>
+		<ClInclude Include="..\..\..\sufw-build\codec\lzh5\lzh5.h">
+			<Filter>thirdparty\codec\lzh5</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\codec\lzo\lzoconf.h">
+			<Filter>thirdparty\codec\lzo</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\codec\lzo\lzodefs.h">
+			<Filter>thirdparty\codec\lzo</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\codec\lzo\minilzo.h">
+			<Filter>thirdparty\codec\lzo</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\..\sufw-build\codec\lzo\minilzo.c">
+			<Filter>thirdparty\codec\lzo</Filter>
+		</ClCompile>
+		<None Include="..\..\..\sufw-build\codec\lzo\testmini.c">
+			<Filter>thirdparty\codec\lzo</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\codec\lzo\Makefile">
+			<Filter>thirdparty\codec\lzo</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\codec\lzo\README.LZO">
+			<Filter>thirdparty\codec\lzo</Filter>
+		</None>
+		<ClInclude Include="..\..\..\sufw-build\codec\jpegd\jpegdecoder.h">
+			<Filter>thirdparty\codec\jpegd</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\codec\jpegd\main.h">
+			<Filter>thirdparty\codec\jpegd</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\..\sufw-build\codec\jpegd\H2v2.cpp">
+			<Filter>thirdparty\codec\jpegd</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\codec\jpegd\idct.cpp">
+			<Filter>thirdparty\codec\jpegd</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\codec\jpegd\jidctfst.cpp">
+			<Filter>thirdparty\codec\jpegd</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\codec\jpegd\jpegdecoder.cpp">
+			<Filter>thirdparty\codec\jpegd</Filter>
+		</ClCompile>
+		<None Include="..\..\..\sufw-build\codec\jpegd\jpegdecoder.inl">
+			<Filter>thirdparty\codec\jpegd</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\COPYRIGHT">
+			<Filter>thirdparty\lua</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\HISTORY">
+			<Filter>thirdparty\lua</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\INSTALL">
+			<Filter>thirdparty\lua</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\Makefile">
+			<Filter>thirdparty\lua</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\README">
+			<Filter>thirdparty\lua</Filter>
+		</None>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lapi.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lcode.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\ldebug.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\ldo.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lfunc.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lgc.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\llex.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\llimits.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lmem.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lobject.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lopcodes.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lparser.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lstate.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lstring.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\ltable.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\ltm.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lua.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\luaconf.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lundump.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lvm.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lzio.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lua\core\original_luaconf.h">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lapi.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lcallstats.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lcode.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\ldebug.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\ldo.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\ldump.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lfunc.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lgc.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\llex.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lmem.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lobject.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lopcodes.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lparser.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lstate.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lstring.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\ltable.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\ltm.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lundump.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lvm.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lzio.c">
+			<Filter>thirdparty\lua\core</Filter>
+		</ClCompile>
+		<None Include="..\..\..\sufw-build\lua\doc\contents.html">
+			<Filter>thirdparty\lua\doc</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\doc\lua.html">
+			<Filter>thirdparty\lua\doc</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\doc\luac.html">
+			<Filter>thirdparty\lua\doc</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\doc\manual.html">
+			<Filter>thirdparty\lua\doc</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\doc\readme.html">
+			<Filter>thirdparty\lua\doc</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\doc\lua.css">
+			<Filter>thirdparty\lua\doc</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\doc\manual.css">
+			<Filter>thirdparty\lua\doc</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\doc\lua.1">
+			<Filter>thirdparty\lua\doc</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\doc\luac.1">
+			<Filter>thirdparty\lua\doc</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\doc\amazon.gif">
+			<Filter>thirdparty\lua\doc</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\doc\logo.gif">
+			<Filter>thirdparty\lua\doc</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\doc\cover.png">
+			<Filter>thirdparty\lua\doc</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\auxlib\lauxlib.h">
+			<Filter>thirdparty\lua\auxlib (excluded)</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\auxlib\lauxlib.c">
+			<Filter>thirdparty\lua\auxlib (excluded)</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\libs\lualib.h">
+			<Filter>thirdparty\lua\libs (excluded)</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\libs\lbaselib.c">
+			<Filter>thirdparty\lua\libs (excluded)</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\libs\ldblib.c">
+			<Filter>thirdparty\lua\libs (excluded)</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\libs\linit.c">
+			<Filter>thirdparty\lua\libs (excluded)</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\libs\liolib.c">
+			<Filter>thirdparty\lua\libs (excluded)</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\libs\lmathlib.c">
+			<Filter>thirdparty\lua\libs (excluded)</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\libs\loadlib.c">
+			<Filter>thirdparty\lua\libs (excluded)</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\libs\loslib.c">
+			<Filter>thirdparty\lua\libs (excluded)</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\libs\lstrlib.c">
+			<Filter>thirdparty\lua\libs (excluded)</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lua\libs\ltablib.c">
+			<Filter>thirdparty\lua\libs (excluded)</Filter>
+		</None>
+		<ClCompile Include="..\..\..\sufw-build\zip\adler32.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\zip\compress.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\zip\crc32.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\zip\deflate.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\zip\gzio.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\zip\infblock.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\zip\infcodes.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\zip\inffast.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\zip\inflate.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\zip\inftrees.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\zip\infutil.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\zip\trees.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\zip\uncompr.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\zip\unzip.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\zip\zip.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\zip\zutil.c">
+			<Filter>thirdparty\zip</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\..\sufw-build\zip\deflate.h">
+			<Filter>thirdparty\zip</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\zip\infblock.h">
+			<Filter>thirdparty\zip</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\zip\infcodes.h">
+			<Filter>thirdparty\zip</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\zip\inffast.h">
+			<Filter>thirdparty\zip</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\zip\inffixed.h">
+			<Filter>thirdparty\zip</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\zip\inftrees.h">
+			<Filter>thirdparty\zip</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\zip\infutil.h">
+			<Filter>thirdparty\zip</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\zip\trees.h">
+			<Filter>thirdparty\zip</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\zip\unzip.h">
+			<Filter>thirdparty\zip</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\zip\zconf.h">
+			<Filter>thirdparty\zip</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\zip\zip.h">
+			<Filter>thirdparty\zip</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\zip\zlib.h">
+			<Filter>thirdparty\zip</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\zip\zutil.h">
+			<Filter>thirdparty\zip</Filter>
+		</ClInclude>
+		<None Include="..\..\..\sufw-build\zip\algorithm.txt">
+			<Filter>thirdparty\zip</Filter>
+		</None>
+		<ClInclude Include="..\..\..\sufw-build\yaml\include\yaml.h">
+			<Filter>thirdparty\yaml</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\yaml\win32\config.h">
+			<Filter>thirdparty\yaml</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\yaml\src\yaml_private.h">
+			<Filter>thirdparty\yaml</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\api.c">
+			<Filter>thirdparty\yaml</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\dumper.c">
+			<Filter>thirdparty\yaml</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\emitter.c">
+			<Filter>thirdparty\yaml</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\loader.c">
+			<Filter>thirdparty\yaml</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\parser.c">
+			<Filter>thirdparty\yaml</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\reader.c">
+			<Filter>thirdparty\yaml</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\scanner.c">
+			<Filter>thirdparty\yaml</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\writer.c">
+			<Filter>thirdparty\yaml</Filter>
+		</ClCompile>
+		<None Include="..\..\..\sufw-build\yaml\doc\html\index.html">
+			<Filter>thirdparty\yaml\doc</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\yaml\doc\spec\1.1\yaml_spec_1_1.html">
+			<Filter>thirdparty\yaml\spec\1_1</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\yaml\doc\spec\1.1\yaml_spec_1_1.pdf">
+			<Filter>thirdparty\yaml\spec\1_1</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\yaml\doc\spec\1.2\yaml_spec_1_2.html">
+			<Filter>thirdparty\yaml\spec\1_2</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\yaml\doc\spec\1.2\yaml_spec_1_2.pdf">
+			<Filter>thirdparty\yaml\spec\1_2</Filter>
+		</None>
+		<ClCompile Include="..\..\..\sufw-build\lzma\C\LzmaDec.c">
+			<Filter>thirdparty\lzma</Filter>
+		</ClCompile>
+		<ClInclude Include="..\..\..\sufw-build\lzma\C\LzmaDec.h">
+			<Filter>thirdparty\lzma</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\lzma\C\Types.h">
+			<Filter>thirdparty\lzma</Filter>
+		</ClInclude>
+		<None Include="..\..\..\sufw-build\lzma\7zC.txt">
+			<Filter>thirdparty\lzma</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lzma\7zFormat.txt">
+			<Filter>thirdparty\lzma</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lzma\history.txt">
+			<Filter>thirdparty\lzma</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lzma\lzma.txt">
+			<Filter>thirdparty\lzma</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\lzma\Methods.txt">
+			<Filter>thirdparty\lzma</Filter>
+		</None>
+		<ClInclude Include="..\..\..\sufw-build\gfl\libgfl.h">
+			<Filter>thirdparty\gfl</Filter>
+		</ClInclude>
+		<Library Include="..\..\..\sufw-build\gfl\libgfl.lib">
+			<Filter>thirdparty\gfl</Filter>
+		</Library>
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\CPVRTexture.h">
+			<Filter>thirdparty\pvrtc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\CPVRTextureData.h">
+			<Filter>thirdparty\pvrtc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\CPVRTextureHeader.h">
+			<Filter>thirdparty\pvrtc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\Pixel.h">
+			<Filter>thirdparty\pvrtc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\PVRException.h">
+			<Filter>thirdparty\pvrtc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\PVRTexLib.h">
+			<Filter>thirdparty\pvrtc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\PVRTexLibGlobals.h">
+			<Filter>thirdparty\pvrtc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\PVRTGlobal.h">
+			<Filter>thirdparty\pvrtc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\ddsutils\inc\dds\ConvertColor.h">
+			<Filter>thirdparty\dds\dds</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\ddsutils\inc\dds\ddsTypes.h">
+			<Filter>thirdparty\dds\dds</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\ddsutils\inc\dds\nvdxt_options.h">
+			<Filter>thirdparty\dds\dds</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\ddsutils\inc\dds\nvErrorCodes.h">
+			<Filter>thirdparty\dds\dds</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\ddsutils\inc\dds\tPixel.h">
+			<Filter>thirdparty\dds\dds</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\ddsutils\inc\dds\tVector.h">
+			<Filter>thirdparty\dds\dds</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\ddsutils\inc\dxtlib\dxtlib.h">
+			<Filter>thirdparty\dds\dxtlib</Filter>
+		</ClInclude>
+		<None Include="..\..\..\sufw-build\fltk\src\dump_compose.c">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\flstring.c">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_call_main.c">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_utf.c">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\numericsort.c">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\scandir.c">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\scandir_win32.c">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\vsnprintf.c">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\cmap.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\filename_absolute.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\filename_expand.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\filename_ext.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\filename_isdir.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\filename_list.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\filename_match.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\filename_setext.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_abort.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_add_idle.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Adjuster.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_arc.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_arci.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_arg.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_ask.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Bitmap.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_BMP_Image.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Box.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_boxtype.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Browser.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Browser_.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Browser_load.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Button.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Chart.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Check_Browser.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Check_Button.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Choice.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Clock.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_color.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Color_Chooser.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_color_mac.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_color_win32.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_compose.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Counter.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_cursor.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_curve.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Device.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Dial.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_diamond_box.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_display.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_dnd.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_dnd_mac.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_dnd_win32.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_dnd_x.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Double_Window.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_draw.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_draw_image.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_draw_image_mac.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_draw_image_win32.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_draw_pixmap.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_encoding_latin1.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_encoding_mac_roman.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_engraved_label.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_File_Browser.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_File_Chooser.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_File_Chooser2.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_file_dir.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_File_Icon.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_File_Icon2.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_File_Input.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_font.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_font_mac.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_font_win32.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_font_x.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_font_xft.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_GDI_Printer.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_get_key.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_get_key_mac.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_get_key_win32.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_get_system_colors.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_GIF_Image.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Gl_Choice.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Gl_Device_Plugin.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Gl_Overlay.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Gl_Window.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_grab.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Group.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_gtk.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Help_Dialog.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Help_Dialog_Dox.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Help_View.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Image.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_images_core.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Input.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Input_.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_JPEG_Image.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_labeltype.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Light_Button.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_line_style.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_lock.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_mac.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Menu.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Menu_.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Menu_add.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Menu_Bar.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Menu_Button.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Menu_global.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Menu_Window.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Multi_Label.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Native_File_Chooser.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Native_File_Chooser_common.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Native_File_Chooser_FLTK.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Native_File_Chooser_MAC.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Native_File_Chooser_WIN32.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_open_uri.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_oval_box.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_overlay.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_overlay_visual.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Overlay_Window.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_own_colormap.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Pack.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Paged_Device.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Pixmap.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_plastic.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_PNG_Image.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_PNM_Image.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Positioner.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_PostScript.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Preferences.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Printer.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Progress.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_read_image.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_read_image_mac.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_read_image_win32.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_rect.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Repeat_Button.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Return_Button.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Roller.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_rounded_box.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_round_box.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Round_Button.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Scroll.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Scrollbar.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_scroll_area.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_set_font.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_set_fonts.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_set_fonts_mac.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_set_fonts_win32.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_set_fonts_x.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_set_fonts_xft.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_shadow_box.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Shared_Image.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_shortcut.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_show_colormap.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Single_Window.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Slider.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_symbols.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Sys_Menu_Bar.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Table.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Table_Row.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tabs.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Text_Buffer.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Text_Display.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Text_Editor.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tile.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tiled_Image.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tooltip.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tree.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tree_Item.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tree_Item_Array.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tree_Prefs.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_utf8.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Valuator.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Value_Input.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Value_Output.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Value_Slider.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_vertex.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_visual.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Widget.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_win32.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Window.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Window_fullscreen.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Window_hotspot.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Window_iconize.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Wizard.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_x.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_XBM_Image.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_XPM_Image.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\forms_bitmap.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\forms_compatability.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\forms_free.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\forms_fselect.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\forms_pixmap.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\forms_timer.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\freeglut_geometry.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\freeglut_stroke_mono_roman.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\freeglut_stroke_roman.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\freeglut_teapot.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\glut_compatability.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\glut_font.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\gl_draw.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\gl_start.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\print_panel.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\ps_image.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\screen_xywh.cxx">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\aimm.h">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\cgdebug.h">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fastarrow.h">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\flstring.h">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\fl_cmap.h">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Font.H">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Gl_Choice.H">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_XColor.H">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\freeglut_teapot_data.h">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\mediumarrow.h">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\print_panel.h">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\src\slowarrow.h">
+			<Filter>thirdparty\fltk\src</Filter>
+		</None>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\dirent.h">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Enumerations.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\filename.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Adjuster.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\fl_ask.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Bitmap.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_BMP_Image.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Box.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Browser.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Browser_.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Button.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Cairo.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Cairo_Window.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Chart.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Check_Browser.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Check_Button.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Choice.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Clock.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Color_Chooser.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Counter.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Device.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Dial.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Double_Window.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\fl_draw.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Export.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_File_Browser.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_File_Chooser.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_File_Icon.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_File_Input.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Fill_Dial.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Fill_Slider.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Float_Input.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_FormsBitmap.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_FormsPixmap.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Free.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_GIF_Image.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Gl_Window.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Group.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Help_Dialog.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Help_View.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Hold_Browser.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Hor_Fill_Slider.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Hor_Nice_Slider.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Hor_Slider.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Hor_Value_Slider.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Image.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Input.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Input_.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Input_Choice.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Int_Input.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_JPEG_Image.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Light_Button.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Line_Dial.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Menu.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Menu_.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Menu_Bar.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Menu_Button.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Menu_Item.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Menu_Window.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\fl_message.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Multiline_Input.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Multiline_Output.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Multi_Browser.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Multi_Label.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Native_File_Chooser.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Native_File_Chooser_FLTK.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Native_File_Chooser_MAC.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Native_File_Chooser_WIN32.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Nice_Slider.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Object.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Output.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Overlay_Window.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Pack.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Paged_Device.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Pixmap.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Plugin.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_PNG_Image.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_PNM_Image.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Positioner.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_PostScript.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Preferences.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Printer.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Progress.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Radio_Button.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Radio_Light_Button.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Radio_Round_Button.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Repeat_Button.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Return_Button.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_RGB_Image.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Roller.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Round_Button.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Round_Clock.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Scroll.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Scrollbar.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Secret_Input.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Select_Browser.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Shared_Image.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\fl_show_colormap.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\fl_show_input.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Simple_Counter.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Single_Window.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Slider.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Spinner.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Sys_Menu_Bar.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Table.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Table_Row.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tabs.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Text_Buffer.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Text_Display.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Text_Editor.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tile.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tiled_Image.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Timer.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Toggle_Button.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Toggle_Light_Button.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Toggle_Round_Button.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tooltip.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tree.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tree_Item.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tree_Item_Array.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tree_Prefs.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\fl_types.h">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\fl_utf8.h">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Valuator.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Value_Input.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Value_Output.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Value_Slider.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Widget.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Window.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Wizard.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_XBM_Image.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_XPM_Image.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\forms.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\gl.h">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\gl2opengl.h">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\glu.h">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\glut.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\gl_draw.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\mac.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\math.h">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\names.h">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\win32.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\x.H">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Xutf8.h">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\ide\VisualC2008\config.h">
+			<Filter>thirdparty\fltk\header</Filter>
+		</ClInclude>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkd.lib">
+			<Filter>thirdparty\fltk\lib</Filter>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkformsd.lib">
+			<Filter>thirdparty\fltk\lib</Filter>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkimagesd.lib">
+			<Filter>thirdparty\fltk\lib</Filter>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkjpegd.lib">
+			<Filter>thirdparty\fltk\lib</Filter>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkpngd.lib">
+			<Filter>thirdparty\fltk\lib</Filter>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkzd.lib">
+			<Filter>thirdparty\fltk\lib</Filter>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltk.lib">
+			<Filter>thirdparty\fltk\lib</Filter>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkforms.lib">
+			<Filter>thirdparty\fltk\lib</Filter>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkimages.lib">
+			<Filter>thirdparty\fltk\lib</Filter>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkjpeg.lib">
+			<Filter>thirdparty\fltk\lib</Filter>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkpng.lib">
+			<Filter>thirdparty\fltk\lib</Filter>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkz.lib">
+			<Filter>thirdparty\fltk\lib</Filter>
+		</Library>
+		<None Include="..\..\..\sufw-build\fltk\test\adjuster.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\arc.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\ask.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\bitmap.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\blocks.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\boxtype.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\browser.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\button.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\buttons.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\cairo_test.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\checkers.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\clock.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\colbrowser.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\color_chooser.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\connect.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\cube.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\CubeMain.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\CubeView.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\cursor.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\curve.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\demo.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\device.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\doublebuffer.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\editor.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\file_chooser.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\fl_jpeg_image.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\fonts.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\forms.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\fractals.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\fracviewer.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\fullscreen.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\glpuzzle.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\gl_overlay.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\hello.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\help.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\iconize.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\image.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\input.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\input_choice.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\keyboard.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\label.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\line_style.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\list_visuals.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\mandelbrot.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\menubar.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\message.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\minimum.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\native-filechooser.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\navigation.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\output.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\overlay.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\pack.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\pixmap.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\pixmap_browser.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\resizebox.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\rotated_text.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\scroll.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\shape.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\subwindow.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\sudoku.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\symbols.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\table.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\threads.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\tile.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\tiled_image.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\unittests.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_about.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_circles.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_images.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_lines.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_points.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_rects.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_scrollbarsize.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_text.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_viewport.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\test\utf8.cxx">
+			<Filter>thirdparty\fltk\tests</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\documentation\Doxybook">
+			<Filter>thirdparty\fltk\documentation</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\documentation\Doxyfile">
+			<Filter>thirdparty\fltk\documentation</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\documentation\fltk.pdf">
+			<Filter>thirdparty\fltk\documentation</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\documentation\Makefile">
+			<Filter>thirdparty\fltk\documentation</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\documentation\README">
+			<Filter>thirdparty\fltk\documentation</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\documentation\strip_tags">
+			<Filter>thirdparty\fltk\documentation</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\documentation\TODO.doc">
+			<Filter>thirdparty\fltk\documentation</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\fluid.exe">
+			<Filter>thirdparty\fltk\fluid</Filter>
+		</None>
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\about_panel.h">
+			<Filter>thirdparty\fltk\fluid\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\alignment_panel.h">
+			<Filter>thirdparty\fltk\fluid\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\CodeEditor.h">
+			<Filter>thirdparty\fltk\fluid\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\comments.h">
+			<Filter>thirdparty\fltk\fluid\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\Fluid_Image.h">
+			<Filter>thirdparty\fltk\fluid\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\Fl_Type.h">
+			<Filter>thirdparty\fltk\fluid\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\Fl_Widget_Type.h">
+			<Filter>thirdparty\fltk\fluid\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\function_panel.h">
+			<Filter>thirdparty\fltk\fluid\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\ide_support.h">
+			<Filter>thirdparty\fltk\fluid\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\print_panel.h">
+			<Filter>thirdparty\fltk\fluid\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\Shortcut_Button.h">
+			<Filter>thirdparty\fltk\fluid\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\template_panel.h">
+			<Filter>thirdparty\fltk\fluid\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\undo.h">
+			<Filter>thirdparty\fltk\fluid\header</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\widget_panel.h">
+			<Filter>thirdparty\fltk\fluid\header</Filter>
+		</ClInclude>
+		<None Include="..\..\..\sufw-build\fltk\fluid\about_panel.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\alignment_panel.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\align_widget.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\code.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\CodeEditor.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\factory.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\file.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\fluid.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\Fluid_Image.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\Fl_Function_Type.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\Fl_Group_Type.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\Fl_Menu_Type.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\Fl_Type.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\Fl_Widget_Type.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\Fl_Window_Type.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\function_panel.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\ide_maketools.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\ide_support.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\ide_visualc.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\ide_xcode.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\print_panel.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\template_panel.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\undo.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\widget_panel.cxx">
+			<Filter>thirdparty\fltk\fluid\sources</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flAdjuster.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flBox.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flBrowser.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flButton.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flCheckBrowser.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flCheckButton.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flChoice.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flClass.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flClock.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flCode.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flCodeBlock.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flComment.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flCounter.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flData.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flDeclaration.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flDeclarationBlock.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flDial.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flFileBrowser.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flFileInput.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flFunction.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flGroup.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flHelp.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flInput.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flLightButton.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flMenubar.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flMenuButton.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flMenuitem.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flOutput.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flPack.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flProgress.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flRepeatButton.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flReturnButton.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flRoller.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flRoundButton.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flScroll.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flScrollBar.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flSlider.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flSpinner.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flSubmenu.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flTabs.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flTextDisplay.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flTextEdit.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flTile.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flValueInput.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flValueOutput.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flValueSlider.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flWidgetClass.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flWindow.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flWizard.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\lock.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\print_color.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\print_gray.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\protected.xpm">
+			<Filter>thirdparty\fltk\fluid\pixmaps</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid.ico">
+			<Filter>thirdparty\fltk\fluid\icons</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-32.xpm">
+			<Filter>thirdparty\fltk\fluid\icons</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-96.xpm">
+			<Filter>thirdparty\fltk\fluid\icons</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-128.png">
+			<Filter>thirdparty\fltk\fluid\icons</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-16.png">
+			<Filter>thirdparty\fltk\fluid\icons</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-16i.png">
+			<Filter>thirdparty\fltk\fluid\icons</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-256.png">
+			<Filter>thirdparty\fltk\fluid\icons</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-32.png">
+			<Filter>thirdparty\fltk\fluid\icons</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-32i.png">
+			<Filter>thirdparty\fltk\fluid\icons</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-48.png">
+			<Filter>thirdparty\fltk\fluid\icons</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-64.png">
+			<Filter>thirdparty\fltk\fluid\icons</Filter>
+		</None>
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid.xcf.gz">
+			<Filter>thirdparty\fltk\fluid\icons</Filter>
+		</None>
+		<Library Include="..\..\..\sufw-build\dwm\dwmapi.lib">
+			<Filter>thirdparty\dwm\lib</Filter>
+		</Library>
+		<ClInclude Include="..\..\..\sufw-build\gl32\include\GL.h">
+			<Filter>thirdparty\gl32</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\gl32\include\glew.h">
+			<Filter>thirdparty\gl32</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\gl32\include\glxew.h">
+			<Filter>thirdparty\gl32</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\gl32\include\khrplatform.h">
+			<Filter>thirdparty\gl32</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\gl32\include\wglew.h">
+			<Filter>thirdparty\gl32</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\amaudio.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\amparse.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\amstream.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\amva.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\amvideo.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\audevcod.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\austream.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\ddstream.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\devguid.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\DShow.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\dvdevcod.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\edevdefs.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\errors.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\evcode.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\mmstream.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\MMSystem.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\OleCtl.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\qedit.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\strmif.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\vfwmsgs.h">
+			<Filter>thirdparty\platformsdk</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\sufw-build\sqlite\sqlite3.h">
+			<Filter>thirdparty\sqlite</Filter>
+		</ClInclude>
+		<ClCompile Include="..\..\..\sufw-build\sqlite\sqlite3.c">
+			<Filter>thirdparty\sqlite</Filter>
+		</ClCompile>
+	</ItemGroup>
+</Project>

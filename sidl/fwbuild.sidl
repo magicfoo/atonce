@@ -1,0 +1,10 @@
+@buildenv config.default
+	from '$devcenter/config/buildconfig_default.py'
+
+@if defined(__WINDOWS__)
+	@include 'fwbuild_windows.sidl'
+@elif defined(__ANDROID__)
+	@include 'fwbuild_android.sidl'
+@elif defined(__IOS__)
+	@include 'fwbuild_ios.sidl'
+@endif

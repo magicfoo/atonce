@@ -1,0 +1,627 @@
+
+@package su.fw.core
+
+
+-- base -------------------------------------------------------------------------------
+
+@inpath '$sufw/core'
+
+@interface IInterface
+	from '<base/su_iinterface.h'
+
+@interface ISwitch
+	from '<base/su_iswitch.h'
+
+@interface IConsole
+	from '<base/su_iconsole.h'
+
+@interface IAllocator
+	from '<base/su_iallocator.h'
+
+@interface INull
+	from '<base/su_inull.h'
+
+
+@outpath '$sufw/core/base'
+
+@interface ISwitchUser
+	extends ISwitch
+
+@implementation MNull
+    static
+	concerns INull
+
+
+@outpath '$sufw/core/misc'
+
+@interface IDriver
+
+@uid NotSupported
+
+
+
+-- console -------------------------------------------------------------------------------
+
+
+@outpath '$sufw/core/net'
+
+@implementation MConsoleNet
+	concerns IConsole
+	defines revision=1
+
+
+@outpath '$sufw/core/fs'
+
+@implementation MFileConsole
+	concerns IConsole
+
+
+
+
+-- filesystem -------------------------------------------------------------------------------
+
+
+@outpath '$sufw/core/fs'
+
+
+@interface IDirectory
+{
+	@func 	(bool)				GetFirst				: (PString&)outName
+	@func 	(bool)				GetNext					: (PString&)outName
+}
+
+
+@interface IFile
+{
+	@enum State
+		S_IDLE		= (0)
+		S_PENDING
+		S_INPROGRESS
+		S_COMPLETED
+		S_ABORTED	= (-1)
+		S_FAILED	= (-2)
+
+	@enum Error
+		E_SUCCESS
+		E_NO_DATA
+		E_WRONG_DISK
+		E_NO_DISK
+		E_NO_DRIVE
+		E_FATAL
+		E_RETRY
+		E_UNDEFINED
+
+	@func	(uint64)			GetSize
+	@func	(State)				GetState
+	@func	(Error)				GetLastError
+	@func	(bool)				IsReadable
+	@func	(bool)				IsWritable
+	@func						Flush
+}
+
+
+@interface IFileWriter
+	extends IFile
+{
+	@func						SetPos					: (uint64)	inBOffset
+	@func	(uint64)			GetPos
+
+	@func	(int)				Write					: (void*)	inBuffer
+														: (uint64)	inBSize
+
+	@func	(int)				Write					: (pcstr)	inText
+
+	@func	(bool)				Resize					: (uint64)	inBSize
+}
+
+
+@interface IFileReader
+	extends IFile
+{
+	@func						SetPos					: (uint64)	inBOffset
+	@func	(uint64)			GetPos
+
+	@func	(int)				Read					: (void*)	inBuffer
+														: (uint64)	inBSize
+}
+
+
+@interface IFileBurst
+	extends IFile
+{
+	@func	(bool)				StartTransfer			: (void*)	inBuffer
+														: (uint64)	inBSize
+														: (uint64)	inBOffset
+														: (void*&)	outAlignedBuffer
+														: (uint64&)	outAlignedBSize
+														: (uint64&)	outAlignedBOffset
+
+	@func						AbortTransfer
+}
+
+
+@interface IFileView
+	extends IFile
+{
+	@func	(void*)				Map						: (uint64)	inBOffset = (0)
+														: (uint64)	inBSize   = (0)
+
+	@func	(bool)				GetMapping				: (void*&)	outAddr
+														: (uint64&)	outBOffset
+														: (uint64&)	outBSize
+}
+
+
+
+
+@interface IFileSystem
+{
+	@forward su.IDirectory
+	@forward su.IFileReader
+	@forward su.IFileWriter
+	@forward su.IFileBurst
+	@forward su.IFileView
+
+	@func	(bool)				IsExists				: (pcstr)inPathname
+	@func	(bool)				IsEmpty					: (pcstr)inPathname
+	@func 	(bool)				IsDirectory				: (pcstr)inPathname
+	@func 	(bool)				IsFile					: (pcstr)inPathname
+	@func 	(bool)				IsReadOnly				: (pcstr)inPathname
+	@func 	(bool)				IsHidden				: (pcstr)inPathname
+	@func 	(bool)				IsSystem				: (pcstr)inPathname
+	@func 	(bool)				IsFullname				: (pcstr)inPathname
+	@func	(bool)				IsInDirectory			: (pcstr)inPathname
+														: (pcstr)inDirname
+
+	@func	(PString)			SplitExtension			: (pcstr)inPathname
+	@func	(bool)				HasExtension			: (pcstr)inPathname
+														: (pcstr)inExtension
+
+	@func	(PString)			GetExtension			: (pcstr)inPathname
+	@func	(PString)			GetBasename				: (pcstr)inPathname
+	@func	(PString)			GetDirname				: (pcstr)inPathname
+	@func	(PString)			GetFullname				: (pcstr)inPathname
+	@func	(PString)			GetNormalized			: (pcstr)inPathname
+	
+	
+	@func	(bool)				GetSize					: (pcstr)inFilename
+														: (uint64&)outBSize
+	@func	(bool)				GetWriteTime			: (pcstr)inFilename
+														: (Date&)outDate
+	@func	(bool)				GetCreationTime			: (pcstr)inFilename
+														: (Date&)outDate
+
+	@func	(uint128)			HashContent				: (pcstr)inFilename
+
+	@func	(PString)			GetCurrentDirectory
+	@func	(bool)				SetCurrentDirectory		: (pcstr)inDirname
+
+	@func	(PString)			GetCommonPath			: (pcstr)inPathname0
+														: (pcstr)inPathname1
+	@func	(PString)			GetCommonDirectory		: (pcstr)inPathname0
+														: (pcstr)inPathname1
+	@func	(PString)			GetRelativeFrom			: (pcstr)inPathname
+														: (pcstr)inOriginPath
+
+	@func	(PString)			FindFile				: (pcstr)inPathname
+														: (pcstr)inOriginPath
+
+	@func	(bool)				Hide					: (pcstr)inPathname
+	@func	(bool)				Unhide					: (pcstr)inPathname
+	@func	(bool)				SetReadOnly				: (pcstr)inPathname
+	@func	(bool)				SetReadWrite			: (pcstr)inPathname
+	@func	(bool)				CopyFile				: (pcstr)inDstFilename
+														: (pcstr)inSrcFilename
+														: (bool)inFailIfExists=(false)
+														: (Pool*)inPool=(NULL)
+														
+	@func	(bool)				MoveFile				: (pcstr)inDstFilename
+														: (pcstr)inSrcFilename
+														
+	@func	(bool)				CreateFile				: (pcstr)inFilename
+														: (bool)inFailIfExists=(false)
+														: (uint64)inBSize=(0)
+														
+	@func	(bool)				CreateDir				: (pcstr)inDirname
+	@func	(bool)				RemoveFile				: (pcstr)inFilename
+	@func	(bool)				RemoveDir				: (pcstr)inDirname
+														: (bool)inForceNotEmpty=(false)
+
+	@func	(IFileReader*)		OpenReader				: (pcstr)inFilename
+														: (Pool*)inPool
+
+	@func	(IFileView*)		OpenView				: (pcstr)inFilename
+														: (Pool*)inPool
+
+	@func	(IFileBurst*)		OpenBurst				: (pcstr)inFilename
+														: (Pool*)inPool
+
+	@func	(IFileWriter*)		OpenWriter				: (pcstr)inFilename
+														: (Pool*)inPool
+														: (bool)inCreateIfNotExists=(true)
+														: (bool)inAppend=(false)
+
+	@func	(IDirectory*)		OpenDir					: (pcstr)inDirname
+														: (Pool*)inPool
+
+	@func	(uint)				GlobFiles				: (pcstr)inFiltername
+														: (vector<PString>&)outFiles
+														: (Pool*)inPool
+
+	@func	(bool)				DumpToFile				: (pcstr)inFilename
+														: (void*)inBufferAddr
+														: (uint)inBufferBSize
+														: (bool)inAppend=(false)
+
+	@func	(bool)				DumpFromFile			: (uint&)outBufferBSize
+														: (pcstr)inFilename
+														: (void*)inBufferAddr
+														: (uint)inBufferBCapacity
+
+	@func	(bool)				DumpFromFile			: (uint&)outBufferBSize
+														: (void*&)outBufferAddr
+														: (pcstr)inFilename
+														: (Pool*)inPool
+
+	@func	(bool)				StartInflateFile		: (IFileWriter*)outFile
+														: (IFileReader*)inFile
+														: (Pool*)inPool
+	@func	(int)				ContinueInflateFile		: (uint) inmaxmstime 
+	@func						AbortInflateFile
+
+	@func	(bool)				DumpSliceFromFile		: (void*)inBufferAddr
+														: (pcstr)inFilename
+														: (uint)inSliceBOffset
+														: (int)inSliceBSize
+
+	@func	(bool)				Mount					: (pcstr)inDirname
+														: (pcstr)inDevClassname
+														: (pcstr)inDevOptions
+
+	@func	(bool)				Unmount					: (pcstr)inDirname
+	@func	(void)				UnmountAll
+
+	@func	(int)				CountMount
+	@func	(pcstr)				EnumMountPath			: (int)inIdx
+	@func	(pcstr)				EnumMountOptions		: (int)inIdx
+
+	@func	(PString)			GetHostPath				: (pcstr)inVirtualPath
+	@func	(PString)			GetVirtualPath			: (pcstr)inHostPath
+}
+
+
+
+
+@interface IDriverFS
+{
+	@enum	// attribute flags
+	{
+		A_NOT_FOUND		= (0)
+		A_FILE			= (1<<0)
+		A_DIR			= (1<<1)
+		A_WTIME			= (1<<2)
+		A_CTIME			= (1<<3)
+		A_ATIME			= (1<<4)
+		A_RONLY			= (1<<5)
+		A_HIDDEN		= (1<<6)
+		A_SYSTEM		= (1<<7)
+	}
+	
+	
+	@func	(uint)				GetAttributes			: (pcstr)		inFilename
+	@func	(uint)				AndAttributes			: (pcstr)		inFilename
+														: (uint)		inAttributes
+	@func	(uint)				OrAttributes			: (pcstr)		inFilename
+														: (uint)		inAttributes
+	@func	(bool)				GetSize					: (pcstr)		inFilename
+														: (uint64&)		outBSize
+	@func	(bool)				GetWriteTime			: (pcstr)		inFilename
+														: (Date&)		outDate
+	@func	(bool)				GetCreationTime			: (pcstr)		inFilename
+														: (Date&)		outDate
+	@func	(bool)				CopyFile				: (pcstr)		inDstFilename
+														: (pcstr)		inSrcFilename
+														: (bool)		inFailIfExists
+	@func	(bool)				MoveFile				: (pcstr)		inDstFilename
+														: (pcstr)		inSrcFilename
+	@func	(bool)				CreateFile				: (pcstr)		inFilename
+														: (bool)		inFailIfExists	 = (FALSE)
+														: (uint64)		inBSize			 = (0)
+
+	@func	(bool)				CreateDir				: (pcstr)		inDirname
+	@func	(bool)				RemoveFile				: (pcstr)		inFilename
+	@func	(bool)				RemoveDir				: (pcstr)		inDirname
+														: (bool)		inForceNotEmpty
+
+	@func	(IFileView*)		OpenView				: (pcstr)		inFilename
+														: (Pool*)		inPool
+
+	@func	(IFileBurst*)		OpenBurst				: (pcstr)		inFilename
+														: (Pool*)		inPool
+
+	@func	(IFileReader*)		OpenReader				: (pcstr)		inFilename
+														: (Pool*)		inPool
+
+	@func	(IFileWriter*)		OpenWriter				: (pcstr)		inFilename
+														: (Pool*)		inPool
+														: (bool)		inCreateIfNotExists	= (true)
+														: (bool)		inAppend			= (true)
+
+	@func	(IDirectory*)		OpenDir					: (pcstr)		inDirname
+														: (Pool*)		inPool
+
+	@func	(PString)			GetHostPath				: (pcstr)		inVirtualPath
+}
+
+
+@implementation MFileSystem
+     concerns IFileSystem
+{
+	@using IDriverFS
+}
+
+
+
+
+-- memory -------------------------------------------------------------------------------
+
+
+@outpath '$sufw/core/mem'
+
+
+# inner allocator
+# uses the targeted memory area to write back management informations.
+
+@implementation MAllocatorInner
+	concerns IAllocator
+
+
+# outer allocator
+# keep the management informations outside of the targeted memory area.
+# this limits the amount of allocated block.
+
+@implementation MAllocatorOuter
+	concerns IAllocator
+
+
+# heap allocator
+# straight allocation on a heap. simple, fast, but always growing.
+# this allocator doesn't support memory recycling.
+
+@interface IAllocatorHeap
+	extends IAllocator
+{
+	@func	(bool)		Realize			: (void*)	inMemAddr
+										: (uint)	inMemBSize
+	@func				Unrealize
+	@func	(bool)		IsRealized
+}
+
+@implementation MAllocatorHeap
+	concerns IAllocatorHeap
+
+
+# chunk allocator
+# this allocator divides the targeted memory in fixed-size uniform units.
+# this approach prevents memory fragmentation issues and delivers very fast allocation/recycling cycles,
+# but at the cost a significant loss of memory.
+
+@interface IAllocatorChunk
+	extends IAllocator
+{
+	@func	(bool)		Realize			: (void*)	inMemAddr
+										: (uint)	inMemBSize
+										: (uint)	inChunkBSize
+	@func				Unrealize
+	@func	(bool)		IsRealized
+
+	@func	(uint)		CountChunk
+	@func	(int)		GetChunkId		: (void*)	inAddr
+	@func	(int)		GetChunkOffset	: (void*)	inAddr
+	@func	(void*)		GetChunkAddr	: (uint)	inIndex
+}
+
+@implementation MAllocatorChunk
+	concerns IAllocatorChunk
+
+
+# slab allocator
+
+@implementation MAllocatorSlab
+	concerns IAllocator
+
+
+# obstack allocator
+# standard obstack algorithm :
+# The last allocated block must be the first released.
+
+@interface IAllocatorObstack
+	extends IAllocator
+{
+	@func	(bool)		Realize			: (void*)	inMemAddr
+										: (uint)	inMemBSize
+	@func				Unrealize
+	@func	(bool)		IsRealized
+
+	@func	(void*)		GetTop
+	@func	(bool)		SetTop			: (void*)	inTop
+
+	@func				SetFatal		: (bool)	inOnOff
+}
+
+@implementation MAllocatorObstack
+	concerns IAllocatorObstack
+	
+
+
+
+
+
+
+-- thread -------------------------------------------------------------------------------
+
+
+@outpath '$sufw/core/thread'
+
+
+@interface IMutex
+{
+	@func 	(IMutex*)			Duplicate
+	@func 	(bool)				IsLocked
+	@func 	(bool)				TryLock				: (uint)				inMsTimeout
+	@func 	(bool)				Lock
+	@func 	(bool)				Abort
+	@func 	(bool)				Unlock
+}
+
+
+@interface ISema
+{
+	@func 	(ISema*)			Duplicate
+	@func 	(uint)				MaxCount
+	@func 	(uint)				Count
+	@func 	(bool)				TryLock				: (uint)				inN
+													: (uint)				inMsTimeout
+	@func 	(bool)				Lock				: (uint)				inN
+	@func 	(bool)				Abort
+	@func 	(bool)				Unlock				: (uint)				inN
+}
+
+
+@interface ISignal
+{
+	@func	(ISignal*)			Duplicate
+
+	@func	(bool)				TryCatch			: (uint)				inMsTimeout
+	@func	(bool)				Catch
+	@func	(bool)				Abort
+	@func	(bool)				Raise
+	@func 	(bool)				Reset
+}
+
+
+@interface ITimer
+{
+	@func 	(bool)				SetPeriod			: (uint)				inMsPeriod
+	@func 	(uint)				GetPeriod
+	@func 	(bool)				IsStarted
+	@func 	(bool)				Start				: (uint)				inDueMsTime = (0)
+	@func 	(bool)				Stop
+}
+
+
+@interface IThreadRef
+{
+	@func 	(bool)				IsPrimary
+	@func 	(bool)				IsExited
+	@func 	(int)				GetExitCode
+	@func 	(void)				Exit				: (int)				inCode
+}
+
+
+@interface IThread
+{
+
+	@section code
+	[
+		struct IThreadRef;
+		struct IMutex;
+		struct ISema;
+		struct ISignal;
+		struct ITimer;
+		struct IObserver;
+		struct IEvent;
+
+		struct Proc
+		{
+			virtual	int thmain() = 0;
+		};
+	]
+
+
+	@func 	(bool)				PostEvent			: (IObserver*)		inObs
+													: (IEvent*)			inE
+	
+	@func 	(void)				Process
+	@func 	(void)				Wait
+	@func 	(void)				WaitTimeout			: (uint)			inMsTime	
+	@func 	(void)				Sleep				: (uint)			inMsTime	
+	@func 	(void)				Exit				: (int)				inCode	
+	
+	@func 	(bool)				IsPrimary
+	
+	@func 	(IThreadRef*)		CreateRef
+	
+	@func 	(IThreadRef*)		CreateThread		: (Proc*)			inProc	
+	
+	
+	@func 	(IMutex*)			CreateMutex			: (pcstr)			inName 		= (NULL)	
+	@func 	(ISema*)			CreateSema			: (uint)			inMaxCount 	= (1)	
+													: (pcstr)			inName		= (NULL)
+												
+	@func 	(ISignal)			CreateSignal		: (pcstr)			inName		= (NULL)
+	@func 	(ITimer)			CreateTimer			: (uint)			inMsPeriod 	= (0)
+}
+
+
+
+
+
+
+@inpath '$sufw/core'
+
+
+@group group.su.fw.core.base
+{
+	@folder 'cpp.core.base'
+		adds '<base/*.h'
+		adds '<base/*.cpp'
+		adds '<base/*.c'
+
+	@folder 'cpp.core.base.md5'
+		adds '<base/md5/*.h'
+		adds '<base/md5/*.cpp'
+}
+
+
+@group group.su.fw.core
+{
+	@folder 'cpp.core'
+		adds '<*.h'
+
+	@folder 'cpp.core.dg'
+		adds '<dg/*.h'
+		adds '<dg/*.cpp'
+
+	@folder 'cpp.core.fs'
+		adds '<fs/*.h'
+		adds '<fs/*.cpp'
+
+	@folder 'cpp.core.misc'
+		adds '<misc/*.h'
+		adds '<misc/*.cpp' ifexisting
+
+	@folder 'cpp.core.container'
+		adds '<container/*.h'
+		adds '<container/*.cpp'
+
+	@folder 'cpp.core.mem'
+		adds '<mem/*.h'
+		adds '<mem/*.cpp'
+
+	@folder 'cpp.core.thread'
+		adds '<thread/*.h'
+		adds '<thread/*.cpp' ifexisting
+	
+	@folder 'cpp.core.net'
+		adds '<net/*.h'
+		adds '<net/*.cpp' ifexisting
+	
+	@folder 'cpp.core.test'
+		adds '<test/*.h'
+		adds '<test/*.cpp'
+}
+
+
+
+

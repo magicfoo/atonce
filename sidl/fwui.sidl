@@ -1,0 +1,22 @@
+
+@package su.fw.ui
+
+@iopath '$sufw/ui'
+
+
+@interface IUICanvas
+@interface IUICollection
+@interface IUIObject
+
+
+
+@group group.su.fw.ui
+{
+	@folder 'cpp.ui'
+		adds '<*.h'
+		adds '<*.cpp' ifexisting
+}
+
+
+
+

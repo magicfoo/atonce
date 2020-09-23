@@ -1,0 +1,309 @@
+
+@package su.fw.directdriver
+
+@outpath '$sufw/directdriver'
+
+
+
+@interface IDirectShader
+{
+	@type Action = ( uint* (*%%)(uint*,uint,void*,void*) )
+
+	@func	(uint)				CountAction
+
+	@func	(bool)				EnumAction			: (uint)		inIndex
+													: (byte&)		outCode
+													: (Action&)		outAction
+													: (void*&)		outUData
+
+	@func						OnInitResources
+	@func 						OnStart
+	@func 						OnBeginFrame
+	@func 						OnEndFrame
+	@func 						OnFlush
+}
+
+
+
+
+@interface IDirectDraw
+{
+	@struct Display
+		(int) x
+		(int) y
+		(int) w
+		(int) h
+
+	@struct Screen
+		(int) dpy
+		(int) x
+		(int) y
+		(int) w
+		(int) h
+
+	@enum ShaderModel
+		SM_None		= (0)
+		SM_Model1	= (1)
+		SM_Model2	= (2)
+		SM_Model3	= (3)
+		SM_Model4	= (4)
+
+
+	@func	(uint)				CountDisplay
+	@func	(bool)				EnumDisplay			: (uint)			inIndex
+													: (Display&)		outDisplay
+
+	@func	(uint)				CountScreen
+	@func	(bool)				EnumScreen			: (uint)			inIndex
+													: (Screen&)			outScreen
+
+	@func	(bool)				Realize
+	@func	(bool)				IsRealized
+	@func						Unrealize
+
+	@func	(bool)				IsFullscreen
+	@func	(ShaderModel)		GetShaderModel
+	
+	@func	(uint)				GetPackedColor		: (byte)			inR
+													: (byte)			inG
+													: (byte)			inB
+													: (byte)			inA = (255)
+													  
+	@func	(uint)				GetPackedColor		: (float)			inR
+													: (float)			inG
+													: (float)			inB
+													: (float)			inA = (1.0f)
+
+	@func						ResourceAddRef		: (int)				inId
+	@func	(uint)				ResourceCountRef	: (int)				inId
+	@func						ResourceRelease		: (int)				inId
+	@func	(uint)				ResourceCountMax
+	
+	
+	
+	@func	(bool)				IsTerminated
+	@func						WaitForTermination
+	@func	(bool)				StartCmdList		: (uint*)			inBAddr
+	@func	(bool)				StartAndWaitCmdList	: (uint*)			inBAddr
+
+	@func	(uint*)				GetLastErrorAddr
+}
+
+
+@abstract ADirectDraw
+	concerns IDirectDraw
+
+@abstract ADirectShader
+	concerns IDirectShader
+
+
+@interface IDirectInput
+
+
+
+@interface IDirectSound
+{
+	@enum FrameType
+		FT_Mono
+		FT_Stereo
+
+
+	@func	(bool)				Realize						: (uint)				inChannelCount
+	@func	(bool)				IsRealized					
+	@func						UnRealize
+	
+	@func	(bool)				SetupChannel				: (uint)				inNumChannel
+															: (uint)				inBufferSize
+															: (float)				inFrequency
+															: (FrameType)			inFrameType
+															: (float)				inVolume
+
+	@func	(uint)				GetFilling					: (uint)				inNumChannel
+	@func	(uint)				ReFill						: (uint)				inNumChannel
+															: (byte*)				inBAddr
+															: (uint)				inBSize
+	
+	
+	@func	(bool)				SetVolume					: (uint)				inNumChannel
+															: (float)				inVolume
+	@func	(bool)				IsStarted					: (uint)				inNumChannel
+	
+	@func	(bool)				Start						: (uint)				inNumChannel
+	@func	(bool)				Stop						: (uint)				inNumChannel
+}
+
+
+
+
+@interface IDirectApp
+{
+	@forward su.IDirectDraw
+	@forward su.IDirectSound
+
+	@enum Event		
+		E_NONE
+		--
+		E_MOUSE_UP
+		E_MOUSE_DOWN
+		E_KEY_UP
+		E_KEY_DOWN
+		E_TOUCH_UP
+		E_TOUCH_DOWN
+		-- system
+		E_CLOSE
+		E_HIDE
+		E_SHOW		
+		E_FOCUS
+		E_UNFOCUS
+
+
+	@enum KeyCode
+		KU_KPAD				= (1)		// Key Pad 0.
+		KU_KPAD_LAST		= (10)		// Key Pad 9.
+		KU_KEY				= (11)		// Key a.
+		KU_KEY_LAST			= (36)		// Key z.		
+		KU_F				= (37)		// Key F1.
+		KU_F_LAST			= (48)		// Key F12.
+		KU_NUM				= (49)		// Key 0/à/@
+		KU_NUM_LAST			= (58)		// Key 9/ç/^
+		KU_KEY_SPECIAL		= (59)		// Key special
+		KU_KEY_SPECIAL_LAST	= (71)		// Key special Last
+		KU_BACKSPACE		// The backspace key.
+		KU_TAB				// The tab key.
+		KU_ENTER			// The enter key.
+		KU_PAUSE			// The pause key.
+		KU_SCROLL_LOCK		// The scroll lock key.
+		KU_ESCAPE			// The escape key.
+		KU_HOME				// The home key.
+		KU_LEFT				// The left arrow key.
+		KU_UP				// The up arrow key.
+		KU_RIGHT			// The right arrow key.
+		KU_DOWN				// The down arrow key.
+		KU_PAGE_UP			// The page-up key.
+		KU_PAGE_DOWN		// The page-down key.
+		KU_END				// The end key.
+		KU_PRINT			// The print (or print-screen) key.
+		KU_INSERT			// The insert key.
+		KU_MENU				// The menu key.
+		KU_NUM_LOCK			// The num lock key.		
+		KU_KPAD_ENTER		// The enter key on the keypad.
+		KU_KPAD_DIV			// The divide key on the keypad.
+		KU_KPAD_ADD			// The addition key on the keypad.
+		KU_KPAD_SUB			// The substraction key on the keypad.
+		KU_KPAD_MUL			// The multiply key on the keypad.
+		KU_KPAD_POINT		// The point key on the keypad.
+		KU_SHIFT_L			// The lefthand shift key.
+		KU_SHIFT_R			// The righthand shift key.
+		KU_CONTROL_L		// The lefthand control key.
+		KU_CONTROL_R		// The righthand control key.
+		KU_CAPS_LOCK		// The caps lock key.
+		KU_META_L			// The left meta/Windows key.
+		KU_META_R			// The right meta/Windows key.
+		KU_ALT_L			// The left alt key.
+		KU_ALT_R			// The right alt key.
+		KU_DELETE			// The delete key.
+		KU_NONE				// No Key Code associated		
+
+	@func	(bool)					Realize
+	@func	(bool)					IsRealized
+	@func							Unrealize
+
+	@func	(IDirectDraw*)			GetDirectDraw
+	@func	(IDirectSound*)			GetDirectSound
+	@func	(uint)					GetScreenView
+	@func	(Vec2)					GetScreenViewSize
+
+	@func							Update
+	@func	(Event)					GetEvent
+	@func	(Event)					PickEvent
+
+	@func	(int)					event_mouse_x
+	@func	(int)					event_mouse_y
+	@func	(util::bitmask<8>)		event_mouse_state
+	@func	(util::bitmask<8>)		event_mouse_prevstate
+	@func	(util::bitmask<8>)		event_mouse_push
+	@func	(util::bitmask<8>)		event_mouse_release
+	@func	(int)					event_mouse_wheel_dx
+	@func	(int)					event_mouse_wheel_dy
+
+	@func	(util::bitmask<256>)	event_key_state	
+	@func	(util::bitmask<256>)	event_key_prevstate
+	@func	(util::bitmask<256>)	event_key_push
+	@func	(util::bitmask<256>)	event_key_release
+	@func	(int)					event_key_code		: (pcstr) key
+	@func	(bool)					event_key_text		: (int) keycode	: (SString*) outString
+
+	@func	(util::bitmask<10>)		event_touch_state
+	@func	(util::bitmask<10>)		event_touch_prevstate
+	@func	(util::bitmask<10>)		event_touch_push
+	@func	(util::bitmask<10>)		event_touch_release
+	@func	(int)					event_touch_x		: (int) idx
+	@func	(int)					event_touch_y		: (int) idx
+}
+
+
+@interface IDirectViewer
+{
+	@forward su.IDirectApp
+	@forward su.IRscManager
+
+	
+	@enum ViewMode
+		VM_CameraAuto
+		VM_Authoring
+
+
+	@func (bool)			Realize				: (IDirectApp*)		inDD
+												: (IRscManager*)	inRscMgr
+												: (ViewMode)		inMode
+	@func					Unrealize
+
+	@func (bool)			AddCollection		: (uint)			inRid
+
+
+	@func					ShowGrid			: (bool)			inOnOff
+	@func					ShowWarp			: (bool)			inOnOff
+	@func					ShowArcBall			: (bool)			inOnOff
+	@func					ShowCubeHelper		: (bool)			inOnOff
+
+
+	@func					Update
+}
+
+@implementation MDirectViewer
+    concerns IDirectViewer
+
+@implementation MDirectDraw
+	alias NotSupported
+
+@implementation MDirectSound
+	alias NotSupported
+
+@implementation MDirectDrawDX9
+	alias NotSupported
+	
+@implementation MDirectDrawGL
+	alias NotSupported
+
+@implementation MDirectApp
+	alias NotSupported
+
+
+@implementation MDirectShaderCamera
+	finalizes ADirectShader
+{
+	@using <sufw/directdriver/su_directdriver.h>
+	@using ICameraGrabber
+}
+
+
+
+
+@inpath '$sufw/directdriver'
+
+@group group.su.fw.ddriver
+{
+	@folder 'cpp.direct driver'
+		adds '<*.h'
+		adds '<*.cpp' ifexisting
+}

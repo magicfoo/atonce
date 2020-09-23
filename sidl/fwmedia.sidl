@@ -1,0 +1,65 @@
+
+
+@package su.fw.media
+
+@outpath '$sufw/media'
+
+
+@interface ICameraGrabber
+{
+	@enum Origin
+		BottomLeft
+		BottomRight
+		TopLeft
+		TopRight
+	
+	@struct Descriptor
+		(void*)		data
+		(uint)		width
+		(uint)		height
+		(Psm)		psm
+		(Origin)	origin
+		(bool)		yFlipped
+	
+	@func	(bool)			Configure
+
+	@func	(bool)			Prepare			: (Pool*)	inPool
+	@func	(void)			UnPrepare
+
+	@func	(bool)			Start
+	@func 	(void)			Stop
+	
+	@func	(bool)			Grab			: (Descriptor*)	ioDesc
+}
+
+@interface IImageAnalyzer
+{
+	@func	(bool)			Analyze			:	(Matrix*)	outView
+											:	(Matrix*)	outProj
+											:	(byte*)		inRGBData
+											:	(uint)		inWidth
+											:	(uint)		inHeight
+											:	(uint)		inFocal		// in pixel
+}
+
+
+
+@implementation MCameraGrabber
+	alias NotSupported
+
+
+@implementation MImageAnalyzer
+     concerns IImageAnalyzer
+
+
+
+@inpath '$sufw/media'
+
+@group group.su.fw.media
+{
+	@folder 'cpp.media'
+		adds '<*.h'
+		adds '<*.cpp'
+}
+
+

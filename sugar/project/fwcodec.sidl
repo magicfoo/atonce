@@ -1,0 +1,92 @@
+
+@package su.fw.codec
+
+@outpath '$sufw/codec'
+
+
+@interface ICodec
+{
+	@forward su.map.rsc_collection
+
+	@enum Mode
+		M_DECODE
+		M_ENCODE
+
+	@enum Result
+		R_OK
+		R_NEED_OUTPUT
+		R_NEED_INPUT
+		R_INVALID_PARAM
+		R_INVALID_CALL
+		R_DATA_ERROR
+		R_FATAL_ERROR
+
+	@func	(bool)			IsRealized
+
+	@func	(bool)			Realize			: (MCursor&) inInOut
+											: (Mode) inMode
+
+	@func	(void)			Unrealize		: (MCursor&) inInOut
+
+	@func	(Result)		Convert			: (MCursor&) inOutput
+											: (MCursor&) inInput
+
+	@func 	(bool)			Convert			: (MCursor&) inOutput
+											: (MCursor&) inInput
+											: (Pool*) inPool
+											: (classid) UID
+											static
+
+	@func	(bool)			Load			: (map::rsc_collection&) outCollec
+											: (MCursor&) inOutput
+											: (MCursor&) inInput
+											: (Pool*) inPool
+											static
+}
+
+
+@implementation MCodecLZH5
+	concerns ICodec
+
+@implementation MCodecLZO
+	concerns ICodec
+
+@implementation MCodecRS
+	concerns ICodec
+
+@implementation MCodecJPEG
+	concerns ICodec
+
+@implementation MCodecTGA
+	concerns ICodec
+
+@implementation MCodecPNG
+	concerns ICodec
+
+@implementation MCodecYM
+	concerns ICodec
+
+@implementation MCodecZLIB
+	alias NotSupported
+
+@implementation MCodecGFL
+	alias NotSupported
+
+@implementation MCodecCocoa
+	alias NotSupported
+	
+
+
+
+
+
+@inpath '$sufw/codec'
+
+@group group.su.fw.codec
+{
+	@folder 'cpp.codec'
+		adds '<*.h'
+		adds '<*.cpp'
+}
+
+

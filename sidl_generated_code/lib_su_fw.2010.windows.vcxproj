@@ -1,0 +1,2028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|Win32">
+			<Configuration>Debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|Win32">
+			<Configuration>Release</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Globals">
+		<ProjectGuid>{E09AA80A-8F8C-380C-923C-B8189FDD58C8}</ProjectGuid>
+		<ProjectName>lib.su.fw</ProjectName>
+		<Keyword>Win32Proj</Keyword>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Globals">
+		<ProjectGuid>{E09AA80A-8F8C-380C-923C-B8189FDD58C8}</ProjectGuid>
+		<ProjectName>lib.su.fw</ProjectName>
+		<Keyword>Win32Proj</Keyword>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>NotSet</CharacterSet>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>NotSet</CharacterSet>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<LinkIncremental>Yes</LinkIncremental>
+		<IntDir>$(SolutionDir)\msvc2010\$(ProjectName) - $(Configuration)\</IntDir>
+		<OutDir>C:\work\sufw\project\bin\</OutDir>
+		<TargetDir>C:\work\sufw\project\bin</TargetDir>
+		<TargetName>sufw_dbg</TargetName>
+		<TargetExt>.lib</TargetExt>
+		<TargetSuffix>_dbg</TargetSuffix>
+		<TargetFilename>$(TargetName)$(TargetExt)</TargetFilename>
+		<TargetPath>C:\work\sufw\project\bin\sufw_dbg.lib</TargetPath>
+		<GenerateManifest>false</GenerateManifest>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<LinkIncremental>Yes</LinkIncremental>
+		<IntDir>$(SolutionDir)\msvc2010\$(ProjectName) - $(Configuration)\</IntDir>
+		<OutDir>C:\work\sufw\project\bin\</OutDir>
+		<TargetDir>C:\work\sufw\project\bin</TargetDir>
+		<TargetName>sufw_rls</TargetName>
+		<TargetExt>.lib</TargetExt>
+		<TargetSuffix>_rls</TargetSuffix>
+		<TargetFilename>$(TargetName)$(TargetExt)</TargetFilename>
+		<TargetPath>C:\work\sufw\project\bin\sufw_rls.lib</TargetPath>
+		<GenerateManifest>false</GenerateManifest>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<ClCompile>
+			<Optimization>Disabled</Optimization>
+			<FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+			<AdditionalOptions>/wd4018 /wd4244 /wd4503 /wd4530 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>C:/work;C:/work/sufw-build/lua; C:/work/sufw-build/lua/auxlib; C:/work/sufw-build/lua/libs; C:/work/sufw-build/lua/core;C:/work/sufw-build/zip;C:/work/sufw-build/fltk/zlib;C:/work/sufw-build/yaml/include;C:/work/sufw-build/lzma/C;C:/work/sufw-build/fltk/png;C:/work/sufw-build/gfl;C:/work/sufw-build/pvrtexlib;C:/work/sufw-build/ddsutils/inc;C:/work/sufw-build/fltk;C:/work/sufw-build/fltk/ide/VisualC2008;C:/work/sufw-build/gl32/include;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\/include;C:/work/sufw-build/platformsdk;C:/work/sufw-build/autodesk/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>SU_FRAMEWORK;WIN32;_WINDOWS;_DEBUG;SU_DEBUG;SU_HW_AUTO;LUA_USE_APICHECK;_CRT_SECURE_NO_WARNINGS;YAML_DECLARE_STATIC;SU_GL;SU_DX9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<StringPooling>true</StringPooling>
+			<MinimalRebuild>true</MinimalRebuild>
+			<ExceptionHandling>false</ExceptionHandling>
+			<BasicRuntimeChecks>Default</BasicRuntimeChecks>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+			<RuntimeTypeInfo>false</RuntimeTypeInfo>
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+			<BrowseInformation>true</BrowseInformation>
+			<BrowseInformationFile>$(IntDir)</BrowseInformationFile>
+			<WarningLevel>Level3</WarningLevel>
+			<EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+			<ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>SU_FRAMEWORK;WIN32;_WINDOWS;_DEBUG;SU_DEBUG;SU_HW_AUTO;LUA_USE_APICHECK;_CRT_SECURE_NO_WARNINGS;YAML_DECLARE_STATIC;SU_GL;SU_DX9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<Culture>1033</Culture>
+			<AdditionalIncludeDirectories>C:/work;C:/work/sufw-build/lua; C:/work/sufw-build/lua/auxlib; C:/work/sufw-build/lua/libs; C:/work/sufw-build/lua/core;C:/work/sufw-build/zip;C:/work/sufw-build/fltk/zlib;C:/work/sufw-build/yaml/include;C:/work/sufw-build/lzma/C;C:/work/sufw-build/fltk/png;C:/work/sufw-build/gfl;C:/work/sufw-build/pvrtexlib;C:/work/sufw-build/ddsutils/inc;C:/work/sufw-build/fltk;C:/work/sufw-build/fltk/ide/VisualC2008;C:/work/sufw-build/gl32/include;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\/include;C:/work/sufw-build/platformsdk;C:/work/sufw-build/autodesk/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+		<Lib>
+			<OutputFile>$(TargetDir)$(TargetName).lib</OutputFile>
+			<AdditionalDependencies>libgfl.lib;PVRTexLib.lib;nvDXTlibMTDLLd.vc8.lib;fltkd.lib;fltkformsd.lib;fltkimagesd.lib;fltkjpegd.lib;fltkpngd.lib;fltkzd.lib;dwmapi.lib;opengl32.lib;glew32.lib;d3d9.lib;d3dx9d.lib;dsound.lib;strmiids.lib;fbxsdk-2012.1-mdd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>C:/work/sufw-build/gfl;C:/work/sufw-build/pvrtexlib/Win32;C:/work/sufw-build/ddsutils/lib/debug;C:/work/sufw-build/fltk/lib;C:/work/sufw-build/dwm;C:/work/sufw-build/gl32/lib;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\/lib/x86;C:/work/sufw-build/platformsdk;C:/work/sufw-build/autodesk/lib/vs2010/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalOptions>/IGNORE:4006 /IGNORE:4221 /IGNORE:4099 %(AdditionalOptions)</AdditionalOptions>
+			<SubSystem>Windows</SubSystem>
+		</Lib>
+		<Link>
+			<OutputFile>$(TargetDir)$(TargetName).exe</OutputFile>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<AdditionalDependencies>libgfl.lib;PVRTexLib.lib;nvDXTlibMTDLLd.vc8.lib;fltkd.lib;fltkformsd.lib;fltkimagesd.lib;fltkjpegd.lib;fltkpngd.lib;fltkzd.lib;dwmapi.lib;opengl32.lib;glew32.lib;d3d9.lib;d3dx9d.lib;dsound.lib;strmiids.lib;fbxsdk-2012.1-mdd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>C:/work/sufw-build/gfl;C:/work/sufw-build/pvrtexlib/Win32;C:/work/sufw-build/ddsutils/lib/debug;C:/work/sufw-build/fltk/lib;C:/work/sufw-build/dwm;C:/work/sufw-build/gl32/lib;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\/lib/x86;C:/work/sufw-build/platformsdk;C:/work/sufw-build/autodesk/lib/vs2010/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalOptions>/IGNORE:4006 /IGNORE:4221 /IGNORE:4099 %(AdditionalOptions)</AdditionalOptions>
+			<SubSystem>Windows</SubSystem>
+			<ManifestFile />
+		</Link>
+		<ProjectReference>
+			<LinkLibraryDependencies>true</LinkLibraryDependencies>
+		</ProjectReference>
+		<Bscmake>
+			<OutputFile>$(TargetDir)$(TargetName).bsc</OutputFile>
+		</Bscmake>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<ClCompile>
+			<Optimization>MaxSpeed</Optimization>
+			<FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+			<AdditionalOptions>/wd4018 /wd4244 /wd4503 /wd4530 %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>C:/work;C:/work/sufw-build/lua; C:/work/sufw-build/lua/auxlib; C:/work/sufw-build/lua/libs; C:/work/sufw-build/lua/core;C:/work/sufw-build/zip;C:/work/sufw-build/fltk/zlib;C:/work/sufw-build/yaml/include;C:/work/sufw-build/lzma/C;C:/work/sufw-build/fltk/png;C:/work/sufw-build/gfl;C:/work/sufw-build/pvrtexlib;C:/work/sufw-build/ddsutils/inc;C:/work/sufw-build/fltk;C:/work/sufw-build/fltk/ide/VisualC2008;C:/work/sufw-build/gl32/include;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\/include;C:/work/sufw-build/platformsdk;C:/work/sufw-build/autodesk/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>SU_FRAMEWORK;NDEBUG;_RELEASE;SU_RELEASE;SU_HW_AUTO;WIN32;_WINDOWS;LUA_USE_APICHECK;_CRT_SECURE_NO_WARNINGS;YAML_DECLARE_STATIC;SU_GL;SU_DX9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<StringPooling>true</StringPooling>
+			<MinimalRebuild>true</MinimalRebuild>
+			<ExceptionHandling>false</ExceptionHandling>
+			<BasicRuntimeChecks>Default</BasicRuntimeChecks>
+			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+			<TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+			<RuntimeTypeInfo>false</RuntimeTypeInfo>
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+			<BrowseInformation>false</BrowseInformation>
+			<BrowseInformationFile>$(IntDir)</BrowseInformationFile>
+			<WarningLevel>Level3</WarningLevel>
+			<EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+			<GenerateDebugInformation>false</GenerateDebugInformation>
+			<DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+			<ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions>SU_FRAMEWORK;NDEBUG;_RELEASE;SU_RELEASE;SU_HW_AUTO;WIN32;_WINDOWS;LUA_USE_APICHECK;_CRT_SECURE_NO_WARNINGS;YAML_DECLARE_STATIC;SU_GL;SU_DX9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<Culture>1033</Culture>
+			<AdditionalIncludeDirectories>C:/work;C:/work/sufw-build/lua; C:/work/sufw-build/lua/auxlib; C:/work/sufw-build/lua/libs; C:/work/sufw-build/lua/core;C:/work/sufw-build/zip;C:/work/sufw-build/fltk/zlib;C:/work/sufw-build/yaml/include;C:/work/sufw-build/lzma/C;C:/work/sufw-build/fltk/png;C:/work/sufw-build/gfl;C:/work/sufw-build/pvrtexlib;C:/work/sufw-build/ddsutils/inc;C:/work/sufw-build/fltk;C:/work/sufw-build/fltk/ide/VisualC2008;C:/work/sufw-build/gl32/include;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\/include;C:/work/sufw-build/platformsdk;C:/work/sufw-build/autodesk/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+		<Lib>
+			<OutputFile>$(TargetDir)$(TargetName).lib</OutputFile>
+			<AdditionalDependencies>libgfl.lib;PVRTexLib.lib;nvDXTlibMTDLL.vc8.lib;fltk.lib;fltkforms.lib;fltkimages.lib;fltkjpeg.lib;fltkpng.lib;fltkz.lib;dwmapi.lib;opengl32.lib;glew32.lib;d3d9.lib;d3dx9.lib;dsound.lib;strmiids.lib;fbxsdk-2012.1-md.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>C:/work/sufw-build/gfl;C:/work/sufw-build/pvrtexlib/Win32;C:/work/sufw-build/ddsutils/lib/release;C:/work/sufw-build/fltk/lib;C:/work/sufw-build/dwm;C:/work/sufw-build/gl32/lib;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\/lib/x86;C:/work/sufw-build/platformsdk;C:/work/sufw-build/autodesk/lib/vs2010/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalOptions>/IGNORE:4006 /IGNORE:4221 /IGNORE:4099 %(AdditionalOptions)</AdditionalOptions>
+			<SubSystem>Windows</SubSystem>
+		</Lib>
+		<Link>
+			<OutputFile>$(TargetDir)$(TargetName).exe</OutputFile>
+			<GenerateDebugInformation>false</GenerateDebugInformation>
+			<AdditionalDependencies>libgfl.lib;PVRTexLib.lib;nvDXTlibMTDLL.vc8.lib;fltk.lib;fltkforms.lib;fltkimages.lib;fltkjpeg.lib;fltkpng.lib;fltkz.lib;dwmapi.lib;opengl32.lib;glew32.lib;d3d9.lib;d3dx9.lib;dsound.lib;strmiids.lib;fbxsdk-2012.1-md.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>C:/work/sufw-build/gfl;C:/work/sufw-build/pvrtexlib/Win32;C:/work/sufw-build/ddsutils/lib/release;C:/work/sufw-build/fltk/lib;C:/work/sufw-build/dwm;C:/work/sufw-build/gl32/lib;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\/lib/x86;C:/work/sufw-build/platformsdk;C:/work/sufw-build/autodesk/lib/vs2010/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalOptions>/IGNORE:4006 /IGNORE:4221 /IGNORE:4099 %(AdditionalOptions)</AdditionalOptions>
+			<SubSystem>Windows</SubSystem>
+			<ManifestFile />
+		</Link>
+		<ProjectReference>
+			<LinkLibraryDependencies>true</LinkLibraryDependencies>
+		</ProjectReference>
+		<Bscmake>
+			<OutputFile>$(TargetDir)$(TargetName).bsc</OutputFile>
+		</Bscmake>
+	</ItemDefinitionGroup>
+	<ItemGroup Label="Items">
+		<ClInclude Include="..\..\codec\su_codec.h" />
+		<ClInclude Include="..\..\codec\su_icodec.h" />
+		<ClInclude Include="..\..\codec\su_mcodecjpeg_stub.h" />
+		<ClInclude Include="..\..\codec\su_mcodeclzh5_stub.h" />
+		<ClInclude Include="..\..\codec\su_mcodeclzo_stub.h" />
+		<ClInclude Include="..\..\codec\su_mcodecpng_stub.h" />
+		<ClInclude Include="..\..\codec\su_mcodecrs_stub.h" />
+		<ClInclude Include="..\..\codec\su_mcodectga_stub.h" />
+		<ClInclude Include="..\..\codec\su_mcodecym_stub.h" />
+		<ClCompile Include="..\..\codec\su_codec.cpp" />
+		<ClCompile Include="..\..\codec\su_codec_lzma.cpp" />
+		<ClCompile Include="..\..\codec\su_codec_pvrtc.cpp" />
+		<ClCompile Include="..\..\codec\su_mcodecjpeg_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\codec\su_mcodeclzh5_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\codec\su_mcodeclzo_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\codec\su_mcodecpng_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\codec\su_mcodecrs_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\codec\su_mcodectga_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\codec\su_mcodecym_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClInclude Include="..\..\media\su_icameragrabber.h" />
+		<ClInclude Include="..\..\media\su_iimageanalyzer.h" />
+		<ClInclude Include="..\..\media\su_mimageanalyzer_stub.h" />
+		<ClCompile Include="..\..\media\su_mimageanalyzer_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClInclude Include="..\..\..\sufw-windows\dx9\default_program.fx.h" />
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_dx9sdk.h" />
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_idirectdrawdx9.h" />
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectdrawdx9_resource.h" />
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectdrawdx9_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectshaderbasedx9_cmds.h" />
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectshaderbasedx9_resources.h" />
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectshaderbasedx9_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectshaderprimdx9_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectshaderprogramdx9_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectshadertiledx9_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\dx9\su_mdirectsounddx9_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\dx9\tile_hlsl.fx.h" />
+		<ClCompile Include="..\..\..\sufw-windows\dx9\su_mdirectdrawdx9_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\dx9\su_mdirectshaderbasedx9_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\dx9\su_mdirectshaderprimdx9_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\dx9\su_mdirectshaderprogramdx9_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\dx9\su_mdirectshadertiledx9_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\dx9\su_mdirectsounddx9_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<CustomBuild Include="..\..\..\sufw-windows\dx9\default_program.fx">
+			<Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">&quot;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\/utilities/bin/x86/fxc&quot; /T fx_2_0 /Od /Zi /Vn fxcode /nologo /Fh %(FullPath).h %(FullPath)</Command>
+			<Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath).h</Outputs>
+			<Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compiling fx file %(Filename).%(Extension) ...</Message>
+			<Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">&quot;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\/utilities/bin/x86/fxc&quot; /T fx_2_0 /O2 /Vn fxcode /nologo /Fh %(FullPath).h %(FullPath)</Command>
+			<Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath).h</Outputs>
+			<Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compiling fx file %(Filename).%(Extension) ...</Message>
+		</CustomBuild>
+		<CustomBuild Include="..\..\..\sufw-windows\dx9\tile_hlsl.fx">
+			<Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">&quot;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\/utilities/bin/x86/fxc&quot; /T fx_2_0 /Od /Zi /Vn fxcode /nologo /Fh %(FullPath).h %(FullPath)</Command>
+			<Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath).h</Outputs>
+			<Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compiling fx file %(Filename).%(Extension) ...</Message>
+			<Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">&quot;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\/utilities/bin/x86/fxc&quot; /T fx_2_0 /O2 /Vn fxcode /nologo /Fh %(FullPath).h %(FullPath)</Command>
+			<Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath).h</Outputs>
+			<Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compiling fx file %(Filename).%(Extension) ...</Message>
+		</CustomBuild>
+		<ClInclude Include="..\..\logic\su_fsm.h" />
+		<ClInclude Include="..\..\logic\su_istatemachine.h" />
+		<ClInclude Include="..\..\logic\su_logic.h" />
+		<ClCompile Include="..\..\logic\su_fsm.cpp" />
+		<ClInclude Include="..\..\su_config.h" />
+		<ClInclude Include="..\..\su_core.h" />
+		<ClInclude Include="..\..\su_fw.h" />
+		<ClInclude Include="..\..\su_generic.h" />
+		<ClInclude Include="..\..\su_mapping.h" />
+		<ClInclude Include="..\..\su_settings.h" />
+		<ClInclude Include="..\..\su_startup.h" />
+		<ClInclude Include="..\..\su_stringid.h" />
+		<ClInclude Include="..\..\su_system.h" />
+		<ClInclude Include="..\..\su_uids.h" />
+		<ClCompile Include="..\..\su_mapping.cpp" />
+		<ClCompile Include="..\..\su_stringid.cpp" />
+		<ClInclude Include="..\..\precompiled\supch_core.h" />
+		<ClInclude Include="..\..\precompiled\supch_fw.h" />
+		<ClCompile Include="..\..\precompiled\supch_core.cpp">
+			<PrecompiledHeader>Create</PrecompiledHeader>
+			<PrecompiledHeaderFile>%(Dirname)%(Filename).h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)%(Filename).pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\precompiled\supch_fw.cpp">
+			<PrecompiledHeader>Create</PrecompiledHeader>
+			<PrecompiledHeaderFile>%(Dirname)%(Filename).h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)%(Filename).pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<None Include="..\env.sidl" />
+		<None Include="..\fw.sidl" />
+		<None Include="..\fwasset.sidl" />
+		<None Include="..\fwbuild.sidl" />
+		<None Include="..\fwbuild_android.sidl" />
+		<None Include="..\fwbuild_ios.sidl" />
+		<None Include="..\fwbuild_windows.sidl" />
+		<None Include="..\fwcodec.sidl" />
+		<None Include="..\fwcore.sidl" />
+		<None Include="..\fwddriver.sidl" />
+		<None Include="..\fwengine.sidl" />
+		<None Include="..\fwlangflash.sidl" />
+		<None Include="..\fwlanglua.sidl" />
+		<None Include="..\fwlogic.sidl" />
+		<None Include="..\fwmaps.sidl" />
+		<None Include="..\fwmedia.sidl" />
+		<None Include="..\fwstringids.sidl" />
+		<None Include="..\fwui.sidl" />
+		<ClInclude Include="..\..\..\sufw-windows\su_mallocatorstd_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\su_mcameragrabberdshow_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\su_mconsolestd_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\su_mdirectory_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\su_mdriverfs_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\su_mfileburst_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\su_mfilereader_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\su_mfileview_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\su_mfilewriter_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\su_mluawindows_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\su_platform_windows.h" />
+		<ClInclude Include="..\..\..\sufw-windows\WebCamPicker.h" />
+		<ClCompile Include="..\..\..\sufw-windows\su_clock.cpp" />
+		<ClCompile Include="..\..\..\sufw-windows\su_core_functions.cpp" />
+		<ClCompile Include="..\..\..\sufw-windows\su_cs.cpp" />
+		<ClCompile Include="..\..\..\sufw-windows\su_mallocatorstd_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_math.cpp" />
+		<ClCompile Include="..\..\..\sufw-windows\su_mcameragrabberdshow_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mconsolestd_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mdirectory_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mdriverfs_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mfileburst_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mfilereader_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mfileview_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mfilewriter_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_mluawindows_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\su_socket.cpp" />
+		<ClCompile Include="..\..\..\sufw-windows\su_stack.cpp" />
+		<ClCompile Include="..\..\..\sufw-windows\WebCamPicker.cpp" />
+		<None Include="..\..\..\sufw-windows\project\fwauth.sidl" />
+		<None Include="..\..\..\sufw-windows\project\fwport_dx11.sidl" />
+		<None Include="..\..\..\sufw-windows\project\fwport_dx9.sidl" />
+		<None Include="..\..\..\sufw-windows\project\fwport_windows.sidl" />
+		<ClInclude Include="..\..\directdriver\su_adirectdraw_stub.h" />
+		<ClInclude Include="..\..\directdriver\su_adirectshader_stub.h" />
+		<ClInclude Include="..\..\directdriver\su_directdraw.h" />
+		<ClInclude Include="..\..\directdriver\su_directdraw_cmds.h" />
+		<ClInclude Include="..\..\directdriver\su_directdraw_defs.h" />
+		<ClInclude Include="..\..\directdriver\su_directdraw_enums.h" />
+		<ClInclude Include="..\..\directdriver\su_directdriver.h" />
+		<ClInclude Include="..\..\directdriver\su_idirectapp.h" />
+		<ClInclude Include="..\..\directdriver\su_idirectdraw.h" />
+		<ClInclude Include="..\..\directdriver\su_idirectinput.h" />
+		<ClInclude Include="..\..\directdriver\su_idirectshader.h" />
+		<ClInclude Include="..\..\directdriver\su_idirectsound.h" />
+		<ClInclude Include="..\..\directdriver\su_idirectviewer.h" />
+		<ClInclude Include="..\..\directdriver\su_lib3d.h" />
+		<ClInclude Include="..\..\directdriver\su_mdirectshadercamera_stub.h" />
+		<ClInclude Include="..\..\directdriver\su_mdirectviewer_stub.h" />
+		<ClCompile Include="..\..\directdriver\su_lib3d.cpp" />
+		<ClCompile Include="..\..\directdriver\su_mdirectshadercamera_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\directdriver\su_mdirectviewer_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClInclude Include="..\..\..\sufw-gl\su_glshader.h" />
+		<ClInclude Include="..\..\..\sufw-gl\su_glwindow.h" />
+		<ClInclude Include="..\..\..\sufw-gl\su_idirectdrawgl.h" />
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectdrawgl_stub.h" />
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectshaderbasegl_cmds.h" />
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectshaderbasegl_resources.h" />
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectshaderbasegl_stub.h" />
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectshaderprimgl_stub.h" />
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectshaderprogramgl_glsl.h" />
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectshaderprogramgl_stub.h" />
+		<ClInclude Include="..\..\..\sufw-gl\su_mdirectshadertilegl_stub.h" />
+		<ClCompile Include="..\..\..\sufw-gl\su_glshader.cpp" />
+		<ClCompile Include="..\..\..\sufw-gl\su_glwindow.cpp" />
+		<ClCompile Include="..\..\..\sufw-gl\su_mdirectdrawgl_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-gl\su_mdirectshaderbasegl_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-gl\su_mdirectshaderprimgl_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-gl\su_mdirectshaderprogramgl_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-gl\su_mdirectshadertilegl_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClInclude Include="..\..\..\sufw-gl\glhost\glhost.h" />
+		<ClInclude Include="..\..\..\sufw-gl\glhost\glhost_and.h" />
+		<ClInclude Include="..\..\..\sufw-gl\glhost\glhost_ios.h" />
+		<ClInclude Include="..\..\..\sufw-gl\glhost\glhost_mac.h" />
+		<ClInclude Include="..\..\..\sufw-gl\glhost\glhost_win.h" />
+		<ClCompile Include="..\..\..\sufw-gl\glhost\glhost.cpp" />
+		<None Include="..\..\..\sufw-gl\project\fwport_gl.sidl" />
+		<ClInclude Include="..\..\core\su_base.h" />
+		<ClInclude Include="..\..\core\su_core.h" />
+		<ClInclude Include="..\..\core\dg\su_dg.h" />
+		<ClCompile Include="..\..\core\dg\su_dg.cpp" />
+		<ClInclude Include="..\..\core\fs\su_idirectory.h" />
+		<ClInclude Include="..\..\core\fs\su_idriverfs.h" />
+		<ClInclude Include="..\..\core\fs\su_ifile.h" />
+		<ClInclude Include="..\..\core\fs\su_ifileburst.h" />
+		<ClInclude Include="..\..\core\fs\su_ifilereader.h" />
+		<ClInclude Include="..\..\core\fs\su_ifilesystem.h" />
+		<ClInclude Include="..\..\core\fs\su_ifileview.h" />
+		<ClInclude Include="..\..\core\fs\su_ifilewriter.h" />
+		<ClInclude Include="..\..\core\fs\su_mfileconsole_stub.h" />
+		<ClInclude Include="..\..\core\fs\su_mfilesystem_stub.h" />
+		<ClCompile Include="..\..\core\fs\su_mfileconsole_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\core\fs\su_mfilesystem_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClInclude Include="..\..\core\misc\su_clock.h" />
+		<ClInclude Include="..\..\core\misc\su_colors.h" />
+		<ClInclude Include="..\..\core\misc\su_cs.h" />
+		<ClInclude Include="..\..\core\misc\su_idriver.h" />
+		<ClInclude Include="..\..\core\misc\su_parameter.h" />
+		<ClInclude Include="..\..\core\misc\su_psm.h" />
+		<ClInclude Include="..\..\core\misc\su_rexp.h" />
+		<ClInclude Include="..\..\core\misc\su_rexpi.h" />
+		<ClInclude Include="..\..\core\misc\su_stack.h" />
+		<ClInclude Include="..\..\core\misc\su_units.h" />
+		<ClInclude Include="..\..\core\misc\su_unitsi.h" />
+		<ClCompile Include="..\..\core\misc\su_colors.cpp" />
+		<ClCompile Include="..\..\core\misc\su_parameter.cpp" />
+		<ClCompile Include="..\..\core\misc\su_psm.cpp" />
+		<ClCompile Include="..\..\core\misc\su_units.cpp" />
+		<ClInclude Include="..\..\core\container\su_bstring.h" />
+		<ClInclude Include="..\..\core\container\su_bstringi.h" />
+		<ClInclude Include="..\..\core\container\su_list.h" />
+		<ClInclude Include="..\..\core\container\su_listi.h" />
+		<ClInclude Include="..\..\core\container\su_multiset.h" />
+		<ClInclude Include="..\..\core\container\su_multiseti.h" />
+		<ClInclude Include="..\..\core\container\su_set.h" />
+		<ClInclude Include="..\..\core\container\su_seti.h" />
+		<ClInclude Include="..\..\core\container\su_string.h" />
+		<ClInclude Include="..\..\core\container\su_stringi.h" />
+		<ClInclude Include="..\..\core\container\su_tree.h" />
+		<ClInclude Include="..\..\core\container\su_treei.h" />
+		<ClInclude Include="..\..\core\container\su_treeii.h" />
+		<ClInclude Include="..\..\core\container\su_vector.h" />
+		<ClInclude Include="..\..\core\container\su_vectori.h" />
+		<ClCompile Include="..\..\core\container\su_string.cpp" />
+		<ClCompile Include="..\..\core\container\su_tree.cpp" />
+		<ClInclude Include="..\..\core\mem\su_iallocatorchunk.h" />
+		<ClInclude Include="..\..\core\mem\su_iallocatorheap.h" />
+		<ClInclude Include="..\..\core\mem\su_iallocatorobstack.h" />
+		<ClInclude Include="..\..\core\mem\su_mallocatorchunk_stub.h" />
+		<ClInclude Include="..\..\core\mem\su_mallocatorheap_stub.h" />
+		<ClInclude Include="..\..\core\mem\su_mallocatorinner_stub.h" />
+		<ClInclude Include="..\..\core\mem\su_mallocatorobstack_stub.h" />
+		<ClInclude Include="..\..\core\mem\su_mallocatorouter_stub.h" />
+		<ClInclude Include="..\..\core\mem\su_mallocatorslab_stub.h" />
+		<ClInclude Include="..\..\core\mem\su_mcursor.h" />
+		<ClInclude Include="..\..\core\mem\su_mcursori.h" />
+		<ClInclude Include="..\..\core\mem\su_obstackobject.h" />
+		<ClInclude Include="..\..\core\mem\su_obstackobjecti.h" />
+		<ClCompile Include="..\..\core\mem\su_mallocatorchunk_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\core\mem\su_mallocatorheap_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\core\mem\su_mallocatorinner_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\core\mem\su_mallocatorobstack_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\core\mem\su_mallocatorouter_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\core\mem\su_mallocatorslab_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\core\mem\su_mcursor.cpp" />
+		<ClInclude Include="..\..\core\thread\su_imutex.h" />
+		<ClInclude Include="..\..\core\thread\su_isema.h" />
+		<ClInclude Include="..\..\core\thread\su_isignal.h" />
+		<ClInclude Include="..\..\core\thread\su_ithread.h" />
+		<ClInclude Include="..\..\core\thread\su_ithreadref.h" />
+		<ClInclude Include="..\..\core\thread\su_itimer.h" />
+		<ClInclude Include="..\..\core\net\su_hfs.h" />
+		<ClInclude Include="..\..\core\net\su_inet.h" />
+		<ClInclude Include="..\..\core\net\su_inet_conx.h" />
+		<ClInclude Include="..\..\core\net\su_inet_cookie.h" />
+		<ClInclude Include="..\..\core\net\su_inet_url.h" />
+		<ClInclude Include="..\..\core\net\su_mconsolenet_stub.h" />
+		<ClInclude Include="..\..\core\net\su_socket.h" />
+		<ClCompile Include="..\..\core\net\su_hfs.cpp" />
+		<ClCompile Include="..\..\core\net\su_inet.cpp" />
+		<ClCompile Include="..\..\core\net\su_mconsolenet_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClInclude Include="..\..\core\test\su_test.h" />
+		<ClCompile Include="..\..\core\test\su_test.cpp" />
+		<ClInclude Include="..\..\engine\cubeHelper_obj.h" />
+		<ClInclude Include="..\..\engine\cubeHelper_tga.h" />
+		<ClInclude Include="..\..\engine\noise_tga.h" />
+		<ClInclude Include="..\..\engine\su_collection.h" />
+		<ClInclude Include="..\..\engine\su_collectioni.h" />
+		<ClInclude Include="..\..\engine\su_engine.h" />
+		<ClInclude Include="..\..\engine\su_sg_core.h" />
+		<ClInclude Include="..\..\engine\su_sg_corebillboard.h" />
+		<ClInclude Include="..\..\engine\su_sg_corecamera.h" />
+		<ClInclude Include="..\..\engine\su_sg_corecollection.h" />
+		<ClInclude Include="..\..\engine\su_sg_coreframe.h" />
+		<ClInclude Include="..\..\engine\su_sg_coregeometry.h" />
+		<ClInclude Include="..\..\engine\su_sg_coregroup.h" />
+		<ClInclude Include="..\..\engine\su_sg_corepostfx.h" />
+		<ClInclude Include="..\..\engine\su_sg_coreprimitive.h" />
+		<ClInclude Include="..\..\engine\su_sg_corescale.h" />
+		<ClInclude Include="..\..\engine\su_sg_coreuscale.h" />
+		<ClInclude Include="..\..\engine\su_sg_coreviewport.h" />
+		<ClInclude Include="..\..\engine\su_sg_handle.h" />
+		<ClInclude Include="..\..\engine\su_sg_handleroot.h" />
+		<ClInclude Include="..\..\engine\su_sg_scenegraph.h" />
+		<ClInclude Include="..\..\engine\su_sg_scenegraph_enum.h" />
+		<ClInclude Include="..\..\engine\su_sg_scenegraph_ppu.h" />
+		<ClInclude Include="..\..\engine\su_sg_scenegraph_ra.h" />
+		<ClInclude Include="..\..\engine\su_sg_scenegraph_rsc.h" />
+		<ClCompile Include="..\..\engine\su_collection.cpp" />
+		<ClCompile Include="..\..\engine\su_collection_mesh.cpp" />
+		<ClCompile Include="..\..\engine\su_sg_core.cpp" />
+		<ClCompile Include="..\..\engine\su_sg_corebillboard.cpp" />
+		<ClCompile Include="..\..\engine\su_sg_corecamera.cpp" />
+		<ClCompile Include="..\..\engine\su_sg_corecollection.cpp" />
+		<ClCompile Include="..\..\engine\su_sg_coreframe.cpp" />
+		<ClCompile Include="..\..\engine\su_sg_coregeometry.cpp" />
+		<ClCompile Include="..\..\engine\su_sg_coregroup.cpp" />
+		<ClCompile Include="..\..\engine\su_sg_corepostfx.cpp" />
+		<ClCompile Include="..\..\engine\su_sg_coreprimitive.cpp" />
+		<ClCompile Include="..\..\engine\su_sg_corescale.cpp" />
+		<ClCompile Include="..\..\engine\su_sg_coreuscale.cpp" />
+		<ClCompile Include="..\..\engine\su_sg_coreviewport.cpp" />
+		<ClCompile Include="..\..\engine\su_sg_handle.cpp" />
+		<ClCompile Include="..\..\engine\su_sg_handleroot.cpp" />
+		<ClCompile Include="..\..\engine\su_sg_scenegraph.cpp" />
+		<ClInclude Include="..\..\core\base\su_addin.h" />
+		<ClInclude Include="..\..\core\base\su_addini.h" />
+		<ClInclude Include="..\..\core\base\su_any.h" />
+		<ClInclude Include="..\..\core\base\su_anyi.h" />
+		<ClInclude Include="..\..\core\base\su_core_functions.h" />
+		<ClInclude Include="..\..\core\base\su_defines.h" />
+		<ClInclude Include="..\..\core\base\su_export.h" />
+		<ClInclude Include="..\..\core\base\su_factory.h" />
+		<ClInclude Include="..\..\core\base\su_factoryi.h" />
+		<ClInclude Include="..\..\core\base\su_forceref.h" />
+		<ClInclude Include="..\..\core\base\su_globals.h" />
+		<ClInclude Include="..\..\core\base\su_globalsi.h" />
+		<ClInclude Include="..\..\core\base\su_iallocator.h" />
+		<ClInclude Include="..\..\core\base\su_iconsole.h" />
+		<ClInclude Include="..\..\core\base\su_iinterface.h" />
+		<ClInclude Include="..\..\core\base\su_iinterfacei.h" />
+		<ClInclude Include="..\..\core\base\su_import.h" />
+		<ClInclude Include="..\..\core\base\su_inull.h" />
+		<ClInclude Include="..\..\core\base\su_iswitch.h" />
+		<ClInclude Include="..\..\core\base\su_iswitchuser.h" />
+		<ClInclude Include="..\..\core\base\su_langc.h" />
+		<ClInclude Include="..\..\core\base\su_locals.h" />
+		<ClInclude Include="..\..\core\base\su_mapping_base.h" />
+		<ClInclude Include="..\..\core\base\su_mapping_basei.h" />
+		<ClInclude Include="..\..\core\base\su_math.h" />
+		<ClInclude Include="..\..\core\base\su_mathi.h" />
+		<ClInclude Include="..\..\core\base\su_math_common.h" />
+		<ClInclude Include="..\..\core\base\su_mnull_stub.h" />
+		<ClInclude Include="..\..\core\base\su_pool.h" />
+		<ClInclude Include="..\..\core\base\su_pooli.h" />
+		<ClInclude Include="..\..\core\base\su_stringid_base.h" />
+		<ClInclude Include="..\..\core\base\su_ttrait.h" />
+		<ClInclude Include="..\..\core\base\su_types.h" />
+		<ClInclude Include="..\..\core\base\su_util.h" />
+		<ClInclude Include="..\..\core\base\su_utili.h" />
+		<ClInclude Include="..\..\core\base\su_util_uucode.h" />
+		<ClCompile Include="..\..\core\base\su_addin.cpp" />
+		<ClCompile Include="..\..\core\base\su_any.cpp" />
+		<ClCompile Include="..\..\core\base\su_core_profile.cpp" />
+		<ClCompile Include="..\..\core\base\su_factory.cpp" />
+		<ClCompile Include="..\..\core\base\su_globals.cpp" />
+		<ClCompile Include="..\..\core\base\su_locals.cpp" />
+		<ClCompile Include="..\..\core\base\su_mapping_base.cpp" />
+		<ClCompile Include="..\..\core\base\su_mnull_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\core\base\su_notsupported.cpp" />
+		<ClCompile Include="..\..\core\base\su_pool.cpp" />
+		<ClCompile Include="..\..\core\base\su_stringid_base.cpp" />
+		<ClCompile Include="..\..\core\base\su_util.cpp" />
+		<ClCompile Include="..\..\core\base\su_util_bits.cpp" />
+		<ClCompile Include="..\..\core\base\su_util_hmac_crc32.cpp" />
+		<ClCompile Include="..\..\core\base\su_util_hmac_md5.cpp" />
+		<ClCompile Include="..\..\core\base\su_util_hmac_sha1.cpp" />
+		<ClCompile Include="..\..\core\base\su_util_match.cpp" />
+		<ClCompile Include="..\..\core\base\su_util_str.cpp" />
+		<ClCompile Include="..\..\core\base\su_langc.c" />
+		<ClInclude Include="..\..\core\base\md5\md5.h" />
+		<ClCompile Include="..\..\core\base\md5\md5.cpp" />
+		<ClInclude Include="..\..\lang\su_lang_lua.h" />
+		<ClInclude Include="..\..\lang\lua\luatools.h" />
+		<ClInclude Include="..\..\lang\lua\luatools_i.h" />
+		<ClCompile Include="..\..\lang\lua\luatools.cpp" />
+		<ClInclude Include="..\..\lang\lua\su_iluacore.h" />
+		<ClInclude Include="..\..\lang\lua\su_iluadatatree.h" />
+		<ClInclude Include="..\..\lang\lua\su_iluafltk.h" />
+		<ClInclude Include="..\..\lang\lua\su_iluagraphic.h" />
+		<ClInclude Include="..\..\lang\lua\su_iluaio.h" />
+		<ClInclude Include="..\..\lang\lua\su_ilualang.h" />
+		<ClInclude Include="..\..\lang\lua\su_iluamath.h" />
+		<ClInclude Include="..\..\lang\lua\su_iluanet.h" />
+		<ClInclude Include="..\..\lang\lua\su_iluastate.h" />
+		<ClInclude Include="..\..\lang\lua\su_iluastring.h" />
+		<ClInclude Include="..\..\lang\lua\su_iluautil.h" />
+		<ClInclude Include="..\..\lang\lua\su_iluawindows.h" />
+		<ClInclude Include="..\..\lang\lua\su_lua.h" />
+		<ClInclude Include="..\..\lang\lua\su_mluacore_stub.h" />
+		<ClInclude Include="..\..\lang\lua\su_mluadatatree_stub.h" />
+		<ClInclude Include="..\..\lang\lua\su_mluagraphic_stub.h" />
+		<ClInclude Include="..\..\lang\lua\su_mluaio_stub.h" />
+		<ClInclude Include="..\..\lang\lua\su_mlualang_stub.h" />
+		<ClInclude Include="..\..\lang\lua\su_mluamath_stub.h" />
+		<ClInclude Include="..\..\lang\lua\su_mluanet_stub.h" />
+		<ClInclude Include="..\..\lang\lua\su_mluastate_stub.h" />
+		<ClInclude Include="..\..\lang\lua\su_mluastring_stub.h" />
+		<ClInclude Include="..\..\lang\lua\su_mluautil_stub.h" />
+		<ClInclude Include="..\..\lang\lua\su_mluautil_typeid.h" />
+		<ClCompile Include="..\..\lang\lua\su_mluacore_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluadatatree_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluagraphic_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluaio_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mlualang_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluamath_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluanet_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluastate_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluastring_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\lua\su_mluautil_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClInclude Include="..\..\lang\su_lang_flash.h" />
+		<ClInclude Include="..\..\lang\flash\su_iswfreader.h" />
+		<ClInclude Include="..\..\lang\flash\su_mswfreader_structs.h" />
+		<ClInclude Include="..\..\lang\flash\su_mswfreader_stub.h" />
+		<ClCompile Include="..\..\lang\flash\su_mswfreader_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\lang\flash\su_mswfreader_structs.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_fw.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClInclude Include="..\..\ui\su_iuicanvas.h" />
+		<ClInclude Include="..\..\ui\su_iuicollection.h" />
+		<ClInclude Include="..\..\ui\su_iuiobject.h" />
+		<ClInclude Include="..\..\asset\su_asset.h" />
+		<ClInclude Include="..\..\asset\su_ibitmapdocument.h" />
+		<ClInclude Include="..\..\asset\su_idatatree.h" />
+		<ClInclude Include="..\..\asset\su_idatatreeheap.h" />
+		<ClInclude Include="..\..\asset\su_idatatreeio.h" />
+		<ClInclude Include="..\..\asset\su_ieffectdocument.h" />
+		<ClInclude Include="..\..\asset\su_ipakdesigner.h" />
+		<ClInclude Include="..\..\asset\su_irscmanager.h" />
+		<ClInclude Include="..\..\asset\su_mbitmapdocument_stub.h" />
+		<ClInclude Include="..\..\asset\su_mdatatreeheap_stub.h" />
+		<ClInclude Include="..\..\asset\su_mdatatreeio_stub.h" />
+		<ClInclude Include="..\..\asset\su_mpakdesigner_stub.h" />
+		<ClInclude Include="..\..\asset\su_mrscmanager_handle.h" />
+		<ClInclude Include="..\..\asset\su_mrscmanager_pak.h" />
+		<ClInclude Include="..\..\asset\su_mrscmanager_plist.h" />
+		<ClInclude Include="..\..\asset\su_mrscmanager_stash.h" />
+		<ClInclude Include="..\..\asset\su_mrscmanager_stub.h" />
+		<ClCompile Include="..\..\asset\su_mbitmapdocument_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\asset\su_mdatatreeheap_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\asset\su_mdatatreeio_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\asset\su_mpakdesigner_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\asset\su_mrscmanager_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClInclude Include="..\..\..\sufw-windows\authoring\cubeHelper_obj.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\cubeHelper_tga.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_flluadbg.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iassetdatabase.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iauthassetbrowser.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iauthbitmap.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iauthdbgmaster.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iauthdummy.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iauthfacade.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iauthgraphics.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_iauthobserver.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_imodeldocument.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_isuastream.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_massetdatabase_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_massetviewer_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mauthbitmap_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mauthdummy_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mauthgraphics_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mcodecgfl_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mcodecpvrtc_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mcodeczlib_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mdirectapp_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfbxdocument_fbxfile.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfbxdocument_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflassetbrowser_filter.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflassetbrowser_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflassetbrowser_treecb.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflconsoleview_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflconsole_buf.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflconsole_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfldesigner_io.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfldesigner_pixmaps.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfldesigner_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfldesigner_widgets.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfllayoutmanager_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfllayoutmanager_utils.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflluadbgmaster_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflluadbgviewer_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflnetworkviewer_block.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflnetworkviewer_graph.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflnetworkviewer_link.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflnetworkviewer_plug.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflnetworkviewer_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflsessionchooser_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfluserdatainspector_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfluserdatainspector_view.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mflworldinspector_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mfxdocument_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mluaauthfacade_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mluafltk_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mnullconsole_stub.h" />
+		<ClInclude Include="..\..\..\sufw-windows\authoring\su_mobjdocument_stub.h" />
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_massetdatabase_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_massetviewer_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mauthbitmap_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mauthdummy_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mauthgraphics_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mcodecgfl_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mcodecpvrtc_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mcodeczlib_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mdirectapp_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mfbxdocument_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflassetbrowser_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflconsoleview_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflconsole_buf.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflconsole_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mfldesigner_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mfllayoutmanager_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflluadbgmaster_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflluadbgviewer_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflnetworkviewer_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflsessionchooser_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mfluserdatainspector_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mflworldinspector_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mfxdocument_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mluaauthfacade_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mluafltk_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mnullconsole_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\authoring\su_mobjdocument_skel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw/precompiled/supch_core.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_core.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClInclude Include="..\..\..\sufw-windows\precompiled\supch_fw_fltk.h" />
+		<ClCompile Include="..\..\..\sufw-windows\precompiled\supch_fw_fltk.cpp">
+			<PrecompiledHeader>Create</PrecompiledHeader>
+			<PrecompiledHeaderFile>%(Dirname)%(Filename).h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)%(Filename).pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_animated.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_appwindow.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_checkbutton.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_choice.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_framegroup.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_ghostwindow.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_group.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_grouplayer.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_popupwindow.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_popupwindow_choice.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_pushbutton.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_scroll.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_scrollbar.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_slider.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_spinner.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_text.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_textdisplay.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_texteditor.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_textinput.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_timespinner.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_togglebutton.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_treeitem.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_treeoverlay.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_treeview.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_treeview_handle.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_treeview_tools.h" />
+		<ClInclude Include="..\..\..\sufw-windows\sufl\sufl_window.h" />
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_animated.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_appwindow.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_checkbutton.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_choice.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_framegroup.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_ghostwindow.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_group.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_grouplayer.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_popupwindow.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_pushbutton.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_scroll.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_scrollbar.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_slider.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_spinner.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_text.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_textdisplay.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_texteditor.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_textinput.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_timespinner.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_togglebutton.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_treeitem.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_treeoverlay.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_treeview.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<ClCompile Include="..\..\..\sufw-windows\sufl\sufl_window.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>sufw-windows/precompiled/supch_fw_fltk.h</PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile>$(IntDir)supch_fw_fltk.pch</PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flAdjuster.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flBox.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flBrowser.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flButton.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flCheckBrowser.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flCheckButton.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flChoice.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flClass.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flClock.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flCode.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flCodeBlock.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flComment.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flCounter.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flData.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flDeclaration.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flDeclarationBlock.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flDial.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flFileBrowser.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flFileInput.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flFunction.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flGroup.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flHelp.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flInput.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flLightButton.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flMenubar.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flMenuButton.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flMenuitem.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flOutput.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flPack.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flProgress.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flRepeatButton.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flReturnButton.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flRoller.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flRoundButton.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flScroll.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flScrollBar.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flSlider.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flSpinner.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flSubmenu.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flTable.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flTabs.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flTextDisplay.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flTextEdit.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flTile.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flTree.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flValueInput.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flValueOutput.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flValueSlider.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flWidgetClass.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flWindow.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\flWizard.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\lock.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\print_color.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\print_gray.xpm" />
+		<None Include="..\..\..\sufw-windows\sufl\pixmaps\protected.xpm" />
+		<None Include="..\..\..\sufw-build\project\3rdparty.sidl" />
+		<ClInclude Include="..\..\..\sufw-build\codec\lzh5\lzh5.h" />
+		<ClInclude Include="..\..\..\sufw-build\codec\lzo\lzoconf.h" />
+		<ClInclude Include="..\..\..\sufw-build\codec\lzo\lzodefs.h" />
+		<ClInclude Include="..\..\..\sufw-build\codec\lzo\minilzo.h" />
+		<ClCompile Include="..\..\..\sufw-build\codec\lzo\minilzo.c" />
+		<None Include="..\..\..\sufw-build\codec\lzo\testmini.c" />
+		<None Include="..\..\..\sufw-build\codec\lzo\Makefile" />
+		<None Include="..\..\..\sufw-build\codec\lzo\README.LZO" />
+		<ClInclude Include="..\..\..\sufw-build\codec\jpegd\jpegdecoder.h" />
+		<ClInclude Include="..\..\..\sufw-build\codec\jpegd\main.h" />
+		<ClCompile Include="..\..\..\sufw-build\codec\jpegd\H2v2.cpp" />
+		<ClCompile Include="..\..\..\sufw-build\codec\jpegd\idct.cpp" />
+		<ClCompile Include="..\..\..\sufw-build\codec\jpegd\jidctfst.cpp" />
+		<ClCompile Include="..\..\..\sufw-build\codec\jpegd\jpegdecoder.cpp" />
+		<None Include="..\..\..\sufw-build\codec\jpegd\jpegdecoder.inl" />
+		<None Include="..\..\..\sufw-build\lua\COPYRIGHT" />
+		<None Include="..\..\..\sufw-build\lua\HISTORY" />
+		<None Include="..\..\..\sufw-build\lua\INSTALL" />
+		<None Include="..\..\..\sufw-build\lua\Makefile" />
+		<None Include="..\..\..\sufw-build\lua\README" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lapi.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lcode.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\ldebug.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\ldo.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lfunc.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lgc.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\llex.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\llimits.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lmem.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lobject.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lopcodes.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lparser.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lstate.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lstring.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\ltable.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\ltm.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lua.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\luaconf.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lundump.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lvm.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\lzio.h" />
+		<ClInclude Include="..\..\..\sufw-build\lua\core\original_luaconf.h" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lapi.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lcallstats.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lcode.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\ldebug.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\ldo.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\ldump.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lfunc.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lgc.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\llex.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lmem.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lobject.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lopcodes.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lparser.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lstate.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lstring.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\ltable.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\ltm.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lundump.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lvm.c" />
+		<ClCompile Include="..\..\..\sufw-build\lua\core\lzio.c" />
+		<None Include="..\..\..\sufw-build\lua\doc\contents.html" />
+		<None Include="..\..\..\sufw-build\lua\doc\lua.html" />
+		<None Include="..\..\..\sufw-build\lua\doc\luac.html" />
+		<None Include="..\..\..\sufw-build\lua\doc\manual.html" />
+		<None Include="..\..\..\sufw-build\lua\doc\readme.html" />
+		<None Include="..\..\..\sufw-build\lua\doc\lua.css" />
+		<None Include="..\..\..\sufw-build\lua\doc\manual.css" />
+		<None Include="..\..\..\sufw-build\lua\doc\lua.1" />
+		<None Include="..\..\..\sufw-build\lua\doc\luac.1" />
+		<None Include="..\..\..\sufw-build\lua\doc\amazon.gif" />
+		<None Include="..\..\..\sufw-build\lua\doc\logo.gif" />
+		<None Include="..\..\..\sufw-build\lua\doc\cover.png" />
+		<None Include="..\..\..\sufw-build\lua\auxlib\lauxlib.h" />
+		<None Include="..\..\..\sufw-build\lua\auxlib\lauxlib.c" />
+		<None Include="..\..\..\sufw-build\lua\libs\lualib.h" />
+		<None Include="..\..\..\sufw-build\lua\libs\lbaselib.c" />
+		<None Include="..\..\..\sufw-build\lua\libs\ldblib.c" />
+		<None Include="..\..\..\sufw-build\lua\libs\linit.c" />
+		<None Include="..\..\..\sufw-build\lua\libs\liolib.c" />
+		<None Include="..\..\..\sufw-build\lua\libs\lmathlib.c" />
+		<None Include="..\..\..\sufw-build\lua\libs\loadlib.c" />
+		<None Include="..\..\..\sufw-build\lua\libs\loslib.c" />
+		<None Include="..\..\..\sufw-build\lua\libs\lstrlib.c" />
+		<None Include="..\..\..\sufw-build\lua\libs\ltablib.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\adler32.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\compress.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\crc32.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\deflate.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\gzio.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\infblock.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\infcodes.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\inffast.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\inflate.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\inftrees.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\infutil.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\trees.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\uncompr.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\unzip.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\zip.c" />
+		<ClCompile Include="..\..\..\sufw-build\zip\zutil.c" />
+		<ClInclude Include="..\..\..\sufw-build\zip\deflate.h" />
+		<ClInclude Include="..\..\..\sufw-build\zip\infblock.h" />
+		<ClInclude Include="..\..\..\sufw-build\zip\infcodes.h" />
+		<ClInclude Include="..\..\..\sufw-build\zip\inffast.h" />
+		<ClInclude Include="..\..\..\sufw-build\zip\inffixed.h" />
+		<ClInclude Include="..\..\..\sufw-build\zip\inftrees.h" />
+		<ClInclude Include="..\..\..\sufw-build\zip\infutil.h" />
+		<ClInclude Include="..\..\..\sufw-build\zip\trees.h" />
+		<ClInclude Include="..\..\..\sufw-build\zip\unzip.h" />
+		<ClInclude Include="..\..\..\sufw-build\zip\zconf.h" />
+		<ClInclude Include="..\..\..\sufw-build\zip\zip.h" />
+		<ClInclude Include="..\..\..\sufw-build\zip\zlib.h" />
+		<ClInclude Include="..\..\..\sufw-build\zip\zutil.h" />
+		<None Include="..\..\..\sufw-build\zip\algorithm.txt" />
+		<ClInclude Include="..\..\..\sufw-build\yaml\include\yaml.h" />
+		<ClInclude Include="..\..\..\sufw-build\yaml\win32\config.h" />
+		<ClInclude Include="..\..\..\sufw-build\yaml\src\yaml_private.h" />
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\api.c" />
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\dumper.c" />
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\emitter.c" />
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\loader.c" />
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\parser.c" />
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\reader.c" />
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\scanner.c" />
+		<ClCompile Include="..\..\..\sufw-build\yaml\src\writer.c" />
+		<None Include="..\..\..\sufw-build\yaml\doc\html\index.html" />
+		<None Include="..\..\..\sufw-build\yaml\doc\spec\1.1\yaml_spec_1_1.html" />
+		<None Include="..\..\..\sufw-build\yaml\doc\spec\1.1\yaml_spec_1_1.pdf" />
+		<None Include="..\..\..\sufw-build\yaml\doc\spec\1.2\yaml_spec_1_2.html" />
+		<None Include="..\..\..\sufw-build\yaml\doc\spec\1.2\yaml_spec_1_2.pdf" />
+		<ClCompile Include="..\..\..\sufw-build\lzma\C\LzmaDec.c" />
+		<ClInclude Include="..\..\..\sufw-build\lzma\C\LzmaDec.h" />
+		<ClInclude Include="..\..\..\sufw-build\lzma\C\Types.h" />
+		<None Include="..\..\..\sufw-build\lzma\7zC.txt" />
+		<None Include="..\..\..\sufw-build\lzma\7zFormat.txt" />
+		<None Include="..\..\..\sufw-build\lzma\history.txt" />
+		<None Include="..\..\..\sufw-build\lzma\lzma.txt" />
+		<None Include="..\..\..\sufw-build\lzma\Methods.txt" />
+		<ClInclude Include="..\..\..\sufw-build\gfl\libgfl.h" />
+		<Library Include="..\..\..\sufw-build\gfl\libgfl.lib" />
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\CPVRTexture.h" />
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\CPVRTextureData.h" />
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\CPVRTextureHeader.h" />
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\Pixel.h" />
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\PVRException.h" />
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\PVRTexLib.h" />
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\PVRTexLibGlobals.h" />
+		<ClInclude Include="..\..\..\sufw-build\pvrtexlib\PVRTGlobal.h" />
+		<ClInclude Include="..\..\..\sufw-build\ddsutils\inc\dds\ConvertColor.h" />
+		<ClInclude Include="..\..\..\sufw-build\ddsutils\inc\dds\ddsTypes.h" />
+		<ClInclude Include="..\..\..\sufw-build\ddsutils\inc\dds\nvdxt_options.h" />
+		<ClInclude Include="..\..\..\sufw-build\ddsutils\inc\dds\nvErrorCodes.h" />
+		<ClInclude Include="..\..\..\sufw-build\ddsutils\inc\dds\tPixel.h" />
+		<ClInclude Include="..\..\..\sufw-build\ddsutils\inc\dds\tVector.h" />
+		<ClInclude Include="..\..\..\sufw-build\ddsutils\inc\dxtlib\dxtlib.h" />
+		<None Include="..\..\..\sufw-build\fltk\src\dump_compose.c" />
+		<None Include="..\..\..\sufw-build\fltk\src\flstring.c" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_call_main.c" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_utf.c" />
+		<None Include="..\..\..\sufw-build\fltk\src\numericsort.c" />
+		<None Include="..\..\..\sufw-build\fltk\src\scandir.c" />
+		<None Include="..\..\..\sufw-build\fltk\src\scandir_win32.c" />
+		<None Include="..\..\..\sufw-build\fltk\src\vsnprintf.c" />
+		<None Include="..\..\..\sufw-build\fltk\src\cmap.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\filename_absolute.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\filename_expand.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\filename_ext.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\filename_isdir.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\filename_list.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\filename_match.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\filename_setext.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_abort.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_add_idle.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Adjuster.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_arc.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_arci.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_arg.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_ask.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Bitmap.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_BMP_Image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Box.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_boxtype.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Browser.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Browser_.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Browser_load.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Button.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Chart.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Check_Browser.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Check_Button.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Choice.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Clock.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_color.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Color_Chooser.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_color_mac.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_color_win32.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_compose.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Counter.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_cursor.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_curve.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Device.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Dial.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_diamond_box.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_display.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_dnd.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_dnd_mac.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_dnd_win32.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_dnd_x.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Double_Window.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_draw.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_draw_image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_draw_image_mac.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_draw_image_win32.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_draw_pixmap.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_encoding_latin1.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_encoding_mac_roman.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_engraved_label.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_File_Browser.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_File_Chooser.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_File_Chooser2.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_file_dir.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_File_Icon.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_File_Icon2.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_File_Input.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_font.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_font_mac.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_font_win32.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_font_x.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_font_xft.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_GDI_Printer.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_get_key.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_get_key_mac.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_get_key_win32.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_get_system_colors.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_GIF_Image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Gl_Choice.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Gl_Device_Plugin.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Gl_Overlay.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Gl_Window.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_grab.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Group.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_gtk.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Help_Dialog.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Help_Dialog_Dox.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Help_View.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_images_core.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Input.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Input_.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_JPEG_Image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_labeltype.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Light_Button.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_line_style.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_lock.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_mac.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Menu.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Menu_.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Menu_add.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Menu_Bar.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Menu_Button.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Menu_global.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Menu_Window.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Multi_Label.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Native_File_Chooser.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Native_File_Chooser_common.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Native_File_Chooser_FLTK.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Native_File_Chooser_MAC.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Native_File_Chooser_WIN32.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_open_uri.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_oval_box.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_overlay.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_overlay_visual.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Overlay_Window.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_own_colormap.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Pack.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Paged_Device.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Pixmap.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_plastic.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_PNG_Image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_PNM_Image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Positioner.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_PostScript.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Preferences.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Printer.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Progress.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_read_image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_read_image_mac.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_read_image_win32.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_rect.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Repeat_Button.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Return_Button.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Roller.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_rounded_box.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_round_box.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Round_Button.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Scroll.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Scrollbar.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_scroll_area.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_set_font.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_set_fonts.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_set_fonts_mac.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_set_fonts_win32.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_set_fonts_x.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_set_fonts_xft.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_shadow_box.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Shared_Image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_shortcut.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_show_colormap.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Single_Window.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Slider.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_symbols.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Sys_Menu_Bar.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Table.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Table_Row.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tabs.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Text_Buffer.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Text_Display.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Text_Editor.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tile.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tiled_Image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tooltip.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tree.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tree_Item.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tree_Item_Array.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Tree_Prefs.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_utf8.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Valuator.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Value_Input.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Value_Output.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Value_Slider.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_vertex.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_visual.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Widget.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_win32.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Window.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Window_fullscreen.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Window_hotspot.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Window_iconize.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Wizard.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_x.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_XBM_Image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_XPM_Image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\forms_bitmap.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\forms_compatability.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\forms_free.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\forms_fselect.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\forms_pixmap.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\forms_timer.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\freeglut_geometry.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\freeglut_stroke_mono_roman.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\freeglut_stroke_roman.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\freeglut_teapot.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\glut_compatability.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\glut_font.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\gl_draw.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\gl_start.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\print_panel.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\ps_image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\screen_xywh.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\src\aimm.h" />
+		<None Include="..\..\..\sufw-build\fltk\src\cgdebug.h" />
+		<None Include="..\..\..\sufw-build\fltk\src\fastarrow.h" />
+		<None Include="..\..\..\sufw-build\fltk\src\flstring.h" />
+		<None Include="..\..\..\sufw-build\fltk\src\fl_cmap.h" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Font.H" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_Gl_Choice.H" />
+		<None Include="..\..\..\sufw-build\fltk\src\Fl_XColor.H" />
+		<None Include="..\..\..\sufw-build\fltk\src\freeglut_teapot_data.h" />
+		<None Include="..\..\..\sufw-build\fltk\src\mediumarrow.h" />
+		<None Include="..\..\..\sufw-build\fltk\src\print_panel.h" />
+		<None Include="..\..\..\sufw-build\fltk\src\slowarrow.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\dirent.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Enumerations.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\filename.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Adjuster.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\fl_ask.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Bitmap.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_BMP_Image.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Box.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Browser.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Browser_.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Button.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Cairo.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Cairo_Window.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Chart.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Check_Browser.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Check_Button.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Choice.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Clock.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Color_Chooser.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Counter.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Device.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Dial.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Double_Window.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\fl_draw.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Export.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_File_Browser.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_File_Chooser.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_File_Icon.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_File_Input.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Fill_Dial.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Fill_Slider.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Float_Input.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_FormsBitmap.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_FormsPixmap.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Free.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_GIF_Image.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Gl_Window.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Group.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Help_Dialog.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Help_View.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Hold_Browser.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Hor_Fill_Slider.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Hor_Nice_Slider.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Hor_Slider.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Hor_Value_Slider.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Image.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Input.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Input_.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Input_Choice.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Int_Input.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_JPEG_Image.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Light_Button.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Line_Dial.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Menu.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Menu_.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Menu_Bar.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Menu_Button.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Menu_Item.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Menu_Window.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\fl_message.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Multiline_Input.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Multiline_Output.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Multi_Browser.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Multi_Label.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Native_File_Chooser.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Native_File_Chooser_FLTK.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Native_File_Chooser_MAC.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Native_File_Chooser_WIN32.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Nice_Slider.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Object.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Output.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Overlay_Window.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Pack.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Paged_Device.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Pixmap.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Plugin.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_PNG_Image.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_PNM_Image.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Positioner.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_PostScript.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Preferences.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Printer.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Progress.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Radio_Button.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Radio_Light_Button.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Radio_Round_Button.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Repeat_Button.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Return_Button.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_RGB_Image.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Roller.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Round_Button.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Round_Clock.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Scroll.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Scrollbar.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Secret_Input.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Select_Browser.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Shared_Image.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\fl_show_colormap.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\fl_show_input.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Simple_Counter.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Single_Window.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Slider.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Spinner.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Sys_Menu_Bar.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Table.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Table_Row.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tabs.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Text_Buffer.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Text_Display.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Text_Editor.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tile.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tiled_Image.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Timer.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Toggle_Button.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Toggle_Light_Button.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Toggle_Round_Button.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tooltip.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tree.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tree_Item.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tree_Item_Array.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Tree_Prefs.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\fl_types.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\fl_utf8.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Valuator.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Value_Input.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Value_Output.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Value_Slider.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Widget.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Window.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_Wizard.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_XBM_Image.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Fl_XPM_Image.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\forms.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\gl.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\gl2opengl.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\glu.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\glut.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\gl_draw.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\mac.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\math.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\names.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\win32.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\x.H" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\FL\Xutf8.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\ide\VisualC2008\config.h" />
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkd.lib">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkformsd.lib">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkimagesd.lib">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkjpegd.lib">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkpngd.lib">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkzd.lib">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltk.lib">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkforms.lib">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkimages.lib">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkjpeg.lib">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkpng.lib">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+		</Library>
+		<Library Include="..\..\..\sufw-build\fltk\lib\fltkz.lib">
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+			<ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+		</Library>
+		<None Include="..\..\..\sufw-build\fltk\test\adjuster.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\arc.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\ask.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\bitmap.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\blocks.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\boxtype.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\browser.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\button.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\buttons.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\cairo_test.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\checkers.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\clock.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\colbrowser.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\color_chooser.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\connect.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\cube.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\CubeMain.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\CubeView.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\cursor.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\curve.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\demo.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\device.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\doublebuffer.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\editor.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\file_chooser.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\fl_jpeg_image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\fonts.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\forms.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\fractals.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\fracviewer.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\fullscreen.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\glpuzzle.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\gl_overlay.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\hello.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\help.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\iconize.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\input.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\input_choice.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\keyboard.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\label.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\line_style.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\list_visuals.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\mandelbrot.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\menubar.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\message.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\minimum.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\native-filechooser.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\navigation.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\output.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\overlay.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\pack.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\pixmap.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\pixmap_browser.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\resizebox.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\rotated_text.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\scroll.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\shape.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\subwindow.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\sudoku.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\symbols.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\table.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\threads.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\tile.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\tiled_image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\unittests.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_about.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_circles.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_images.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_lines.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_points.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_rects.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_scrollbarsize.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_text.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\unittest_viewport.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\test\utf8.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\documentation\Doxybook" />
+		<None Include="..\..\..\sufw-build\fltk\documentation\Doxyfile" />
+		<None Include="..\..\..\sufw-build\fltk\documentation\fltk.pdf" />
+		<None Include="..\..\..\sufw-build\fltk\documentation\Makefile" />
+		<None Include="..\..\..\sufw-build\fltk\documentation\README" />
+		<None Include="..\..\..\sufw-build\fltk\documentation\strip_tags" />
+		<None Include="..\..\..\sufw-build\fltk\documentation\TODO.doc" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\fluid.exe" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\about_panel.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\alignment_panel.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\CodeEditor.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\comments.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\Fluid_Image.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\Fl_Type.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\Fl_Widget_Type.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\function_panel.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\ide_support.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\print_panel.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\Shortcut_Button.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\template_panel.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\undo.h" />
+		<ClInclude Include="..\..\..\sufw-build\fltk\fluid\widget_panel.h" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\about_panel.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\alignment_panel.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\align_widget.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\code.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\CodeEditor.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\factory.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\file.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\fluid.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\Fluid_Image.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\Fl_Function_Type.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\Fl_Group_Type.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\Fl_Menu_Type.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\Fl_Type.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\Fl_Widget_Type.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\Fl_Window_Type.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\function_panel.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\ide_maketools.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\ide_support.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\ide_visualc.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\ide_xcode.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\print_panel.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\template_panel.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\undo.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\widget_panel.cxx" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flAdjuster.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flBox.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flBrowser.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flButton.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flCheckBrowser.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flCheckButton.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flChoice.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flClass.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flClock.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flCode.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flCodeBlock.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flComment.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flCounter.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flData.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flDeclaration.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flDeclarationBlock.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flDial.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flFileBrowser.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flFileInput.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flFunction.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flGroup.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flHelp.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flInput.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flLightButton.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flMenubar.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flMenuButton.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flMenuitem.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flOutput.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flPack.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flProgress.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flRepeatButton.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flReturnButton.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flRoller.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flRoundButton.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flScroll.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flScrollBar.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flSlider.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flSpinner.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flSubmenu.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flTabs.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flTextDisplay.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flTextEdit.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flTile.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flValueInput.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flValueOutput.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flValueSlider.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flWidgetClass.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flWindow.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\flWizard.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\lock.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\print_color.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\print_gray.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\pixmaps\protected.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid.ico" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-32.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-96.xpm" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-128.png" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-16.png" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-16i.png" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-256.png" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-32.png" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-32i.png" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-48.png" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid-64.png" />
+		<None Include="..\..\..\sufw-build\fltk\fluid\icons\fluid.xcf.gz" />
+		<Library Include="..\..\..\sufw-build\dwm\dwmapi.lib" />
+		<ClInclude Include="..\..\..\sufw-build\gl32\include\GL.h" />
+		<ClInclude Include="..\..\..\sufw-build\gl32\include\glew.h" />
+		<ClInclude Include="..\..\..\sufw-build\gl32\include\glxew.h" />
+		<ClInclude Include="..\..\..\sufw-build\gl32\include\khrplatform.h" />
+		<ClInclude Include="..\..\..\sufw-build\gl32\include\wglew.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\amaudio.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\amparse.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\amstream.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\amva.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\amvideo.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\audevcod.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\austream.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\ddstream.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\devguid.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\DShow.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\dvdevcod.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\edevdefs.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\errors.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\evcode.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\mmstream.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\MMSystem.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\OleCtl.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\qedit.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\strmif.h" />
+		<ClInclude Include="..\..\..\sufw-build\platformsdk\vfwmsgs.h" />
+		<ClInclude Include="..\..\..\sufw-build\sqlite\sqlite3.h" />
+		<ClCompile Include="..\..\..\sufw-build\sqlite\sqlite3.c" />
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<Target Name="CpCompileFiles">
+		<Message Text="@(ClCompile->'%(Filename)%(Extension)')" />
+	</Target>
+	<Target Name="CpIncludeFiles">
+		<Message Text="@(ClInclude->'%(Filename)%(Extension)')" />
+	</Target>
+	<ImportGroup Label="ExtensionTargets" />
+</Project>

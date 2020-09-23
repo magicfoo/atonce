@@ -1,0 +1,371 @@
+
+
+@package su.fw.asset
+
+@outpath '$sufw/asset'
+
+
+
+
+@interface IDatatree
+{
+	@enum NodeType
+		NT_Nil
+		NT_Scalar
+		NT_Sequence
+		NT_Mapping
+
+	@enum ScalarType
+		ST_Undef
+		ST_Boolean
+		ST_String
+		ST_Integer
+		ST_Number
+		ST_Blob
+
+	@enum Constants
+		InvalidIndex = (-99999)
+
+	-- stack index is valid in the range [0..n[ or ]-n..-1]
+
+	@func	(bool)				isempty								-- true if the stack is empty
+	@func	(int)				getcount							-- number of elements in the stack
+	@func						setcount		: (int)	inCount		-- sets the stack size
+	@func	(int)				gettop								-- index of the top element
+	@func						settop			: (int) inIndex		-- sets the stack top to this index
+	@func	(int)				baseindex		: (int) inIndex
+	@func	(int)				topindex		: (int) inIndex
+	@func						pop				: (int) inCount
+	@func						push			: (int) inIndex
+	@func						insert			: (int) inIndex
+	@func						remove			: (int) inIndex
+	@func						replace			: (int) inIndex
+	@func	(bool)				equal			: (int) inIndex1	: (int) inIndex2
+
+	@func	(bool)				isnil			: (int) inIndex
+	@func	(bool)				isboolean		: (int) inIndex
+	@func	(bool)				isblob			: (int) inIndex
+	@func	(bool)				isstring		: (int) inIndex
+	@func	(bool)				isinteger		: (int) inIndex
+	@func	(bool)				isnumber		: (int) inIndex
+	@func	(bool)				isscalar		: (int) inIndex
+	@func	(bool)				iscollection	: (int) inIndex
+	@func	(bool)				issequence		: (int) inIndex
+	@func	(bool)				ismapping		: (int) inIndex
+	@func	(NodeType)			nodetype		: (int) inIndex
+	@func	(ScalarType)		scalartype		: (int) inIndex
+
+	-- scalar: access content
+
+	@func	(bool)				asboolean		: (int) inIndex
+	@func	(pcstr)				asstring		: (int) inIndex
+	@func	(int)				asinteger		: (int) inIndex
+	@func	(float)				asnumber		: (int) inIndex
+	@func	(byte*)				asblob			: (int) inIndex		: (int*) outBsize = (NULL)
+	@func	(bool)				toboolean		: (int) inIndex
+	@func	(pcstr)				tostring		: (int) inIndex
+	@func	(int)				tointeger		: (int) inIndex
+	@func	(float)				tonumber		: (int) inIndex
+
+	-- collection
+
+	@func						clear			: (int)	inIndex
+	@func	(int)				size			: (int)	inIndex
+
+	-- sequence
+	-- index inIth is valid in the range [0..n[
+
+	@func						resize			: (int)	inIndex		: (int) inLen
+	@func						push			: (int)	inIndex		: (int) inIth
+	@func						store			: (int)	inIndex		: (int) inIth
+	@func						append			: (int)	inIndex
+
+	-- mapping
+
+	@func						pushchain		: (int)	inIndex		: (pcstr) inKeyPath
+	@func						push			: (int)	inIndex		: (pcstr) inKey
+	@func						store			: (int)	inIndex		: (pcstr) inKey
+	@func	(bool)				haskey			: (int)	inIndex		: (pcstr) inKey
+	@func	(pcstr)				enumkey			: (int)	inIndex		: (pcstr) inKey = (NULL)
+	@func						unkey			: (int)	inIndex		: (pcstr) inKey
+
+	-- creation
+
+	@func						pushnil
+	@func						pushscalar		: (pcstr) inValue
+	@func						pushboolean		: (bool)  inValue
+	@func						pushstring		: (pcstr) inValue
+	@func						pushstring		: (pcstr) inStart	: (pcstr) inEnd
+	@func						pushinteger		: (int)	  inValue
+	@func						pushnumber		: (float) inValue
+	@func						pushblob		: (byte*) inBaddr	: (int) inBsize
+	@func						pushsequence	: (int)	  inCapacity = (0)
+	@func						pushmapping
+
+	# Some properties can be associated to any node through a property-node.
+	# The property-node could be a scalar or a collection node.
+	# Some examples are following :
+	# - 'tag'       : a simple format description string
+	# - 'style'     : coult be 'any' / 'plain' / 'squoted' / 'dquoted' / 'literal' / 'folded' / 'flow' / 'block' 
+	# - 'statement' : grouping begin-index/line/column and end-index/line/column
+
+	@func						storeproperty	: (int)	inIndex
+	@func						pushproperty	: (int)	inIndex
+}
+
+@interface IDatatreeHeap
+{
+	@func	(bool)				Reset			: (Pool*) inPool
+}
+
+
+@implementation MDatatreeHeap
+    concerns IDatatree IDatatreeHeap
+
+
+
+@interface IDatatreeIO
+{
+	@using IDatatree
+
+	-- Parse/Load a stream of one or more documents and
+	-- pushed associated root nodes on top of the stack.
+
+	@func	(int)				Parse			: (IDatatree*)	inDtt
+												: (byte*)		inAddr
+												: (uint)		inSize
+
+	@func	(int)				Load			: (IDatatree*)	inDtt
+												: (pcstr)		inFilename
+
+	-- Present/Dump a stream composed of #inCount documents
+	-- corresponding of the same amount of node(s) located on top of the stack.
+
+	@func	(bool)				Present			: (IDatatree*)	inDtt
+												: (byte*)		inAddr
+												: (uint)		inCapacity
+												: (uint&)		outSize
+												: (int)			inCount=(1)
+												: (bool)		inRef=(true)
+
+	@func	(bool)				Dump			: (IDatatree*)	inDtt
+												: (pcstr)		inFilename
+												: (int)			inCount=(1)
+												: (bool)		inRef=(true)
+}
+
+
+@implementation MDatatreeIO
+	concerns IDatatreeIO
+
+
+
+
+
+
+@interface IPakDesigner
+{
+	@struct PakHeader
+		(uint32)		magicid			-- 0x7270616b
+		(uint32)		format			-- 1
+		(char %%[16])	label			-- content label string terminated by 0
+		(uint32)		revision		-- content revision number
+		(char %%[64])	comment			-- content comment string terminated by 0
+		(uint32)		fullbs			-- full pak byte size (<4GB)
+		(uint32)		tocso			-- TOC start byte-offset
+		(uint32)		toceo			-- TOC end byte-offset
+		(uint32)		lorid			-- lower resource id
+		(uint32)		hirid			-- higher resource id
+
+	@struct PakDesc
+		(uint32)		rid				-- unique resource id
+		(uint32)		tid				-- type id (meta-class)
+		(uint32)		dataso			-- data start byte-offset
+		(uint32)		dataeo			-- data end byte-offset
+		(uint32)		contentbs		-- unpacked content byte-size
+
+	@enum
+	{
+		PKD_MAGICID = (0x7270616b)
+		PKD_FORMAT = (2)
+	}
+
+
+	@func	(bool)				Setup			: (pcstr) inFilename
+												: (bool) inForceCreate = (false)
+
+	@func	(PakHeader)			GetHeader
+
+	@func	(uint)				CountDesc
+	@func	(PakDesc)			EnumDesc		: (int) inIndex
+	@func	(PakDesc)			GetDesc			: (uint32) inRID
+
+	@func	(bool)				ExtractBytes	: (uint32) inStartOffset
+												: (uint32) inEndOffset
+												: (void*) inDataAddr
+
+	@func	(bool)				ExtractRaw		: (uint32) inRID
+												: (void*) inDataAddr
+
+	@func	(bool)				ExtractContent	: (uint32) inRID
+												: (void*) inDataAddr
+
+	@func	(bool)				StartUpdating
+
+	@func	(bool)				UpdateLabel		: (pcstr) inLabel
+	@func	(bool)				UpdateRevision	: (uint) inRevision
+	@func	(bool)				UpdateComment	: (pcstr) inComment
+
+	@func	(bool)				UpdateContent	: (uint32) inRID
+												: (uint32) inTID
+												: (void*) inDataAddr
+												: (uint32) inDataBSize
+												: (bool) inPackable = (true)
+
+	@func						EndUpdating
+
+	@func	(bool)				Optimize
+}
+
+
+@implementation MPakDesigner
+    concerns IPakDesigner
+
+
+
+
+
+
+
+
+@interface IRscManager
+{
+	@struct Resource
+		(uint32)	rid
+		(uint32)	tid
+		(byte*)		bytes
+		(uint32)	bsize
+
+	@enum ResourceStatus
+		RS_NOTFOUND = (0)		-- Not available
+		RS_PAKED				-- Availables in the pak cloud and needs to be prefetch
+		RS_STASHED				-- Available in memoryand could be immediatly instancied
+
+	@enum PrefetchStatus
+		PS_INVALID = (0)		-- Not enqueued.
+		PS_PENDING				-- Enqueued ...
+		PS_LOADING				-- In progress ...
+		PS_STASHED				-- Prefetch is completed.
+		PS_ABORTED = (-1)		-- The prefetch has been aborted !
+		PS_LOAD_FAILED = (-2)	-- Loading has failed !
+		PS_FATAL_FAILED = (-3)	-- Has failed because of a fatal error !
+
+
+	-- Pak in the cloud
+
+	@func (int)				AttachPak				: (pcstr) inFilename
+	@func (bool)			DetachPak				: (int) inPakid
+
+
+	-- Stashes, areas where prefetched resources are physically nested
+
+	@func (int)				CreateStash				: (Pool*) inPool
+	@func (bool)			SqueezeStash			: (int) inStashid
+	@func (bool)			DestroyStash			: (int) inStashid
+
+
+	-- Prefetch list management
+
+	@func (int)				EnqueuePrefetchList		: (int) inStashid : (uint32*) inList : (uint32) inCount
+	@func (PrefetchStatus)	ProbePrefetchList		: (int) inListid  : (uint32*) outToLoadBS = (NULL) : (uint*) outLoadedB = (NULL)
+	@func (bool)			IsValidPrefetchList		: (int) inListid		-- != PS_INVALID
+	@func (bool)			IsPendingPrefetchList	: (int) inListid		-- == PS_PENDING
+	@func (bool)			IsBusyPrefetchList		: (int) inListid		-- in [PS_PENDING,PS_LOADING]
+	@func (bool)			IsIdlePrefetchList		: (int) inListid		-- not busy
+	@func (bool)			AbortPrefetchList		: (int) inListid
+	@func (bool)			DequeuePrefetchList		: (int) inListid
+
+
+	--
+
+	@func (uint)			GetLoResource
+	@func (uint)			GetHiResource
+	@func (uint)			GetTypeResource			: (uint32) inRID
+	@func (ResourceStatus)	ProbeResource			: (uint32) inRID
+	@func					RetainResource			: (uint32) inRID
+	@func					ReleaseResource			: (uint32) inRID
+	@func (bool)			FetchResource			: (uint32) inRID : (Resource&) outRsc
+
+
+	--
+
+	@func					Update
+	@func					Squeeze
+}
+
+
+
+@implementation MRscManager
+    concerns IRscManager
+
+
+# IBitmapDocument section
+
+@interface IBitmapDocument
+{
+	@func (bool)			OpenDocument			: (pcstr) path
+													: (Pool*) pool
+
+	@func (uint)			GetWidth
+	@func (uint)			GetHeight
+
+	@func (uint)			CountLayer
+	@func (SString)			GetLayerName			: (uint) iLay
+	@func (Color32)			GetLayerPixel			: (uint) iLay
+													: (uint) x : (uint) y
+	@func (bool)			GetLayerLine			: (byte*) ioLine		// RGBA in memory
+													: (uint) iLay
+													: (uint) y
+}
+
+
+@implementation MBitmapDocument
+	concerns IBitmapDocument
+
+
+
+
+# Microsoft .FX shader-program document accessor
+
+@interface IEffectDocument
+{
+	@forward su.IDatatree
+
+	@func	(bool)			OpenDocument	: (pcstr) inPath
+	
+	@func	(bool)			GenerateGL		: (IDatatree*) inDtt
+	@func	(bool)			GenerateDX9		: (IDatatree*) inDtt
+
+	@func	(bool)			GetSamplerList	: (IDatatree*) inDtt
+
+
+	@func	(uint)			CountTechnique	: (IDatatree*) inDtt
+	@func	(uint)			EnumTechnique	: (IDatatree*) inDtt
+}
+
+
+
+
+
+@inpath '$sufw/asset'
+
+
+@group group.su.fw.asset
+{
+	@folder 'cpp.asset'
+		adds '<*.h'
+		adds '<*.cpp'
+		adds '<*.sua' ifexisting
+		adds '<*.lua' ifexisting
+}
+

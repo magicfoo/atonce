@@ -1,0 +1,803 @@
+
+@package su.fw.maps
+
+
+--
+-- COMMON
+
+
+@record rsc
+{
+	.ui<20>			id
+}
+
+@record rscs
+{
+	.ui<8>			count
+	.ui<20,count>	ids
+}
+
+@record element
+{
+	.ui<10>			id
+}
+
+@record elements
+{
+	.ui<8>			count
+	.ui<10,count>	ids
+}
+
+@record string
+{
+	.ui<10>			len
+	.ui<8,len>	:0	text
+}
+
+@record strings
+{
+	.ui<10>			count
+	.ui<10>			len
+	.ui<16>		:0	offsets
+	.ui<8,len>	:0	texts
+}
+
+@record blob
+{
+	.ui<32>			size
+	.ui<8,size> :2	bytes
+}
+
+@record bitmask
+{
+	.ui<32>			size
+	.ui<1,size>		bits
+}
+
+@record location
+{
+	.fp<32>			x
+	.fp<32>			y
+	.fp<32>			z
+}
+
+@record locations
+{
+	.ui<8>			count
+	.fp<32,count>	x
+	.fp<32,count>	y
+	.fp<32,count>	z
+}
+
+@record vec3
+{
+	.fp<32>			x
+	.fp<32>			y
+	.fp<32>			z
+}
+
+@record vec4
+{
+	.fp<32>			x
+	.fp<32>			y
+	.fp<32>			z
+	.fp<32>			w
+}
+
+@record quat
+{
+	.fp<32>			x
+	.fp<32>			y
+	.fp<32>			z
+	.fp<32>			w
+}
+
+@record matrix
+{
+	.fp<32,16>		coeff
+}
+
+@record box3
+{
+	.fp<32,3>		center
+	.fp<32,4>		rotation
+	.fp<32,3>		length
+}
+
+
+
+
+
+
+@tag rsc.common.end
+{
+	.code 1
+}
+
+
+
+
+
+
+
+
+--
+-- Userdata resource
+
+
+@tag rsc.userdata.content
+{
+	.code 10
+
+	.record string				label
+	.record string				sourcefile
+	.record blob				data
+}
+
+@map rsc.userdata
+{
+	rsc.common.*
+	rsc.userdata.*
+}
+
+
+
+
+
+
+
+
+--
+-- Collection resource
+
+
+-- attribut elements
+
+@tag rsc.collection.define
+{
+	.code 100
+
+	.ui<10>						id
+}
+
+@tag rsc.collection.sourcefile
+{
+	.code 101
+
+	.record string				filename
+}
+
+@tag rsc.collection.hotbox
+{
+	.code 111
+
+	.ui<32>						namecrc
+	.record	box3				box
+}
+
+@tag rsc.collection.hotpoint
+{
+	.code 112
+
+	.ui<32>						namecrc
+	.record	location			spot
+}
+
+@tag rsc.collection.hotsegment
+{
+	.code 113
+
+	.ui<32>						namecrc
+	.record	location			start
+	.record	location			end
+}
+
+@tag rsc.collection.hotcloud
+{
+	.code 114
+
+	.ui<32>						namecrc
+	.record	locations			spots
+}
+
+@tag rsc.collection.hotspline
+{
+	.code 115
+
+	.ui<32>						namecrc
+	.record	location			start
+	.record	location			end
+	.record	vec3				intan
+	.record	vec3				outan
+}
+
+@tag rsc.collection.hotsphere
+{
+	.code 116
+
+	.ui<32>						namecrc
+	.record	location			center
+	.fp<32>						radius
+}
+
+
+
+
+-- list
+--
+--	list 'display'
+--		litem.node
+--		litem.geometry
+--		litem.camera
+--		litem.light
+--		litem.helper
+--		litem.bone
+--		litem.character
+--
+--	list 'export'
+--		litem.export
+--		litem.export (...)
+
+
+@tag rsc.collection.list
+{
+	.code 120
+
+	.record string				name					-- 'display', 'export'
+	.ui<10>						count
+}
+
+@tag rsc.collection.litem.node
+{
+	.code 121
+
+	.si<10>						parentidx				-- parent's index in the list
+	.record string				name
+	.record string				note
+	.ui<1>						hidden
+	.record matrix				trs						-- global TRS
+	.ui<10>						trsanimid				-- element's id of the motion animation
+}
+
+@tag rsc.collection.litem.geometry
+{
+	.code 122
+
+	.si<10>						parentidx				-- parent's index in the list
+	.record string				name
+	.record string				note
+	.ui<1>						hidden
+	.record matrix				trs						-- global TRS
+	.ui<10>						trsanimid				-- element's id of the motion animation
+	.record matrix				offset					-- mesh offset
+	.ui<10>						meshid
+	.ui<8,4>					color					-- rgba
+}
+
+@tag rsc.collection.litem.camera
+{
+	.code 123
+
+	.si<10>						parentidx				-- parent's index in the list
+	.record string				name
+	.record string				note
+	.ui<1>						hidden
+	.record matrix				trs						-- global TRS
+	.ui<10>						trsanimid				-- element's id of the motion animation
+	.fp<32>						fov
+	.ui<10>						fovanimid				-- element's id of the fov animation
+	.fp<32>						targetdist
+	.fp<32,2>					envrange
+}
+
+@tag rsc.collection.litem.light
+{
+	.code 124
+
+	.si<10>						parentidx				-- parent's index in the list
+	.record string				name
+	.record string				note
+	.ui<1>						hidden
+	.record matrix				trs						-- global TRS
+	.ui<10>						trsanimid				-- element's id of the motion animation
+}
+
+@tag rsc.collection.litem.helper
+{
+	.code 125
+
+	.si<10>						parentidx				-- parent's index in the list
+	.record string				name
+	.record string				note
+	.ui<1>						hidden
+	.record matrix				trs						-- global TRS
+	.ui<10>						trsanimid				-- element's id of the motion animation
+	.fp<32>						width
+	.fp<32>						height
+	.fp<32>						depth
+}
+
+@tag rsc.collection.litem.bone
+{
+	.code 126
+
+	.si<10>						parentidx				-- parent's index in the list
+	.record string				name
+	.record string				note
+	.ui<1>						hidden
+	.record matrix				trs						-- global TRS
+	.ui<10>						trsanimid				-- element's id of the motion animation
+	.fp<32>						length
+}
+
+@tag rsc.collection.litem.character
+{
+	.code 127
+
+	.si<10>						parentidx				-- parent's index in the list
+	.record string				name
+	.record string				note
+	.ui<1>						hidden
+	.record matrix				trs						-- global TRS
+	.ui<10>						trsanimid				-- element's id of the motion animation
+}
+
+@tag rsc.collection.litem.export
+{
+	.code 128
+
+	.ui<10>						objectid
+	.record string				name
+}
+
+
+
+
+-- animation
+--
+--	define
+--	anim
+--		klin.float
+--		klin.pos
+--		klin.rot
+--		klin.scl
+--		note
+--
+--		skelframe
+--		skelframe
+--		skelframe (...)
+--
+--		morphframe
+--		morphframe
+--		morphframe (...)
+
+@tag rsc.collection.anim
+{
+	.code 130
+
+	.const ORT_UNDEF		= (0)
+	.const ORT_CONSTANT		= (1)
+	.const ORT_CYCLE		= (2)					// aka loop
+	.const ORT_OSCILLATE	= (3)					// aka ping-pong
+	.const ORT_LINEAR		= (4)
+	.const ORT_REL_CYCLE	= (5)					// aka relative loop
+
+	.record box3					bbox
+	.fp<32,2>						timerange		-- begin/end
+}
+
+@tag rsc.collection.anim.klin.float					-- linear keyframed animation of float values
+{
+	.code 131
+
+	.ui<3,2>						ort				-- before/after out-of-range types
+	.ui<10>							samplingrate	-- #keys per second
+	.ui<16>							keycnt
+	.fp<32,keycnt*2>				keys			-- { (t,v) }
+}
+
+@tag rsc.collection.anim.klin.loc					-- linear keyframed animation of location values
+{
+	.code 132
+
+	.ui<3,2>						ort				-- before/after out-of-range types
+	.ui<10>							samplingrate	-- #keys per second
+	.ui<16>							keycnt
+	.fp<32,keycnt*4>				keys			-- { (t,x,y,z) }
+}
+
+@tag rsc.collection.anim.klin.rot					-- linear keyframed animation of rotation values
+{
+	.code 133
+
+	.ui<3,2>						ort				-- before/after out-of-range types
+	.ui<10>							samplingrate	-- #keys per second
+	.ui<16>							keycnt
+	.fp<32,keycnt*5>				keys			-- { (t,qx,qy,qz,qw) }
+}
+
+@tag rsc.collection.anim.klin.scl					-- linear keyframed animation of scale factors
+{
+	.code 134
+
+	.ui<3,2>						ort				-- before/after out-of-range types
+	.ui<10>							samplingrate	-- #keys per second
+	.ui<16>							keycnt
+	.fp<32,keycnt*4>				keys			-- { (t,sx,sy,sz) }
+}
+
+@tag rsc.collection.anim.note						-- animation of textual note
+{
+	.code 135
+
+	.ui<16>							keycnt
+	.fp<32,keycnt>					keys			-- { (time) }
+	.record strings					notes			-- keys.count == keycnt
+}
+
+@tag rsc.collection.anim.skelframe					-- skinning frame
+{
+	.code 136
+
+	.ui<8>							freq			-- { sampling frequency }
+	.ui<10>							bonecnt			-- #bones
+	.ui<32,bonecnt>					bonenames		-- crc
+	.ui<20>							framecnt		-- #frames
+	.fp<32,bonecnt*4*framecnt>	:2	frames			-- { (qx,qy,qz,qw) }
+}
+
+@tag rsc.collection.anim.morphframe					-- morphing frame
+{
+	.code 137
+
+	.ui<8>							freq			-- { sampling frequency }
+	.ui<10>							targetcnt		-- #targets
+	.ui<32,targetcnt>				tnames			-- targets crcs
+	.fp<32,targetcnt>				tdownlim		-- targets down-limits
+	.fp<32,targetcnt>				tuplim			-- targets up-limits
+	.ui<20>							framecnt		-- #frames
+	.fp<32,targetcnt*1*framecnt> :2	frames			-- { weights for each target }
+}
+
+
+
+
+-- character skeleton
+--
+--	skeleton
+--		bone
+--		bone
+--		bone (...)
+
+@tag rsc.collection.skeleton						-- skeleton
+{
+	.code 140
+
+	.record box3				bbox
+	.record string				note
+	.ui<16>						bonecnt
+}
+
+@tag rsc.collection.skeleton.bone					-- skeleton bone
+{
+	.code 141
+
+	.record string				name
+	.ui<32>						namecrc
+	.ui<10>						parentidx			-- parent's index in the list
+	.record string				note
+	.fp<32,5>					pose				-- { relative pose (rx,ry,rz,rw,n) }
+	.record matrix				tobonetr			-- { vertice to bone }
+}
+
+
+
+
+-- morphing target
+--
+--	morph.target
+
+@tag rsc.collection.morph.target					-- moprhing's target
+{
+	.code 160
+
+	.record string				name
+	.ui<32>						namecrc
+	.ui<20>						vtxcnt
+	.ui<32,vtxcnt> :2			vtxidx
+	.fp<32,vtxcnt> :2			vtxdelta
+}
+
+
+
+
+-- bitmap/texture elements
+--
+--	bitmap
+--		layer
+--		layer
+--		layer (...)
+--		mip (1:1)
+--		mip (1:4)
+--		mip (1:8) (...)
+
+@tag rsc.collection.bitmap
+{
+	.code 301
+
+	.const AS_OPAQUE		= (0)
+	.const AS_PUNCHTHROUGH	= (1)
+	.const AS_VARIED		= (2)
+
+	.ui<12>						width
+	.ui<12>						height
+	.ui<8>						wpad				-- amount of pixels in the horizontal padding
+	.ui<8>						hpad				-- amount of pixels in the vertical padding
+	.ui<2>						astatus
+}
+
+@tag rsc.collection.bitmap.layer					-- bitmap's layers for authoring
+{
+	.code 302
+
+	.record string				name				-- layer name 'red', 'rgba', 'mip0', 'mip1', ...
+	.ui<4>						psm					-- pixel storage mode of the components
+	.ui<30>						size
+	.ui<8,size>		:2			data
+}
+
+@tag rsc.collection.bitmap.dxmip					-- DirectX optimized mipmap
+{
+	.code 303
+	
+	.ui<8>						format				-- public dx native format
+	.ui<30>						size
+	.ui<8,size>		:2			data
+}
+
+@tag rsc.collection.bitmap.glmip					-- OpenGL optimized mipmap
+{
+	.code 304
+	
+	.ui<32>						format				-- public gl native format (GL_ENUM)
+	.ui<32>						type				-- public gl native type (GL_ENUM)
+	.ui<30>						size
+	.ui<8,size>		:2			data
+}
+
+@tag rsc.collection.bitmap.pvrmip					-- PowerVR optimized mipmap
+{
+	.code 305
+
+	.ui<1>						format				-- public 0:2bpp 1:4bpp
+	.ui<30>						size
+	.ui<8,size>		:2			data
+}
+
+@tag rsc.collection.bitmap.s3mip					-- PowerVR optimized mipmap
+{
+	.code 306
+
+	.ui<2>						format				-- public 0:DXT1 1:DXT3 2:DXT5
+	.ui<30>						size
+	.ui<8,size>		:2			data
+}
+
+@tag rsc.collection.bitmap.drivermip				-- dedicated and undocumented mipmap format for a specific driver purpose
+{
+	.code 307
+
+	.ui<4>						format				-- private driver native format
+	.ui<30>						size
+	.ui<8,size>		:2			data
+}
+
+
+
+
+-- shading elements
+--
+--	effect
+--		ps
+--		constant
+--		constant (...)
+--		ps
+--		constant
+--		constant (...)
+--		vs
+--		constant
+--		constant (...)
+--		vs
+--		constant
+--		constant (...)
+--		gs
+--		constant
+--		constant (...)
+--		gs
+--		constant
+--		constant (...)
+--		technique
+--			rstate
+--			pass
+--			rstate
+--			pass
+--		technique
+--			rstate
+--			pass
+--			rstate
+--			pass
+
+@tag rsc.collection.shading.effect
+{
+	.code 405
+
+	.record string				name
+	.record string				note
+	.ui<6>						techcnt					-- #techniques
+}
+
+@tag rsc.collection.shading.ps
+{
+	.code 401
+
+	.record blob				data
+}
+
+@tag rsc.collection.shading.vs
+{
+	.code 402
+
+	-- vertex input
+	.ui<4>						usagecount
+	.ui<4,usagecount>			usages					-- dd::CompUsage
+
+	.record blob				data
+}
+
+@tag rsc.collection.shading.gs
+{
+	.code 403
+
+	.record blob				data
+}
+
+@tag rsc.collection.shading.constant
+{
+	.code 404
+
+	.ui<32>						namecrc
+	.ui<4>						cclass					-- dd::CstClass
+	.ui<4>						ctype					-- dd::CstType
+	.ui<3>						col
+	.ui<3>						row
+	.ui<5>						elt
+}
+
+@tag rsc.collection.shading.technique
+{
+	.code 406
+
+	.record string				name
+	.ui<32>						namecrc
+	.record string				note
+	.ui<6>						passcnt					-- #passes
+}
+
+@tag rsc.collection.shading.pass
+{
+	.code 407
+
+	.ui<10>						psidx					-- shading.ps's index
+	.ui<10>						vsidx					-- shading.vs's index
+}
+
+@tag rsc.collection.shading.rstate
+{
+	.code 408
+
+	.ui<6>						regcnt
+	.ui<32,regcnt>		:0		registers				-- attributes list for the SU_DD_RENDERSTATE opcode
+}
+
+
+
+
+-- geometrical elements
+--
+--	mesh
+--		vb
+--		vb (..)
+--		ib
+--		ib (..)
+--		surface
+--		surface
+--		blendprocess
+--			blendpass
+--			blendpass
+--			blendpass
+--			blendpass
+--		blendprocess
+--			blendpass
+--			blendpass
+--			blendpass
+--			blendpass
+
+@tag rsc.collection.mesh
+{
+	.code 201
+
+	.record box3				bbox
+	.si<10>						skeletonid			-- skeleton's element-id, (<0) if none
+}
+
+@tag rsc.collection.mesh.vbo
+{
+	.code 202
+
+	.const	VF_LOC2	= (1<<0)	-- xy
+	.const	VF_LOC3	= (1<<1)	-- xyz
+	.const	VF_UV0	= (1<<2)	-- uv
+	.const	VF_UV1	= (1<<3)
+	.const	VF_UV2	= (1<<4)
+	.const	VF_COL	= (1<<5)
+	.const	VF_NRM	= (1<<6)
+	.const	VF_TAN	= (1<<7)
+	.const	VF_BIN	= (1<<8)
+	
+	.const	PRIM_POINT		= (0)
+	.const	PRIM_LINE		= (1)
+	.const	PRIM_TRIANGLE	= (2)
+
+	.ui<9>						vf
+	.ui<2>						primtype
+	.ui<1>						dynamic
+	.ui<16>						count
+	.record blob				data
+	.record bitmask				kick
+}
+
+@tag rsc.collection.mesh.surface
+{
+	.code 204
+
+	.ui<6>						vboidx				-- mesh.vbo's index
+	.ui<10>						effectid			-- effect's element-id
+	.ui<32>						techniqueidx
+	.record string				shdparams
+	.record elements			texids
+}
+
+@tag rsc.collection.mesh.blendprocess
+{
+	.code 205
+
+	.ui<10>						vbidx				-- mesh.vb's index
+	.ui<20>						vcount
+	.ui<4>						vstride				-- 3/6
+	.fp<32,vcount*vstride>	:2	vertices			-- { (x,y,z[,nx,ny,nz]) }
+	.ui<10>						bcount
+	.ui<32,bcount>				bones				-- bones mapping
+}
+
+@tag rsc.collection.mesh.blendpass
+{
+	.code 206
+
+	.ui<3>						arity				-- arity [1..4]
+	.ui<20>						count				-- amount of vertices to blend in this pass
+	.fp<32,arity>			:2	bw					-- bone's weight
+	.ui<16,count*arity>		:1	bidx				-- bone's index
+}
+
+
+
+
+@map rsc.collection
+{
+	rsc.common.*
+	rsc.collection.*
+}
+
+
+
+
